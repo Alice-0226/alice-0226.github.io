@@ -110,7 +110,12 @@
 }
     .hero { position:relative; height:clamp(420px,70vh,720px); overflow:hidden; }
     .hero .swiper { height:100%; }
-    .hero .swiper-slide img { width:100%; height:100%; object-fit:cover; }
+.hero .swiper-slide img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center bottom;  /* ←追加：下側を優先して表示 */
+}
     .hero-copy { position:absolute; inset:auto 50% 8% 50%; transform:translate(-50%,0); background:rgba(255,255,255,.25); backdrop-filter:blur(3px); padding:1rem 1.2rem 1.2rem; border-radius:16px; width:min(92%,600px); text-align:center; box-shadow:0 8px 24px -8px rgba(0,0,0,.25); }
 	.hero-copy h1 { margin:.2rem 0 .6rem; font-size:clamp(1.05rem,3.6vw,1.45rem); }
     .hero-badges { display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; margin-bottom:.65rem; }
@@ -172,12 +177,14 @@
     footer a { color:#fff; font-weight:500; }
     .copy { text-align:center; font-size:.7rem; opacity:.7; }
 
-    /* Responsive Tweaks */
-    @media (max-width:600px){
-      .hero-copy { padding:.9rem 1rem 1.1rem; }
-      .hero-copy h1 { font-size:clamp(1.25rem,6vw,1.65rem); }
-      .price { font-size:1.35rem; }
-    }
+@media (max-width:600px){
+  .hero { height:60vh; }                     /* ←追加：縦長スマホで高さを少し低めに */
+  .hero .swiper-slide img { object-position:center bottom; }  /* 念のためここでも指定 */
+
+  .hero-copy { padding:.9rem 1rem 1.1rem; }
+  .hero-copy h1 { font-size:clamp(1.25rem,6vw,1.65rem); }
+  .price { font-size:1.35rem; }
+}
   </style>
   <style>
     /* ===== Intro Logo Animation (Optimized Image Version) ===== */
@@ -268,8 +275,8 @@
     <h2>当教室の特徴</h2>
     <div class="items">
       <div class="feature">
-        <h3>1回60分でゆとり指導</h3>
-        <p>多くの個人教室は1回30分（例: 月4回で月謝約5,000円）ですが、当教室は<strong>60分</strong>。基礎・新しい曲・復習・練習ポイント整理までを一度で落ち着いて行える進行です。</p>
+        <h3>1回60分ゆとり指導</h3>
+        <p>当教室は<strong>60分授業</strong>(初心者除く)を取り入れており、基礎・新しい曲・復習・練習ポイント整理までを一度で落ち着いて行える進行です。</p>
       </div>
       <div class="feature">
         <h3>親子・兄弟の連弾にも対応</h3>
@@ -295,6 +302,11 @@
         <h3>コンサート用グランドピアノ</h3>
         <p>音楽ホールと同等のコンサート用グランドピアノ（象牙鍵盤・黒檀）を使用。本格的な響きに触れて、音色やタッチの違いを感じながら<strong>表現力</strong>が自然に身についていきます。</p>
       </div>
+      <div class="feature">
+        <h3>発表会前はとことんサポート</h3>
+        <p>発表会が近づいたら、<strong>レッスン時間や回数にこだわらず</strong>、仕上がりを最優先に指導します。自信をもってステージに立てるまで、弾き方や表現を一緒に整えていきます。</p>
+      </div>
+
     </div>
   </section>
 
@@ -351,6 +363,19 @@
         <ul style="font-size:.8rem; line-height:1.5; padding-left:1.1rem;">
           <li>障がいのあるお子さまへの指導経験</li>
           <li>受験・ソルフェージュ指導可</li>
+        <!-- Instagram Icon -->
+<div style="margin-top:20px; text-align:center;">
+  <a href="https://www.instagram.com/alice_piano0226/" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Instagramを見る"
+     style="display:inline-block;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+         alt="Instagram"
+         style="width:50px;height:50px;">
+  </a>
+</div>
+          
         </ul>
       </div>
     </div>
