@@ -1,0 +1,5 @@
+# /robots.txt（index.html と同じ階層に置く）
+User-agent: *
+Disallow:
+
+Sitemap: https://alice-0226.github.io/alice-piano/sitemap-2.xml
