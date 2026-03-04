@@ -287,24 +287,24 @@
   margin: 10px auto 0;
   padding: 10px 5vw 0;
 }
+/* お知らせ画像スライダー：見切れない版 */
 .promo-swiper{
   border-radius: 18px;
   overflow: hidden;
 }
-/* 枠の比率を固定（例：3.2:1。お好みで調整） */
+
 .promo-item{
-  aspect-ratio: 3.2 / 1;
   display:block;
+  border-radius: 18px;
   overflow:hidden;
-  border-radius:18px;
 }
 
-/* 枠いっぱいに表示（必要ならトリミング） */
+/* これが重要：height固定や cover をやめる */
 .promo-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: unset;
 }
 
 /* 矢印/ポチの色 */
@@ -396,14 +396,14 @@
 
       <!-- 画像2 -->
       <div class="swiper-slide">
-        <a href="#Contact" class="promo-item" aria-label="">
+        <a href="#contact" class="promo-item" aria-label="">
           <img src="./promo2.png" alt="" loading="lazy">
         </a>
       </div>
 
       <!-- 画像3 -->
       <div class="swiper-slide">
-        <a href="#Contact" class="promo-item" aria-label="">
+        <a href="#contact" class="promo-item" aria-label="">
           <img src="./promo3.png" alt="" loading="lazy">
         </a>
       </div>
