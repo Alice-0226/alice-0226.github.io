@@ -298,10 +298,9 @@
   overflow:hidden;
 }
 .promo-item img{
-  width:100%;
-  height: clamp(150px, 22vw, 260px); /* 高さ調整 */
-  object-fit: cover;
-  display:block;
+  width: 100%;
+  height: auto;        /* ←固定高さをやめる */
+  display: block;
 }
 
 /* 矢印/ポチの色 */
@@ -386,7 +385,7 @@
 
       <!-- 画像1 -->
       <div class="swiper-slide">
-        <a href="#contact" class="promo-item" aria-label="">
+        <a class="promo-item" href="https://www.instagram.com/alice_piano0226/" target="_blank" rel="noopener">
           <img src="./promo1.png" alt="" loading="lazy">
         </a>
       </div>
