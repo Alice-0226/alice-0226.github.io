@@ -120,14 +120,6 @@
     .hero-copy { position:absolute; inset:auto 50% 8% 50%; transform:translate(-50%,0); background:rgba(255,255,255,.25); backdrop-filter:blur(3px); padding:1rem 1.2rem 1.2rem; border-radius:16px; width:min(92%,600px); text-align:center; box-shadow:0 8px 24px -8px rgba(0,0,0,.25); }
 	.hero-copy h1 { margin:.2rem 0 .6rem; font-size:clamp(1.05rem,3.6vw,1.45rem); }
     .hero-badges { display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; margin-bottom:.65rem; }
-    .hero-copy p { margin:.45rem 0; font-size:.9rem; }
-    .hero-copy .hero-lead { font-weight:700; color:#222; }
-    .hero-quick { display:flex; justify-content:center; flex-wrap:wrap; gap:.45rem; margin:.65rem 0 .8rem; }
-    .hero-quick span { display:inline-block; background:rgba(255,255,255,.88); border:1px solid #ffd0df; color:#333; font-size:.75rem; font-weight:700; padding:.35em .7em; border-radius:999px; }
-    .contact-lead { text-align:center; max-width:760px; margin:0 auto 1.4rem; font-size:.92rem; }
-    .contact-box .note { font-size:.82rem; line-height:1.7; }
-    .faq-answer { line-height:1.75; }
-    .cta-row { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
 
     .cta-btn { display:inline-block; background:var(--accent); color:#fff; padding:.85rem 1.6rem; font-weight:700; border-radius:999px; letter-spacing:.05em; box-shadow:0 4px 12px -3px rgba(233,30,99,.55); transition:transform .2s var(--ease), box-shadow .25s; }
     .cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 18px -4px rgba(233,30,99,.55); text-decoration:none; }
@@ -158,11 +150,6 @@
     .voices { display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:34px; }
     .voice { background:#fff; border:1px solid #f7d5e3; border-radius:18px; padding:1rem 1rem 1.2rem; font-size:.82rem; position:relative; }
     .voice::before { content:'\"'; position:absolute; top:-18px; left:14px; font-size:62px; line-height:1; color:#ffd4e5; font-family:serif; }
-
-
-    .line-direct-link { margin-top:.85rem; font-size:.86rem; line-height:1.6; }
-    .line-direct-link a { display:inline-block; margin-top:.25rem; word-break:break-all; font-weight:700; color:var(--accent-dark); text-decoration:underline; }
-    .line-help { font-size:.78rem; color:#555; margin:.65rem 0 0; }
 
     /* Contact */
     .contact-wrap { display:grid; gap:34px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); align-items:start; }
@@ -197,10 +184,25 @@
 
   .hero-copy { padding:.9rem 1rem 1.1rem; }
   .hero-copy h1 { font-size:clamp(1.25rem,6vw,1.65rem); }
-  .hero-copy p { font-size:.82rem; }
-  .hero-quick span { font-size:.68rem; }
   .price { font-size:1.35rem; }
 }
+
+
+    /* Conversion-focused hero and intro */
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.28));z-index:1;pointer-events:none;}
+    .hero-copy{background:rgba(255,255,255,.88);backdrop-filter:blur(6px);}
+    .hero-copy p{margin:.45rem 0;font-size:.9rem;}
+    .hero-copy .hero-lead{font-weight:700;color:#333;}
+    .hero-copy .hero-cta-note{font-size:.78rem;color:#555;}
+    .intro-section{max-width:900px;text-align:center;}
+    .intro-section p{font-size:.95rem;line-height:1.9;color:#444;}
+    .quick-points{display:flex;justify-content:center;flex-wrap:wrap;gap:.55rem;margin:.85rem 0 1rem;}
+    .quick-points span{display:inline-block;background:#fff;border:1px solid #ffd1e0;color:#333;border-radius:999px;padding:.42rem .75rem;font-size:.8rem;font-weight:700;}
+    .line-url-box{margin:.9rem auto 0;padding:.8rem;border-radius:14px;background:#fff;border:1px dashed #e91e63;max-width:360px;word-break:break-all;}
+    .line-url-box a{font-weight:800;color:var(--accent-dark);text-decoration:underline;}
+    .contact-box .cta-btn{margin-top:.45rem;}
+    .section-cta{text-align:center;margin-top:1.4rem;}
+
   </style>
   <style>
     /* ===== Intro Logo Animation (Optimized Image Version) ===== */
@@ -341,8 +343,8 @@
   "@context":"https://schema.org",
   "@type":"MusicSchool",
   "name":"アリスピアノ教室",
-  "description":"石川県小松市の子ども向け・親子向け個別ピアノレッスン。無料体験レッスン60分〜120分受付中。入会金・維持費0円。",
   "url":"https://alice-0226.github.io/alice-piano/",
+  "description":"石川県小松市の子ども向け・親子向け個別ピアノ教室。無料体験レッスン60分〜120分受付中。入会金・維持費0円。指導歴50年弱の講師が一人ひとりに合わせて丁寧にサポートします。",
   "telephone":"090-6526-4543",
   "address":{
     "@type":"PostalAddress",
@@ -402,13 +404,12 @@
 
   <!-- Hero -->
   <section class="hero" id="top">
-    <div class="swiper hero-swiper">
+    <div class="swiper hero-swiper" aria-label="アリスピアノ教室のレッスン風景">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="e.jpg" alt="アリスピアノ教室のレッスン風景" loading="lazy"></div>
-        <div class="swiper-slide"><img src="aa.jpg" alt="小松市のピアノ教室 アリスピアノ教室" loading="lazy"></div>
+        <div class="swiper-slide"><img src="e.jpg" alt="小松市のアリスピアノ教室 レッスン風景" loading="lazy"></div>
+        <div class="swiper-slide"><img src="aa.jpg" alt="子ども向け・親子向けピアノレッスンの様子" loading="lazy"></div>
       </div>
     </div>
-
     <div class="hero-copy">
       <div class="hero-badges">
         <span class="tag">小松市</span>
@@ -416,16 +417,34 @@
         <span class="tag">個別レッスン</span>
       </div>
       <h1>小松市の子ども向け・親子向けピアノ教室</h1>
-      <p class="hero-lead">アリスピアノ教室では、1回60分の個別レッスンで、音符・リズムの基礎から好きな曲への挑戦まで丁寧にサポートします。</p>
-      <div class="hero-quick">
-        <span>無料体験60分〜120分</span>
+      <p class="hero-lead">無料体験レッスン60分〜120分受付中</p>
+      <p>1回60分の個別レッスンで、音符・リズムの基礎から好きな曲への挑戦まで丁寧にサポートします。</p>
+      <div class="quick-points">
         <span>入会金・維持費0円</span>
         <span>指導歴50年弱</span>
+        <span>完全防音スタジオ</span>
       </div>
       <a href="#contact" class="cta-btn">無料体験を申し込む</a>
+      <p class="hero-cta-note">LINE・電話・フォームからご相談いただけます</p>
     </div>
   </section>
 
+  <!-- Intro -->
+  <section id="intro" class="intro-section">
+    <h2>小松市でピアノ教室をお探しの方へ</h2>
+    <p>
+      アリスピアノ教室は、石川県小松市小寺町にある子ども向け・親子向けの個別ピアノ教室です。
+      幼児・小学生から大人の方まで、一人ひとりのペースや個性に合わせて丁寧にレッスンしています。
+      小松市周辺で、はじめてでも安心して通えるピアノ教室・音楽教室をお探しの方は、ぜひ一度ご相談ください。
+    </p>
+    <div class="quick-points">
+      <span>無料体験60分〜120分</span>
+      <span>入会金・維持費0円</span>
+      <span>兄妹割あり</span>
+      <span>コンサート用グランドピアノ</span>
+    </div>
+    <a href="#contact" class="cta-btn">LINEで無料体験を申し込む</a>
+  </section>
 
       <!-- お知らせ -->
 <section class="promo" aria-label="お知らせ・キャンペーン">
@@ -435,14 +454,14 @@
       <!-- 画像1 -->
       <div class="swiper-slide">
         <a class="promo-item" href="https://www.instagram.com/alice_piano0226/" target="_blank" rel="noopener">
-          <img src="./promo1.png" alt="" loading="lazy">
+          <img src="./promo1.png" alt="アリスピアノ教室のお知らせ・キャンペーン" loading="lazy">
         </a>
       </div>
 
       <!-- 画像3 -->
       <div class="swiper-slide">
-        <a href="#contact" class="promo-item" aria-label="">
-          <img src="./promo3.png" alt="" loading="lazy">
+        <a href="#contact" class="promo-item" aria-label="無料体験レッスンを申し込む">
+          <img src="./promo3.png" alt="無料体験レッスン60分〜120分受付中" loading="lazy">
         </a>
       </div>
 
@@ -459,27 +478,31 @@
 
   <!-- Features -->
   <section id="features">
-    <h2>当教室の特徴</h2>
+    <h2>アリスピアノ教室の特徴</h2>
+    <div class="narrow center" style="margin-bottom:28px;font-size:.92rem;line-height:1.8;">
+      小松市のアリスピアノ教室では、子ども向け・親子向けの個別ピアノレッスンを行っています。<br>
+      指導歴50年弱の講師が、一人ひとりに合わせて責任をもって上達をサポートします。
+    </div>
     <div class="items">
       <div class="feature">
-        <h3>指導歴50年弱の講師が丁寧にサポート</h3>
-        <p>長年の指導経験をもとに、音符やリズムの基礎から、好きな曲への挑戦まで一人ひとりに合わせて進めます。</p>
+        <h3>指導歴50年弱の講師がサポート</h3>
+        <p>長年の指導経験をもとに、つまずきやすいポイントを見極めながら、音符・リズムの基礎から丁寧にレッスンします。</p>
       </div>
       <div class="feature">
         <h3>一人ひとりに合わせた個別レッスン</h3>
-        <p>画一的な進行ではなく、お子さまの性格・理解度・好きな曲に合わせて、無理なく上達を目指します。</p>
+        <p>画一的な進め方ではなく、お子さまのペースや個性、好きな曲への気持ちを大切にしながら進めます。</p>
       </div>
       <div class="feature">
         <h3>1回60分でじっくり学べる</h3>
-        <p>基礎・新しい曲・復習・練習ポイント整理まで、短時間で慌てず落ち着いて取り組めます。<br><small>※初級の方は30〜40分になる場合があります。</small></p>
+        <p>短時間で慌てず、基礎・新しい曲・復習・練習ポイント整理まで、落ち着いて取り組めます。初級の方は30〜40分の場合があります。</p>
       </div>
       <div class="feature">
         <h3>完全防音の独立スタジオ</h3>
-        <p>周りを気にせず、思いきり音を出せる環境です。落ち着いた空間で集中してレッスンできます。</p>
+        <p>周りを気にせず、思いきり音を出せる環境です。はじめての方も落ち着いてレッスンを受けられます。</p>
       </div>
       <div class="feature">
         <h3>コンサート用グランドピアノ</h3>
-        <p>本格的な響きに触れながら、豊かな音で学べます。音色やタッチの違いを感じることで表現力も育ちます。</p>
+        <p>本格的な響きに触れながら、豊かな音で学べます。音色やタッチの違いを感じることで、表現力も育ちます。</p>
       </div>
       <div class="feature">
         <h3>発表会前もしっかりサポート</h3>
@@ -487,18 +510,19 @@
       </div>
       <div class="feature">
         <h3>入会金・維持費0円</h3>
-        <p>はじめやすく、続けやすい教室です。必要な費用は無料体験時に分かりやすくご案内します。</p>
+        <p>はじめてピアノを習う方でも始めやすく、続けやすい教室です。無料体験レッスンも受付中です。</p>
       </div>
       <div class="feature">
-        <h3>兄妹割あり</h3>
-        <p>ご兄妹・ご家族でも通いやすいように、兄妹割をご用意しています。親子向けレッスンもご相談ください。</p>
+        <h3>兄妹割・親子レッスンにも対応</h3>
+        <p>兄妹で通いやすい割引や、親子で音楽を楽しみたい方向けのレッスンにも対応しています。</p>
       </div>
     </div>
+    <div class="section-cta"><a href="#contact" class="cta-btn">無料体験を申し込む</a></div>
   </section>
 
   <!-- 60min Value Section (moved before Pricing) -->
   <section class="value-60" id="why60">
-  <h2 class="sec-title">60分レッスンのポイント　<font size=5>(初級の方は３０～４０分 教材により変動します)</font></h2>
+  <h2 class="sec-title">60分レッスンのポイント <span style="display:block;font-size:.85rem;font-family:'Noto Sans JP',sans-serif;font-weight:500;margin-top:.35rem;">初級の方は30〜40分の場合があります</span></h2>
   <div class="value-60__grid" style="display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:start;">
     <div class="value-60__card" style="background:#fff;border:1px solid #eee;padding:1.05rem 1.1rem 1.2rem;border-radius:18px;">
       <h3 style="margin:.2rem 0 .5rem;font-size:1.02rem;">時間あたりの負担が低い</h3>
@@ -521,19 +545,21 @@
   <!-- Pricing -->
   <section id="pricing">
     <h2>料金プラン</h2>
-    <div class="narrow center" style="margin-bottom:36px; font-size:.9rem;">教材・発表会費は別途。学年・進度によって段階的に調整します。<br>まずは無料体験後に最適な進め方をご提案。</div>
+    <div class="narrow center" style="margin-bottom:36px; font-size:.9rem;">教材・発表会費は別途。学年・進度によって段階的に調整します。<br>入会金・維持費0円。まずは無料体験後に最適な進め方をご提案します。</div>
     <div class="pricing-wrap">
       <div class="price-card highlight single-plan">
         <h3>🔹 レッスン (月４回)</h3>
         <div class="price">6,500円〜</div>
-        <div class="price-note">※レベルにより変動 / 1回60分 / 教材・発表会費は別途</div>
+        <div class="price-note">※レベルにより変動 / 1回60分</div>
         <ul class="benefits">
           <li>入会金・維持費0円</li>
           <li>月4回 6,500円〜</li>
           <li>1回60分の個別レッスン</li>
-          <li>無料体験60分〜120分受付中</li>
+          <li>無料体験レッスン60分〜120分受付中</li>
           <li>兄妹割あり</li>
-          <li>親子向けレッスンも相談可</li>
+          <li>親子レッスンにも対応</li>
+          <li>リズム・譜読み基礎ドリル</li>
+          <li>楽曲をレベルに応じて編曲</li>
         </ul>
         <a href="#contact" class="cta-btn" style="align-self:flex-start;">無料体験を申し込む</a>
       </div>
@@ -547,7 +573,7 @@
       <img src="kimi.jpg" alt="講師写真" loading="lazy">
       <div>
         <h3 style="margin-top:0; font-size:1.4rem;">小川 公子</h3>
-        <p style="font-size:.92rem;">幼少期よりピアノ一筋。音楽系高校・音大を経て、地域で50年弱にわたり指導。<strong>「まず音楽を好きになる」</strong>を大切に、耳・リズム・表現をバランス良く育てるレッスン設計を行っています。はじめての方から、好きな曲に挑戦したい方まで幅広く対応します。</p>
+        <p style="font-size:.92rem;">幼少期よりピアノ一筋。音楽系高校・音大を経て、地域で指導歴50年弱。<strong>「まず音楽を好きになる」</strong>を大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。はじめてのお子さまから、好きな曲に挑戦したい方まで幅広く対応します。</p>
         <ul style="font-size:.8rem; line-height:1.5; padding-left:1.1rem;">
           <li>障がいのあるお子さまへの指導経験</li>
           <li>受験・ソルフェージュ指導可</li>
@@ -575,32 +601,31 @@
   <section id="faq">
     <h2>よくある質問</h2>
     <div class="narrow">
-      <div class="faq-item"><button aria-expanded="false"><strong>Q1.</strong><span>まったくの初心者でも大丈夫？</span></button><div class="faq-answer">大丈夫です。音符読み・リズムの基礎から、お子さまのペースに合わせて丁寧に進めます。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q2.</strong><span>無料体験は何分ですか？</span></button><div class="faq-answer">無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認していただけます。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q1.</strong><span>まったくの初心者でも大丈夫？</span></button><div class="faq-answer">大丈夫です。音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q2.</strong><span>無料体験は何分ですか？</span></button><div class="faq-answer">無料体験レッスンは60分〜120分で受付しています。お子さまの様子やご相談内容に合わせて、教室の雰囲気をゆっくり体験していただけます。</div></div>
       <div class="faq-item"><button aria-expanded="false"><strong>Q3.</strong><span>入会金や維持費はかかりますか？</span></button><div class="faq-answer">入会金・維持費は0円です。月謝や教材費など、必要な費用は体験時に分かりやすくご案内します。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q4.</strong><span>体験後にしつこい勧誘はありますか？</span></button><div class="faq-answer">ありません。ご家庭でゆっくりご相談いただき、LINE・電話・フォームのいずれかでお返事ください。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q5.</strong><span>親子でレッスンを受けられますか？</span></button><div class="faq-answer">はい。子ども向けレッスンだけでなく、親子向けの個別レッスンにも対応しています。ご家族で音楽を楽しみたい方もご相談ください。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q6.</strong><span>大人でも通えますか？</span></button><div class="faq-answer">はい。幼児から大人の方まで対応しています。はじめての方や、好きな曲に挑戦したい方もお気軽にご相談ください。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q7.</strong><span>発表会前のサポートはありますか？</span></button><div class="faq-answer">はい。発表会前は、格好良く自信を持って弾けるようになるまで、予定時間を超えてでも丁寧にサポートします。</div></div>
-      <div class="faq-item"><button aria-expanded="false"><strong>Q8.</strong><span>練習が続くか不安です…</span></button><div class="faq-answer">1週間ごとに小さな目標を設定し、無理なく成功体験を積み重ねられるように進めます。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q4.</strong><span>親子でレッスンを受けられますか？</span></button><div class="faq-answer">はい、親子向けのレッスンにも対応しています。お子さまだけでなく、ご家族で音楽を楽しみたい方もご相談ください。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q5.</strong><span>大人でも通えますか？</span></button><div class="faq-answer">はい。幼児から大人の方まで対応しています。はじめての方もお気軽にご相談ください。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q6.</strong><span>発表会前のサポートはありますか？</span></button><div class="faq-answer">はい。発表会前は、格好良く自信を持って弾けるようになるまで、時間を延長してでも丁寧にサポートします。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q7.</strong><span>体験後にしつこい勧誘はありますか？</span></button><div class="faq-answer">ありません。ご家庭でゆっくりご相談いただき、LINE・電話・フォームでお返事ください。</div></div>
+      <div class="faq-item"><button aria-expanded="false"><strong>Q8.</strong><span>練習が続くか不安です…</span></button><div class="faq-answer">小さな目標を作り、成功体験を積み重ねながら進めます。好きな曲への挑戦も取り入れ、続けやすいレッスンを心がけています。</div></div>
     </div>
   </section>
 
   <!-- Contact -->
     <section id="contact">
-    <h2>お問い合わせ / 無料体験</h2>
-    <p class="contact-lead">無料体験レッスン60分〜120分受付中です。小松市周辺でピアノ教室をお探しの方は、LINE・お電話・フォームよりお気軽にご相談ください。</p>
+    <h2>お問い合わせ / 無料体験レッスン</h2>
     <div class="contact-wrap">
-      <!-- LINE BOX unchanged -->
+      <!-- LINE BOX -->
       <div class="contact-box center">
         <h3>LINEで無料体験を申し込む</h3>
         <img class="qr" src="https://qr-official.line.me/gs/M_816cipfh_BW.png?oat_content=qr" alt="アリスピアノ教室 LINE QRコード" loading="lazy">
-        <p class="note">「体験希望」と送っていただければ大丈夫です。<br>日程やご質問だけのご相談もお気軽にどうぞ。</p>
+        <p style="font-size:.85rem;line-height:1.7;">「体験希望」と送っていただければ大丈夫です。<br>日程のご相談や、ご質問だけでもお気軽にどうぞ。</p>
         <a class="cta-btn" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener" aria-label="LINEで無料体験を申し込む">LINEで無料体験を申し込む</a>
-        <p class="line-direct-link">スマホの方は、下記URLをタップして友だち追加できます。<br>
+        <div class="line-url-box">
+          <p style="font-size:.78rem;margin:.1rem 0 .35rem;">スマホの方はこちらをタップ</p>
           <a href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">https://lin.ee/s7dxB4M</a>
-        </p>
-        <p class="line-help">QRコードが読み取れない場合も、上のボタンまたはURLからLINEへ進めます。</p>
+        </div>
       </div>
   <div class="contact-box center">
     <h3>お電話はこちらより</h3>
@@ -617,9 +642,9 @@
           <input type="text" name="name"     required placeholder="お子さまのお名前" />
           <input type="text" name="age"      required placeholder="年齢 / 学年" />
           <input type="tel"  name="phone"    required placeholder="電話番号" inputmode="tel" />
-          <textarea name="message" rows="4" placeholder="ご希望日時・ご質問など"></textarea>
+          <textarea name="message" rows="4" placeholder="ご質問・体験希望日時など"></textarea>
 
-          <button type="submit">無料体験を申し込む</button>
+          <button type="submit">無料体験について送信する</button>
           <p class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</p>
         </form>
         <p style="font-size:.65rem; margin-top:.75rem;">※送信後2日以内に返信がない場合はLINEでご連絡ください。</p>
@@ -649,7 +674,7 @@
     <div class="cols">
       <div>
         <strong style="font-size:.8rem;">アリスピアノ教室</strong><br>
-        <span style="font-size:.7rem;">小松市の子ども＆親子向けピアノレッスン</span>
+        <span style="font-size:.7rem;">小松市の子ども向け・親子向け個別ピアノレッスン</span>
       </div>
       <div>
         <strong style="font-size:.75rem;">メニュー</strong><br>
