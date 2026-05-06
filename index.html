@@ -58,6 +58,7 @@
     .site-header{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(255,250,242,.84);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,217,191,.7)}
     .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:.75rem;font-weight:900;letter-spacing:.08em;font-family:'Noto Serif JP',serif}
+    .brand-logo{width:clamp(160px,20vw,230px);height:auto;display:block}
     .brand-mark{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#fff,#f0dfbd);border:1px solid var(--line);color:var(--gold);font-size:1.1rem}
     .nav-links{display:flex;gap:1.1rem;align-items:center;font-size:.88rem;font-weight:800;color:#453a30}
     .nav-links a{padding:.55rem .1rem;position:relative}
@@ -218,6 +219,7 @@
     @media (max-width:620px){
       .site-header .btn.primary{display:none}
       .brand{font-size:.9rem}
+      .brand-logo{width:150px}
       .hero-inner{padding-bottom:84px}
       .hero-buttons .btn{width:100%}
       .feature-grid,.steps{grid-template-columns:1fr}
@@ -244,7 +246,7 @@
 <body>
   <header class="site-header">
     <div class="wrap nav" id="nav">
-      <a class="brand" href="#top" aria-label="トップへ"><span class="brand-mark">♪</span><span>アリスピアノ教室</span></a>
+      <a class="brand" href="#top" aria-label="トップへ"><img class="brand-logo" src="logo2.png" alt="アリスピアノ教室 ロゴ"></a>
       <nav class="nav-links" aria-label="メインメニュー">
         <a href="#features">特徴</a>
         <a href="#exterior">外観</a>
@@ -353,7 +355,7 @@
     <section class="section features" id="features">
       <div class="wrap">
         <h2 class="section-title">アリスピアノ教室の特徴</h2>
-        <p class="section-lead">「料金が分かりやすい」「設備が整っている」「しっかり見てもらえる」ことを大切にしています。</p>
+        <p class="section-lead">「責任と愛情を持って指導する」「設備が整っている」「じっくり見てもらえる」ことを大切にしています。</p>
         <div class="feature-grid">
           <article class="feature-card"><div class="feature-no">01</div><h3>1回60分でじっくり</h3><p>短時間で慌てず、基礎・新しい曲・復習・練習ポイント整理まで落ち着いて取り組めます。初級の方は30〜40分の場合があります。</p></article>
           <article class="feature-card"><div class="feature-no">02</div><h3>入会金・維持費0円</h3><p>はじめやすく続けやすい料金設定。必要な費用は体験時に分かりやすくご案内します。</p></article>
