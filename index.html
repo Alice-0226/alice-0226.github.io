@@ -13,6 +13,16 @@
   <meta property="og:description" content="お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。楽曲アレンジ、完全防音スタジオ、コンサート用グランドピアノが特長。無料体験レッスン60分〜120分受付中。" />
   <meta property="og:url" content="https://alice-0226.github.io/alice-piano/" />
   <meta property="og:image" content="https://alice-0226.github.io/alice-piano/assets/exterior.jpg" />
+  <meta property="og:image:alt" content="アリスピアノ教室の鍵盤デザインの外観" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#fffaf2" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="小松市のピアノ教室｜アリスピアノ教室" />
+  <meta name="twitter:description" content="お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。" />
+  <meta name="twitter:image" content="https://alice-0226.github.io/alice-piano/assets/exterior.jpg" />
   <meta name="application-name" content="アリスピアノ教室" />
   <meta name="apple-mobile-web-app-title" content="アリスピアノ教室" />
   <meta name="google-site-verification" content="rNXl_3tUO48WMAiAgyHZyWtbVhsdP74plJNq8ChcnkY" />
@@ -53,6 +63,29 @@
     .btn:hover{transform:translateY(-2px);filter:brightness(1.02);text-decoration:none}
     .pill{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--line);background:rgba(255,255,255,.74);border-radius:999px;padding:.45rem .78rem;font-size:.82rem;font-weight:800;color:#544330}
     .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:20px auto;max-width:520px}
+
+
+    /* ===== Intro Logo Animation (logo2.png) ===== */
+    .intro-cover{
+      position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+      background:#fff;z-index:1200;overflow:hidden;animation:introCoverFade 1s ease 2.2s forwards;
+    }
+    .intro-logo-shell{position:relative;display:flex;flex-direction:column;align-items:center;gap:1rem;}
+    .intro-logo-img-wrap{width:min(520px,78vw);max-width:520px;aspect-ratio:2600/528;position:relative;}
+    .intro-logo-img-wrap::before{content:"";position:absolute;inset:0;background:#fff;z-index:2;animation:introRevealMask 1.35s cubic-bezier(.65,.02,.35,1) .15s forwards;}
+    .intro-logo-img{width:100%;height:100%;display:block;filter:blur(6px) brightness(.42);opacity:0;transform:scale(.94) translateY(12px);animation:introLogoIn 1s cubic-bezier(.55,.1,.3,1) .05s forwards;}
+    .intro-copy{font-family:'Noto Serif JP',serif;font-size:clamp(1rem,3.4vw,1.35rem);font-weight:700;letter-spacing:.08em;color:var(--gold);opacity:0;transform:translateY(10px);animation:introCopyFade .7s ease 1.05s forwards;}
+    @keyframes introLogoIn{0%{opacity:0;filter:blur(6px) brightness(.42);transform:scale(.94) translateY(12px);}60%{opacity:1;}100%{opacity:1;filter:blur(0) brightness(1);transform:scale(1) translateY(0);}}
+    @keyframes introRevealMask{0%{clip-path:inset(0 0 0 0 round 8px);}10%{clip-path:inset(0 0 0 0 round 8px);}100%{clip-path:inset(0 100% 0 0 round 8px);}}
+    @keyframes introCopyFade{0%{opacity:0;transform:translateY(10px);}100%{opacity:1;transform:translateY(0);}}
+    @keyframes introCoverFade{0%{opacity:1;}100%{opacity:0;visibility:hidden;}}
+    @media (prefers-reduced-motion:reduce){
+      .intro-cover{animation:none;opacity:0;visibility:hidden;}
+      .intro-logo-img{animation:none;opacity:1;filter:none;transform:none;}
+      .intro-logo-img-wrap::before{animation:none;clip-path:inset(0 100% 0 0);}
+      .intro-copy{animation:none;opacity:1;transform:none;}
+      .hero-slide{animation:none;opacity:1;transform:none;}
+    }
 
     /* Header */
     .site-header{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(255,250,242,.84);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,217,191,.7)}
@@ -246,17 +279,50 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"MusicSchool",
-    "name":"アリスピアノ教室",
-    "url":"https://alice-0226.github.io/alice-piano/",
-    "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。楽曲アレンジや発表会サポートにも対応。",
-    "telephone":"090-6526-4543",
-    "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
-    "sameAs":["https://www.instagram.com/alice_piano0226/"]
+    "@graph":[
+      {
+        "@type":["MusicSchool","LocalBusiness"],
+        "@id":"https://alice-0226.github.io/alice-piano/#school",
+        "name":"アリスピアノ教室",
+        "url":"https://alice-0226.github.io/alice-piano/",
+        "image":"https://alice-0226.github.io/alice-piano/assets/exterior.jpg",
+        "logo":"https://alice-0226.github.io/alice-piano/logo2.png",
+        "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。楽曲アレンジや発表会サポートにも対応しています。",
+        "telephone":"090-6526-4543",
+        "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
+        "areaServed":["石川県小松市","小松市周辺"],
+        "priceRange":"月4回 6,500円〜",
+        "sameAs":["https://www.instagram.com/alice_piano0226/"],
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"ピアノレッスン",
+          "itemListElement":[
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"子ども向けピアノレッスン","description":"音符・リズムの基礎から好きな曲への挑戦まで、一人ひとりに合わせて指導します。"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"大人の初心者・再開ピアノレッスン","description":"大人の初心者や昔習っていた方の再開、好きな曲への挑戦にも対応します。"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"無料体験レッスン","description":"60分〜120分で教室の雰囲気やレッスン内容を確認できます。"}}
+          ]
+        }
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://alice-0226.github.io/alice-piano/#website",
+        "url":"https://alice-0226.github.io/alice-piano/",
+        "name":"アリスピアノ教室"
+      }
+    ]
   }
   </script>
 </head>
 <body>
+  <!-- Intro Logo Animation -->
+  <div class="intro-cover" aria-hidden="true" id="introCover">
+    <div class="intro-logo-shell">
+      <div class="intro-logo-img-wrap">
+        <img src="logo2.png" width="2600" height="528" alt="アリスピアノ教室 ロゴ" class="intro-logo-img" decoding="async" />
+      </div>
+      <div class="intro-copy">Alice Piano School</div>
+    </div>
+  </div>
   <header class="site-header">
     <div class="wrap nav" id="nav">
       <a class="brand" href="#top" aria-label="トップへ"><img class="brand-logo" src="logo2.png" alt="アリスピアノ教室 ロゴ"></a>
@@ -445,7 +511,7 @@
         <h2 class="section-title">無料体験レッスンの流れ</h2>
         <p class="section-lead">無料体験は60分〜120分。はじめての方でも安心してお越しいただけるよう、分かりやすくご案内します。</p>
         <div class="steps">
-          <article class="step"><b>1</b><h3>LINEでお問い合わせ</h3><p>「体験希望」と送っていただければ大丈夫です。</p></article>
+          <article class="step"><b>1</b><h3>LINEなどでお問い合わせ</h3><p>「体験希望」と送っていただければ大丈夫です。</p></article>
           <article class="step"><b>2</b><h3>ご希望日時を相談</h3><p>ご都合の良い日時をうかがい、体験日を決めます。</p></article>
           <article class="step"><b>3</b><h3>無料体験</h3><p>レッスンを体験しながら教室の雰囲気も確認できます。</p></article>
           <article class="step"><b>4</b><h3>教室を見学</h3><p>完全防音スタジオやピアノの響きを体感できます。</p></article>
@@ -586,6 +652,11 @@
       nav.classList.remove('open');
       hamb?.setAttribute('aria-expanded','false');
     }));
+    window.addEventListener('load', () => {
+      const cover = document.getElementById('introCover');
+      if(!cover) return;
+      setTimeout(() => { cover.style.display = 'none'; }, 3200);
+    });
   </script>
 </body>
 </html>
