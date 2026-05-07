@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>小松市のピアノ教室｜アリスピアノ教室｜子どもも大人も通える個別レッスン</title>
-  <meta name="description" content="石川県小松市のアリスピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応する個別ピアノ教室です。無料体験レッスン60分〜120分受付中。入会金・維持費0円、1回60分レッスン、完全防音スタジオ、コンサート用グランドピアノで丁寧にサポートします。" />
+  <meta name="description" content="石川県小松市のアリスピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応する個別ピアノ教室です。無料体験レッスン60分〜120分受付中。入会金・維持費0円、1回60分レッスン、完全防音スタジオ、象牙鍵盤・黒檀を備えたコンサート用グランドピアノ、楽曲アレンジ、発表会サポートまで丁寧に対応します。" />
   <link rel="canonical" href="https://alice-0226.github.io/alice-piano/" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="アリスピアノ教室" />
   <meta property="og:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-  <meta property="og:description" content="お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。鍵盤デザインの外観と完全防音スタジオが目印。無料体験レッスン60分〜120分受付中。" />
+  <meta property="og:description" content="お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。楽曲アレンジ、完全防音スタジオ、コンサート用グランドピアノが特長。無料体験レッスン60分〜120分受付中。" />
   <meta property="og:url" content="https://alice-0226.github.io/alice-piano/" />
   <meta property="og:image" content="https://alice-0226.github.io/alice-piano/assets/exterior.jpg" />
   <meta name="application-name" content="アリスピアノ教室" />
@@ -125,6 +125,18 @@
     .feature-card h3{font-family:'Noto Serif JP',serif;font-size:1.18rem;margin:0 0 .55rem;line-height:1.45}
     .feature-card p{margin:0;color:var(--sub);font-size:.92rem}
 
+
+
+    /* Difference / Strengths */
+    .difference{background:linear-gradient(180deg,#fffaf2,#fff)}
+    .difference-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+    .difference-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(20px,3vw,28px);box-shadow:0 14px 38px rgba(50,32,14,.08);position:relative;overflow:hidden}
+    .difference-card::before{content:"";position:absolute;right:-28px;top:-28px;width:110px;height:110px;border-radius:50%;background:rgba(217,188,122,.16)}
+    .difference-card .diff-label{display:inline-flex;align-items:center;gap:.35em;color:var(--gold);font-family:'Noto Serif JP',serif;font-weight:800;font-size:.86rem;margin-bottom:.65rem}
+    .difference-card h3{font-family:'Noto Serif JP',serif;font-size:clamp(1.18rem,2.5vw,1.55rem);line-height:1.45;margin:0 0 .65rem;position:relative}
+    .difference-card p{margin:0;color:var(--sub);font-size:.94rem;position:relative}
+    .difference-note{max-width:820px;margin:28px auto 0;padding:1rem 1.2rem;border:1px dashed var(--gold2);border-radius:20px;background:rgba(255,255,255,.72);color:var(--sub);font-size:.92rem;text-align:center}
+
     /* Studio gallery */
     .studio{background:#fff}
     .gallery{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:260px 260px;gap:18px}
@@ -208,6 +220,7 @@
       .hero-grid,.two-col,.audience-grid,.gallery,.teacher-card,.contact-grid,.access-grid,.footer-grid,.exterior-card{grid-template-columns:1fr}
       .hero-panel{display:none}
       .feature-grid{grid-template-columns:1fr 1fr}
+      .difference-grid{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr 1fr}
       .gallery{grid-template-rows:auto}
       .gallery figure:first-child{grid-row:auto}
@@ -236,7 +249,7 @@
     "@type":"MusicSchool",
     "name":"アリスピアノ教室",
     "url":"https://alice-0226.github.io/alice-piano/",
-    "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。",
+    "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。楽曲アレンジや発表会サポートにも対応。",
     "telephone":"090-6526-4543",
     "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
     "sameAs":["https://www.instagram.com/alice_piano0226/"]
@@ -251,6 +264,7 @@
         <a href="#features">特徴</a>
         <a href="#exterior">外観</a>
         <a href="#studio">教室</a>
+        <a href="#difference">違い</a>
         <a href="#trial">無料体験</a>
         <a href="#pricing">料金</a>
         <a href="#teacher">講師</a>
@@ -278,6 +292,7 @@
               <span class="pill">入会金・維持費0円</span>
               <span class="pill">完全防音スタジオ</span>
               <span class="pill">グランドピアノ</span>
+              <span class="pill">楽曲アレンジ対応</span>
             </div>
             <div class="hero-buttons">
               <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
@@ -359,26 +374,67 @@
 
     <section class="section features" id="features">
       <div class="wrap">
-        <h2 class="section-title">アリスピアノ教室の特徴</h2>
-        <p class="section-lead">「責任と愛情を持って指導する」「設備が整っている」「じっくり見てもらえる」ことを大切にしています。</p>
+        <h2 class="section-title">通いやすさとレッスン環境</h2>
+        <p class="section-lead">まずは、安心して通い始められること。料金・時間・環境の面から、無理なく続けやすい教室づくりを大切にしています。</p>
         <div class="feature-grid">
           <article class="feature-card"><div class="feature-no">01</div><h3>1回60分でじっくり</h3><p>短時間で慌てず、基礎・新しい曲・復習・練習ポイント整理まで落ち着いて取り組めます。初級の方は30〜40分の場合があります。</p></article>
           <article class="feature-card"><div class="feature-no">02</div><h3>入会金・維持費0円</h3><p>はじめやすく続けやすい料金設定。必要な費用は体験時に分かりやすくご案内します。</p></article>
-          <article class="feature-card"><div class="feature-no">03</div><h3>完全防音の独立スタジオ</h3><p>周りを気にせず、思いきり音を出せる環境。落ち着いた空間で集中できます。</p></article>
-          <article class="feature-card"><div class="feature-no">04</div><h3>本格的なグランドピアノ</h3><p>コンサート用グランドピアノの響きに触れながら、音色やタッチの違いを学べます。</p></article>
-          <article class="feature-card"><div class="feature-no">05</div><h3>発表会前も丁寧にサポート</h3><p>本番で自信を持って弾けるようになるまで、予定時間を超えてでも寄り添います。</p></article>
-          <article class="feature-card"><div class="feature-no">06</div><h3>兄妹割・親子レッスン</h3><p>兄妹で通いやすい割引や、親子で音楽を楽しみたい方向けのレッスンにも対応します。</p></article>
+          <article class="feature-card"><div class="feature-no">03</div><h3>完全防音の独立スタジオ</h3><p>周りを気にせず、思いきり音を出せる環境。落ち着いた空間で集中してレッスンできます。</p></article>
+          <article class="feature-card"><div class="feature-no">04</div><h3>兄妹割・親子レッスン</h3><p>兄妹で通いやすい割引や、親子で音楽を楽しみたい方向けのレッスンにも対応します。</p></article>
+          <article class="feature-card"><div class="feature-no">05</div><h3>子どもも大人も対応</h3><p>お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで、それぞれの目的に合わせてご相談いただけます。</p></article>
+          <article class="feature-card"><div class="feature-no">06</div><h3>無料体験60分〜120分</h3><p>教室の雰囲気やレッスン内容を、ゆっくり確認していただけます。無理な勧誘はありません。</p></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section difference" id="difference">
+      <div class="wrap">
+        <span class="eyebrow" style="display:block;text-align:center">OUR STRENGTHS</span>
+        <h2 class="section-title">アリスピアノ教室ならではのこだわり</h2>
+        <p class="section-lead">設備や料金だけでなく、「どう弾けるようにするか」まで丁寧に考えること。弾きやすく、格好良く、音楽を好きになれるレッスンを大切にしています。</p>
+        <div class="difference-grid">
+          <article class="difference-card">
+            <span class="diff-label">01 / ARRANGE</span>
+            <h3>一人ひとりに合わせた楽曲アレンジ</h3>
+            <p>講師自ら、弾きたい曲をその方の個性やレベルに合わせて、弾きやすく、かつ格好良く聴こえるようにアレンジします。無理なく挑戦できる形に整えることで、「弾けた！」という達成感につなげます。</p>
+          </article>
+          <article class="difference-card">
+            <span class="diff-label">02 / GRAND PIANO</span>
+            <h3>象牙鍵盤・黒檀のコンサート用グランドピアノ</h3>
+            <p>レッスンでは、コンサート用グランドピアノを使用。本格的な響きやタッチに触れながら、音色の違いや表現の楽しさを感じていただけます。</p>
+          </article>
+          <article class="difference-card">
+            <span class="diff-label">03 / LESSON</span>
+            <h3>真摯に、情熱と愛情と責任を持って向き合う指導</h3>
+            <p>生徒さん一人ひとりの性格や理解度を見ながら、責任をもって上達につながるよう丁寧に向き合います。基礎を大切にしながら、少しずつ自信を育てます。</p>
+          </article>
+          <article class="difference-card">
+            <span class="diff-label">04 / SOUND</span>
+            <h3>「1回のレッスンで音が変わった」と言われることも</h3>
+            <p>保護者の方などから、レッスン後に「音が変わった」とご評価いただくこともあります。姿勢・タッチ・聴き方・表現の意識まで、細かな変化を大切にしています。</p>
+          </article>
+          <article class="difference-card">
+            <span class="diff-label">05 / STAGE</span>
+            <h3>発表会で複数回の出演機会</h3>
+            <p>発表会では一人1回だけでなく、最低でも2回は出演の機会を設けています。余裕のある生徒さんは何曲も挑戦でき、人前で弾く経験を重ねながら大きなステップアップを目指せます。</p>
+          </article>
+          <article class="difference-card">
+            <span class="diff-label">06 / SUPPORT</span>
+            <h3>発表会前も、最後までしっかりサポート</h3>
+            <p>本番で格好良く、自信を持って弾けるようになるまで、発表会前は通常のレッスン時間にとらわれず丁寧に寄り添います。不安なまま本番を迎えないようサポートします。</p>
+          </article>
+        </div>
+        <p class="difference-note">※上達にはご本人の練習やペースも関係しますが、当教室では「できるようになるまで寄り添う」姿勢を大切にしています。</p>
       </div>
     </section>
 
     <section class="section studio" id="studio">
       <div class="wrap">
         <h2 class="section-title">教室の雰囲気</h2>
-        <p class="section-lead">白を基調とした明るい完全防音スタジオ。グランドピアノとアップライトピアノで、のびのびと音を出せます。</p>
+        <p class="section-lead">白を基調とした明るい完全防音スタジオ。コンサート用グランドピアノとアップライトピアノで、のびのびと音を出せます。</p>
         <div class="gallery">
           <figure><img src="assets/classroom-wide.jpg" alt="完全防音スタジオの室内" loading="lazy"><figcaption class="caption">完全防音の独立スタジオ</figcaption></figure>
-          <figure><img src="assets/grand-piano-front.jpg" alt="コンサート用グランドピアノ" loading="lazy"><figcaption class="caption">本格的なグランドピアノ</figcaption></figure>
+          <figure><img src="assets/grand-piano-front.jpg" alt="コンサート用グランドピアノ" loading="lazy"><figcaption class="caption">本格的なコンサート用グランドピアノ</figcaption></figure>
           <figure><img src="assets/music-score.jpg" alt="楽譜のイメージ" loading="lazy"><figcaption class="caption">基礎から好きな曲まで</figcaption></figure>
         </div>
       </div>
@@ -411,6 +467,7 @@
               <li>入会金・維持費0円</li>
               <li>無料体験60分〜120分受付中</li>
               <li>兄妹割あり</li>
+              <li>レベルに合わせた楽曲アレンジにも対応</li>
             </ul>
           </div>
           <div class="price-num">6,500円〜</div>
@@ -444,6 +501,8 @@
           <details><summary>Q. 大人でも通えますか？</summary><p>はい。大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンもご相談ください。</p></details>
           <details><summary>Q. 発表会前のサポートはありますか？</summary><p>はい。本番で格好良く自信を持って弾けるようになるまで、予定時間を超えてでも丁寧にサポートします。</p></details>
           <details><summary>Q. 体験後にしつこい勧誘はありますか？</summary><p>ありません。ご家庭でゆっくりご相談いただき、LINE・電話・フォームのいずれかでお返事ください。</p></details>
+          <details><summary>Q. 好きな曲を弾きたい場合も対応できますか？</summary><p>はい。生徒さんの個性やレベルに合わせて、講師が弾きやすく格好良く聴こえる形にアレンジして進めることもできます。</p></details>
+          <details><summary>Q. 発表会では何回くらい演奏できますか？</summary><p>当教室では、発表会で最低でも2回は出演の機会を設けています。余裕のある方は、何曲も挑戦して大きなステップアップを目指せます。</p></details>
         </div>
       </div>
     </section>
