@@ -130,6 +130,64 @@
     .floating-cta{position:fixed;left:0;right:0;bottom:0;z-index:75;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,242,.9);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
     .floating-cta .btn{width:100%;padding:.85rem 1rem}
 
+
+    /* Trial notice banner */
+    .trial-notice{
+      background:linear-gradient(135deg,#fff8ea 0%,#ffffff 52%,#f6ead0 100%);
+      border-block:1px solid rgba(217,188,122,.72);
+      position:relative;
+      z-index:3;
+      box-shadow:0 12px 32px rgba(55,38,18,.08);
+    }
+    .trial-notice-inner{
+      max-width:var(--max);
+      margin:auto;
+      padding:clamp(18px,3vw,26px) clamp(18px,4vw,42px);
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:clamp(16px,3vw,28px);
+      align-items:center;
+    }
+    .trial-notice-label{
+      display:inline-flex;
+      align-items:center;
+      gap:.45em;
+      border:1px solid rgba(177,135,63,.32);
+      background:rgba(255,255,255,.78);
+      color:#8c5f20;
+      border-radius:999px;
+      padding:.34rem .72rem;
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      margin-bottom:.55rem;
+    }
+    .trial-notice h2{
+      font-family:'Noto Serif JP',serif;
+      font-size:clamp(1.35rem,3.3vw,2.2rem);
+      line-height:1.35;
+      margin:0 0 .35rem;
+      letter-spacing:.04em;
+      color:#2b2119;
+    }
+    .trial-notice p{
+      margin:0;
+      color:var(--sub);
+      font-weight:700;
+      font-size:clamp(.92rem,2vw,1.02rem);
+    }
+    .trial-notice-actions{
+      display:flex;
+      gap:.7rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    @media (max-width:780px){
+      .trial-notice-inner{grid-template-columns:1fr}
+      .trial-notice-actions{justify-content:flex-start}
+      .trial-notice-actions .btn{width:100%}
+    }
+
     /* Intro cards */
     .intro{background:linear-gradient(180deg,#fffaf2,#fff)}
     .two-col{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,58px);align-items:center}
@@ -382,6 +440,22 @@
         </div>
       </div>
     </section>
+
+
+    <section class="trial-notice" aria-label="無料体験レッスン受付中のお知らせ">
+      <div class="trial-notice-inner">
+        <div>
+          <div class="trial-notice-label">FREE TRIAL LESSON</div>
+          <h2>現在、無料体験レッスン受付中です</h2>
+          <p>小松市・粟津駅周辺・能美市方面からもご相談いただけます。LINEで「体験希望」と送るだけで大丈夫です。</p>
+        </div>
+        <div class="trial-notice-actions">
+          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで体験希望を送る</a>
+          <a class="btn secondary" href="trial-lesson.html">無料体験の流れを見る</a>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section intro">
       <div class="wrap two-col">
