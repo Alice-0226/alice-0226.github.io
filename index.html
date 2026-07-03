@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>小松市のピアノ教室｜アリスピアノ教室｜子ども・大人の個別レッスン</title>
-  <meta name="description" content="石川県小松市のアリスピアノ教室。子どものはじめてのピアノから、大人の初心者・再開レッスンまで対応する個別ピアノ教室です。能美市・粟津駅周辺・金沢方面からも通いやすく、無料体験レッスン60分〜120分受付中。完全防音スタジオ、コンサート用グランドピアノで丁寧にサポートします。" />
+  <meta name="description" content="石川県小松市小寺町のアリスピアノ教室。子どものはじめてのピアノ、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備まで対応。無料体験レッスン60分〜120分受付中。" />
   <link rel="canonical" href="https://alice-0226.github.io/" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="アリスピアノ教室" />
   <meta property="og:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-  <meta property="og:description" content="小松市の個別ピアノ教室。子どものはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験60分〜120分受付中。" />
+  <meta property="og:description" content="小松市の個別ピアノ教室。子ども・大人のピアノレッスンから、音大受験・保育志望の準備まで対応。無料体験60分〜120分受付中。" />
   <meta property="og:url" content="https://alice-0226.github.io/" />
   <meta property="og:image" content="https://alice-0226.github.io/assets/exterior.jpg" />
   <meta property="og:image:alt" content="アリスピアノ教室の鍵盤デザインの外観" />
@@ -18,12 +18,12 @@
   <meta property="og:image:height" content="630" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="theme-color" content="#fffaf2" />
-  <meta name="keywords" content="小松市 ピアノ教室, 小松市 ピアノレッスン, 小松市 子ども ピアノ教室, 小松市 大人 ピアノ教室, 能美市 ピアノ教室, 能美市 ピアノレッスン, 粟津駅 ピアノ教室, 粟津 ピアノ教室, 加賀方面 ピアノ教室, 金沢方面 ピアノ教室, 石川県南部 ピアノ教室, アリスピアノ教室" />
+  <meta name="keywords" content="小松市 ピアノ教室, 小松市 ピアノレッスン, 小松市 子ども ピアノ教室, 小松市 大人 ピアノ教室, 小松市 音大受験 ピアノ, 小松市 保育士 ピアノ, 保育志望 ピアノ 小松市, 能美市 ピアノ教室, 能美市 ピアノレッスン, 粟津駅 ピアノ教室, 粟津 ピアノ教室, 加賀方面 ピアノ教室, アリスピアノ教室" />
   <link rel="preload" as="image" href="assets/exterior.jpg" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-  <meta name="twitter:description" content="小松市の個別ピアノ教室。能美市・粟津駅周辺・金沢方面からもご相談いただけます。無料体験60分〜120分受付中。" />
+  <meta name="twitter:description" content="小松市小寺町の個別ピアノ教室。子ども・大人のレッスン、音大受験・保育志望の準備にも対応。無料体験60分〜120分受付中。" />
   <meta name="twitter:image" content="https://alice-0226.github.io/assets/exterior.jpg" />
   <meta name="application-name" content="アリスピアノ教室" />
   <meta name="apple-mobile-web-app-title" content="アリスピアノ教室" />
@@ -65,6 +65,37 @@
     .btn:hover{transform:translateY(-2px);filter:brightness(1.02);text-decoration:none}
     .pill{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--line);background:rgba(255,255,255,.74);border-radius:999px;padding:.45rem .78rem;font-size:.82rem;font-weight:800;color:#544330}
     .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:20px auto;max-width:520px}
+
+    /* Compact conversion sections */
+    .quick-start{background:linear-gradient(180deg,#fffaf2,#fff)}
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+    .quick-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:1.1rem 1rem;box-shadow:0 10px 26px rgba(50,32,14,.06);min-height:150px}
+    .quick-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#fff8ea,#f1dfba);color:var(--gold);font-family:'Noto Serif JP',serif;font-weight:900;margin-bottom:.72rem}
+    .quick-card h3{font-family:'Noto Serif JP',serif;margin:0 0 .4rem;font-size:1.06rem;line-height:1.45}
+    .quick-card p{margin:0;color:var(--sub);font-size:.88rem;line-height:1.65}
+    .recommend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+    .recommend-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(20px,3vw,26px);box-shadow:0 12px 32px rgba(50,32,14,.07)}
+    .recommend-card .tag{display:inline-flex;border-radius:999px;background:#fff6e6;border:1px solid rgba(177,135,63,.22);color:#8c5f20;padding:.25rem .7rem;font-weight:900;font-size:.78rem;margin-bottom:.8rem}
+    .recommend-card h3{font-family:'Noto Serif JP',serif;font-size:1.25rem;margin:0 0 .55rem;line-height:1.45}
+    .recommend-card p{margin:0;color:var(--sub);font-size:.92rem}
+    .availability{background:linear-gradient(135deg,#fff8ea,#fff)}
+    .availability-card{max-width:900px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:30px;padding:clamp(22px,4vw,34px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+    .availability-card h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.55rem,3.6vw,2.35rem);margin:0 0 .55rem;line-height:1.35}
+    .availability-card p{margin:0;color:var(--sub);font-weight:700}
+    .availability-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+    .availability-pills span{display:inline-flex;border-radius:999px;border:1px solid var(--line);background:#fffaf2;padding:.42rem .78rem;font-size:.85rem;font-weight:900;color:#4a3d32}
+    .availability-pills .busy{background:#fff1e9;border-color:#e6c2b0;color:#94523c}
+    .review-section{background:#fff}
+    .review-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:32px;align-items:stretch}
+    .review-card{background:linear-gradient(180deg,#fff,#fffaf2);border:1px solid var(--line);border-radius:26px;padding:clamp(20px,3vw,28px);box-shadow:0 12px 34px rgba(50,32,14,.07)}
+    .review-stars{color:var(--gold);font-weight:900;letter-spacing:.08em;margin-bottom:.65rem}
+    .review-card blockquote{margin:0;color:#3a3028;font-weight:700;line-height:1.8}
+    .review-card blockquote p{margin:.55rem 0}
+    .review-card cite{display:block;margin-top:1rem;color:var(--muted);font-style:normal;font-size:.86rem;font-weight:800}
+    .review-note{max-width:760px;margin:22px auto 0;text-align:center;color:var(--sub);font-size:.9rem}
+    .compact-link-row{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:24px}
+    .micro-note{font-size:.78rem!important;color:var(--muted)!important;margin-top:.7rem!important}
+
 
 
     /* ===== Intro Logo Animation (logo2.png) ===== */
@@ -316,6 +347,9 @@
       .nav.open .nav-links{display:flex;position:absolute;left:16px;right:16px;top:76px;background:#fffaf2;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:1rem;flex-direction:column;align-items:flex-start}
       .nav-actions .btn.secondary{display:none}
       .hero-grid,.two-col,.audience-grid,.gallery,.teacher-card,.contact-grid,.access-grid,.footer-grid,.exterior-card{grid-template-columns:1fr}
+      .quick-grid{grid-template-columns:1fr 1fr}
+      .recommend-grid,.review-grid,.availability-card{grid-template-columns:1fr}
+      .availability-card{text-align:left}
       .hero-panel{display:none}
       .feature-grid{grid-template-columns:1fr 1fr}
       .difference-grid{grid-template-columns:1fr}
@@ -335,7 +369,7 @@
       .brand-logo{width:150px}
       .hero-inner{padding-bottom:84px}
       .hero-buttons .btn{width:100%}
-      .feature-grid,.steps{grid-template-columns:1fr}
+      .feature-grid,.steps,.quick-grid,.recommend-grid,.review-grid{grid-template-columns:1fr}
       .aud-card{min-height:280px}
       .gallery figure{height:250px}
       .contact-grid{gap:14px}
@@ -354,7 +388,7 @@
         "url":"https://alice-0226.github.io/",
         "image":"https://alice-0226.github.io/assets/exterior.jpg",
         "logo":"https://alice-0226.github.io/logo2.png",
-        "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応。無料体験レッスン60分〜120分受付中。楽曲アレンジや発表会サポートにも対応しています。",
+        "description":"石川県小松市の個別ピアノ教室。お子さまのはじめてのピアノから、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備まで対応。無料体験レッスン60分〜120分受付中。",
         "telephone":"090-6526-4543",
         "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
         "areaServed":["石川県小松市","石川県能美市","粟津駅周辺","石川県加賀市","金沢方面","石川県南部"],
@@ -366,6 +400,7 @@
           "itemListElement":[
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"子ども向けピアノレッスン","description":"音符・リズムの基礎から好きな曲への挑戦まで、一人ひとりに合わせて指導します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"大人の初心者・再開ピアノレッスン","description":"大人の初心者や昔習っていた方の再開、好きな曲への挑戦にも対応します。"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"音大受験・保育志望のピアノレッスン","description":"音大受験や保育士・幼児教育を目指す方のピアノ準備にも対応します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"無料体験レッスン","description":"60分〜120分で教室の雰囲気やレッスン内容を確認できます。"}}
           ]
         }
@@ -381,7 +416,7 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンも相談できます。"}},{"@type":"Question","name":"発表会前のサポートはありますか？","acceptedAnswer":{"@type":"Answer","text":"月謝はそのままで、本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。"}},{"@type":"Question","name":"小松市外からでも通えますか？","acceptedAnswer":{"@type":"Answer","text":"小松市内のほか、能美市・粟津駅周辺・加賀方面・金沢方面から通えるピアノ教室をお探しの方にもご相談いただいています。駐車場・駐輪場もあります。"}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。"}},{"@type":"Question","name":"保護者がピアノ未経験でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"保護者の方がピアノ未経験でも大丈夫です。ご家庭の事情や練習環境もふまえて、無理なく続けられる方法を一緒に考えます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"水曜日や土曜日でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンも相談できます。"}},{"@type":"Question","name":"音大受験や保育志望のピアノにも対応していますか？","acceptedAnswer":{"@type":"Answer","text":"音大受験を考えている方や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。現在のレベルや目標に合わせてご相談いただけます。"}},{"@type":"Question","name":"発表会前のサポートはありますか？","acceptedAnswer":{"@type":"Answer","text":"本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。"}},{"@type":"Question","name":"Etudeと同じ教室ですか？","acceptedAnswer":{"@type":"Answer","text":"同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。レッスンのお問い合わせはアリスピアノ教室へお願いいたします。"}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"アリスピアノ教室","item":"https://alice-0226.github.io/"}]}
@@ -401,12 +436,12 @@
     <div class="wrap nav" id="nav">
       <a class="brand" href="#top" aria-label="トップへ"><img class="brand-logo" src="logo2.png" alt="アリスピアノ教室 ロゴ"></a>
       <nav class="nav-links" aria-label="メインメニュー">
-        <a href="#komatsu-piano">小松市でお探しの方へ</a>
-        <a href="#difference">こだわり</a>
-        <a href="#studio">教室</a>
+        <a href="#komatsu-piano">対象</a>
+        <a href="#features">特徴</a>
+        <a href="#availability">募集状況</a>
+        <a href="#reviews">口コミ</a>
         <a href="#trial">無料体験</a>
         <a href="#pricing">料金</a>
-        <a href="#area">通える地域</a>
         <a href="#access">アクセス</a>
       </nav>
       <div class="nav-actions">
@@ -424,12 +459,13 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="hero-kicker">KOMATSU CITY / ALICE PIANO SCHOOL</p>
-            <h1><span>子どもも大人も歓迎</span>小松市で、やさしく丁寧に学べるピアノ教室</h1>
-            <p class="hero-lead">1回60～120分の個別レッスンで、音符・リズムの基礎から、好きな曲への挑戦まで一人ひとりのペースに合わせてサポートします。</p>
+            <h1><span>子ども・大人・音大受験・保育志望もご相談ください</span>小松市で、やさしく丁寧に学べるピアノ教室</h1>
+            <p class="hero-lead">1回60～120分の個別レッスンで、音符・リズムの基礎から、好きな曲への挑戦、音大受験や保育士・幼児教育を目指す方の準備までサポートします。</p>
             <div class="hero-badges">
               <span class="pill">無料体験60分〜120分</span>
               <span class="pill">完全防音スタジオ</span>
               <span class="pill">グランドピアノ・楽曲アレンジ</span>
+              <span class="pill">音大受験・保育志望にも対応</span>
             </div>
             <div class="hero-buttons">
               <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
@@ -447,64 +483,85 @@
         <div>
           <div class="trial-notice-label">FREE TRIAL LESSON</div>
           <h2>現在、無料体験レッスン受付中です</h2>
-          <p>小松市・粟津駅周辺・能美市方面からもご相談いただけます。LINEで「体験希望」と送るだけで大丈夫です。</p>
+          <p>小松市・粟津駅周辺・能美市方面からもご相談いただけます。教室の雰囲気や料金を、体験時にゆっくり確認できます。</p>
         </div>
         <div class="trial-notice-actions">
-          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで体験希望を送る</a>
+          <a class="btn primary" href="#trial">無料体験の流れを見る</a>
+          <a class="btn secondary" href="#availability">募集状況を見る</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section quick-start" id="quick-start">
+      <div class="wrap">
+        <span class="eyebrow" style="display:block;text-align:center">FIRST CHECK</span>
+        <h2 class="section-title">はじめての方へ</h2>
+        <p class="section-lead">お子さまのはじめてのピアノ、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備にも対応しています。体験では、教室の雰囲気や料金をゆっくり確認できます。</p>
+        <div class="quick-grid">
+          <article class="quick-card">
+            <div class="quick-icon">1</div>
+            <h3>幅広い目的に対応</h3>
+            <p>子ども・大人のレッスンから、音大受験や保育志望の準備までご相談いただけます。</p>
+          </article>
+          <article class="quick-card">
+            <div class="quick-icon">2</div>
+            <h3>無料体験60〜120分</h3>
+            <p>教室の雰囲気・先生との相性・料金をゆっくり確認できます。</p>
+          </article>
+          <article class="quick-card">
+            <div class="quick-icon">3</div>
+            <h3>完全防音スタジオ</h3>
+            <p>コンサート用グランドピアノで、のびのび音を出せる環境です。</p>
+          </article>
+          <article class="quick-card">
+            <div class="quick-icon">4</div>
+            <h3>水曜・土曜も相談可</h3>
+            <p>混み合う曜日ですが、時間帯によって調整できる場合があります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="section service-area" id="komatsu-piano">
+      <div class="wrap">
+        <span class="eyebrow" style="display:block;text-align:center">FOR YOU</span>
+        <h2 class="section-title">こんな方におすすめです</h2>
+        <p class="section-lead">小松市小寺町の個別ピアノ教室です。小松市内はもちろん、粟津駅周辺・能美市方面からもご相談いただけます。</p>
+        <div class="recommend-grid">
+          <article class="recommend-card">
+            <span class="tag">KIDS</span>
+            <h3>子どものはじめてのピアノ</h3>
+            <p>音符・リズムの基礎から、楽しく続けられるように丁寧に進めます。保護者がピアノ未経験でも大丈夫です。</p>
+          </article>
+          <article class="recommend-card">
+            <span class="tag">ADULT</span>
+            <h3>大人の初心者・再開レッスン</h3>
+            <p>昔習っていた方、趣味で好きな曲を弾きたい方も歓迎。生活ペースに合わせて無理なく進めます。</p>
+          </article>
+          <article class="recommend-card">
+            <span class="tag">EXAM</span>
+            <h3>音大受験・保育志望の準備</h3>
+            <p>音大受験や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。</p>
+          </article>
+          <article class="recommend-card">
+            <span class="tag">SUPPORT</span>
+            <h3>発表会前もしっかりサポート</h3>
+            <p>本番で自信を持って弾けるよう、音の出し方・表現・姿勢まで一人ひとりに合わせて整えます。</p>
+          </article>
+        </div>
+        <div class="compact-link-row">
+          <a class="btn secondary" href="kids-piano.html">子ども向けを見る</a>
+          <a class="btn secondary" href="adult-piano.html">大人向けを見る</a>
           <a class="btn secondary" href="trial-lesson.html">無料体験の流れを見る</a>
         </div>
       </div>
     </section>
 
 
-    <section class="section intro">
-      <div class="wrap two-col">
-        <div class="photo-card"><img src="assets/audience-adult.jpg" alt="グランドピアノで演奏する様子" loading="lazy"></div>
-        <div class="copy">
-          <span class="eyebrow">CONCEPT</span>
-          <h2>「弾けた！」の喜びを、無理なく積み重ねるレッスン。</h2>
-          <p>アリスピアノ教室は、お子さまのはじめてのピアノから、親子レッスン、大人の初心者・再開レッスンまで対応しています。</p>
-          <p>指導歴50年弱の講師が、基礎を大切にしながら、好きな曲への挑戦や発表会前のサポートまで丁寧に寄り添います。</p>
-          <ul class="check-list">
-            <li>お子さまのはじめてのピアノに対応</li>
-            <li>大人の初心者・再開レッスンも相談可</li>
-            <li>無料体験で教室の雰囲気をゆっくり確認</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section service-area" id="komatsu-piano">
-      <div class="wrap">
-        <span class="eyebrow" style="display:block;text-align:center">KOMATSU PIANO LESSON</span>
-        <h2 class="section-title">小松市でピアノ教室をお探しの方へ</h2>
-        <p class="section-lead">
-          アリスピアノ教室は、石川県小松市小寺町にある個別ピアノ教室です。
-          お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで、一人ひとりの目的に合わせて丁寧にサポートします。
-        </p>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-no">01</div>
-            <h3>子どものはじめてのピアノ</h3>
-            <p>音符・リズムの基礎から、好きな曲への挑戦まで。小松市で子ども向けのピアノ教室をお探しの方に、楽しく続けられる個別レッスンをご案内しています。</p>
-            <p style="margin-top:.8rem"><a href="kids-piano.html" style="color:var(--gold);font-weight:900;text-decoration:underline">子ども向けレッスンを見る</a></p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-no">02</div>
-            <h3>大人の初心者・再開レッスン</h3>
-            <p>大人になってからピアノを始めたい方、昔習っていたピアノをもう一度弾きたい方にも対応しています。基礎から好きな曲まで無理なく進めます。</p>
-            <p style="margin-top:.8rem"><a href="adult-piano.html" style="color:var(--gold);font-weight:900;text-decoration:underline">大人向けレッスンを見る</a></p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-no">03</div>
-            <h3>無料体験60分〜120分</h3>
-            <p>教室の雰囲気、レッスン内容、料金について、体験時にゆっくり確認できます。小松市・能美市・粟津駅周辺から通える教室をお探しの方もご相談ください。</p>
-            <p style="margin-top:.8rem"><a href="trial-lesson.html" style="color:var(--gold);font-weight:900;text-decoration:underline">無料体験の流れを見る</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section class="section exterior-highlight" id="exterior">
       <div class="wrap">
@@ -529,82 +586,106 @@
     </section>
 
 
-<section class="section audience">
-  <div class="wrap">
-    <h2 class="section-title">子どもも大人も、自分のペースで学べます</h2>
-    <p class="section-lead">はじめてのお子さまから、大人の初心者・再開したい方まで。目標に合わせて、無理なく楽しく続けられるレッスンを行っています。</p>
 
-    <div class="audience-grid">
-      <article class="aud-card kids">
-        <span class="eyebrow">KIDS</span>
-        <h3>お子さまの個別レッスン</h3>
-        <p>音符・リズムの基礎から、好きな曲への挑戦まで。楽しく続けながら、自信を育てます。</p>
-      </article>
-
-      <article class="aud-card adult">
-        <span class="eyebrow">ADULT</span>
-        <h3>大人の初心者・再開レッスン</h3>
-        <p>好きな曲を弾きたい方、昔習っていたピアノを再開したい方も丁寧にサポートします。</p>
-      </article>
-    </div>
-  </div>
-</section>
 
     <section class="section features" id="features">
       <div class="wrap">
-        <h2 class="section-title">通いやすさとレッスン環境</h2>
-        <p class="section-lead">まずは、安心して通い始められること。料金・時間・環境の面から、無理なく続けやすい教室づくりを大切にしています。</p>
+        <h2 class="section-title">選ばれる理由</h2>
+        <p class="section-lead">小さなお子さまから大人の方まで、安心して続けられる環境と、一人ひとりに合わせた指導を大切にしています。</p>
         <div class="feature-grid">
-          <article class="feature-card"><div class="feature-no">01</div><h3>1回60～120分でじっくり</h3><p>短時間で慌てず、基礎・新しい曲・復習・練習ポイント整理まで落ち着いて取り組めます。初級の方は30〜40分の場合があります。</p></article>
-          <article class="feature-card"><div class="feature-no">02</div><h3>料金を分かりやすくご案内</h3><p>月謝や教材費、発表会費など、必要な費用は体験時に丁寧にご説明します。</p></article>
-          <article class="feature-card"><div class="feature-no">03</div><h3>完全防音の独立スタジオ</h3><p>周りを気にせず、思いきり音を出せる環境。落ち着いた空間で集中してレッスンできます。</p></article>
-          <article class="feature-card"><div class="feature-no">04</div><h3>兄妹割・親子レッスン</h3><p>兄妹で通いやすい割引や、親子で音楽を楽しみたい方向けのレッスンにも対応します。</p></article>
-          <article class="feature-card"><div class="feature-no">05</div><h3>子どもも大人も対応</h3><p>お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで、それぞれの目的に合わせてご相談いただけます。</p></article>
-          <article class="feature-card"><div class="feature-no">06</div><h3>無料体験60分〜120分</h3><p>教室の雰囲気やレッスン内容を、ゆっくり確認していただけます。無理な勧誘はありません。</p></article>
+          <article class="feature-card"><div class="feature-no">01</div><h3>指導歴50年弱</h3><p>一人ひとりの理解度や性格を見ながら、基礎から丁寧に進めます。</p></article>
+          <article class="feature-card"><div class="feature-no">02</div><h3>完全防音スタジオ</h3><p>周りを気にせず、落ち着いて音を出せる独立したレッスン環境です。</p></article>
+          <article class="feature-card"><div class="feature-no">03</div><h3>コンサート用グランドピアノ</h3><p>本格的な響きやタッチに触れながら、音色の違いを学べます。</p></article>
+          <article class="feature-card"><div class="feature-no">04</div><h3>楽曲アレンジ対応</h3><p>好きな曲を、レベルに合わせて弾きやすく格好良く整えます。</p></article>
+          <article class="feature-card"><div class="feature-no">05</div><h3>目的に合わせて対応</h3><p>幼児・小学生・親子・大人の初心者・再開レッスン、音大受験・保育志望の準備まで対応します。</p></article>
+          <article class="feature-card"><div class="feature-no">06</div><h3>無理な勧誘なし</h3><p>無料体験後は、ご家庭でゆっくり検討していただけます。</p></article>
         </div>
       </div>
     </section>
+
+<section class="section availability" id="availability">
+      <div class="wrap">
+        <div class="availability-card">
+          <div>
+            <span class="eyebrow">OPEN SLOTS</span>
+            <h2>現在の募集状況</h2>
+            <p>水曜日と土曜日のレッスン枠は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはお気軽にお問い合わせください。</p>
+            <div class="availability-pills">
+              <span class="busy">水曜：混み合っていますが相談可</span>
+              <span class="busy">土曜：混み合っていますが相談可</span>
+              <span>その他の曜日：ご相談ください</span>
+            </div>
+          </div>
+          <div>
+            <a class="btn secondary" href="#contact">お問い合わせ方法を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section review-section" id="reviews">
+      <div class="wrap">
+        <span class="eyebrow" style="display:block;text-align:center">GOOGLE REVIEWS</span>
+        <h2 class="section-title">生徒さん・保護者さまの声</h2>
+        <p class="section-lead">先生の関わり方やお子さまの変化について、保護者さまから温かいお声をいただいています。</p>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>
+              <p>両親共に未経験者で、不安や心配がありましたが、先生にお会いし、お話しやレッスンの様子を見て、子供のいいところを褒めて伸ばしてくださる指導で、子供ものびのび！やる気ムクムク！の様子です。</p>
+              <p>どんな事も嫌な顔をせず、親切丁寧に教えてくださいます。</p>
+              <p>無理にピアノを買うように言われたりもせず、そこの家庭の事情なども考慮しながら一緒に考えてくださる、本当に子にも親にも寄り添ってくださいます。</p>
+              <p>これからの子供の成長が楽しみです♪</p>
+            </blockquote>
+            <cite>Google口コミより</cite>
+          </article>
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>
+              <p>いつも笑顔で優しく、教え方が丁寧でわかりやすく、子供のペースに合わせて指導してくださいます。おかげでピアノがどんどん好きになりました。</p>
+            </blockquote>
+            <cite>Google口コミより</cite>
+          </article>
+        </div>
+        <div class="compact-link-row">
+          <a class="btn secondary" href="https://www.google.com/search?q=%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%94%E3%82%A2%E3%83%8E%E6%95%99%E5%AE%A4+%E5%B0%8F%E6%9D%BE%E5%B8%82" target="_blank" rel="noopener">Google口コミを見る</a>
+        </div>
+      </div>
+    </section>
+
+
 
     <section class="section difference" id="difference">
       <div class="wrap">
         <span class="eyebrow" style="display:block;text-align:center">OUR STRENGTHS</span>
-        <h2 class="section-title">アリスピアノ教室ならではのこだわり</h2>
-        <p class="section-lead">設備や料金だけでなく、「どう弾けるようにするか」まで丁寧に考えること。弾きやすく、格好良く、音楽を好きになれるレッスンを大切にしています。</p>
+        <h2 class="section-title">アリスピアノ教室らしさ</h2>
+        <p class="section-lead">長く続けてほしいから、ただ弾くだけでなく「分かる」「できる」「楽しい」につながるレッスンを大切にしています。</p>
         <div class="difference-grid">
           <article class="difference-card">
             <span class="diff-label">01 / ARRANGE</span>
-            <h3>一人ひとりに合わせた楽曲アレンジ</h3>
-            <p>講師自ら、弾きたい曲をその方の個性やレベルに合わせて、弾きやすく、かつ格好良く聴こえるようにアレンジします。無理なく挑戦できる形に整えることで、「弾けた！」という達成感につなげます。</p>
+            <h3>好きな曲も、弾きやすくアレンジ</h3>
+            <p>難しすぎる曲でも、その方のレベルに合わせて無理なく挑戦できる形に整えます。</p>
           </article>
           <article class="difference-card">
-            <span class="diff-label">02 / GRAND PIANO</span>
-            <h3>象牙鍵盤・黒檀のコンサート用グランドピアノ</h3>
-            <p>レッスンでは、コンサート用グランドピアノを使用。本格的な響きやタッチに触れながら、音色の違いや表現の楽しさを感じていただけます。</p>
+            <span class="diff-label">02 / SOUND</span>
+            <h3>音の出し方まで丁寧に</h3>
+            <p>姿勢・タッチ・聴き方を少し整えるだけで、演奏の印象が変わることがあります。</p>
           </article>
           <article class="difference-card">
-            <span class="diff-label">03 / LESSON</span>
-            <h3>真摯に、情熱と愛情と責任を持って向き合う指導</h3>
-            <p>生徒さん一人ひとりの性格や理解度を見ながら、責任をもって上達につながるよう丁寧に向き合います。基礎を大切にしながら、少しずつ自信を育てます。</p>
+            <span class="diff-label">03 / STAGE</span>
+            <h3>発表会前も心強くサポート</h3>
+            <p>本番で自信を持てるよう、通常時間にとらわれず最後まで丁寧に寄り添います。</p>
           </article>
           <article class="difference-card">
-            <span class="diff-label">04 / SOUND</span>
-            <h3>「1回のレッスンで音が変わった」と言われることも</h3>
-            <p>保護者の方などから、レッスン後に「音が変わった」とご評価いただくこともあります。姿勢・タッチ・聴き方・表現の意識まで、細かな変化を大切にしています。</p>
-          </article>
-          <article class="difference-card">
-            <span class="diff-label">05 / STAGE</span>
-            <h3>発表会で複数回の出演機会</h3>
-            <p>発表会では一人1回だけでなく、最低でも2回は出演の機会を設けています。余裕のある生徒さんは何曲も挑戦でき、人前で弾く経験を重ねながら大きなステップアップを目指せます。</p>
-          </article>
-          <article class="difference-card">
-            <span class="diff-label">06 / SUPPORT</span>
-            <h3>発表会前も、月謝はそのまま最後までサポート</h3>
-            <p>本番で格好良く、自信を持って弾けるようになるまで、発表会前は通常のレッスン時間にとらわれず丁寧に寄り添います。一人ひとりが納得して舞台に立てるよう、最後まで責任をもってサポートします。</p>
+            <span class="diff-label">04 / CARE</span>
+            <h3>家庭の事情にも配慮</h3>
+            <p>ピアノ購入や練習環境についても、無理にすすめず状況に合わせて一緒に考えます。</p>
           </article>
         </div>
-        <p class="difference-note">※上達にはご本人の練習やペースも関係しますが、当教室では「できるようになるまで寄り添う」姿勢を大切にしています。</p>
       </div>
     </section>
+
+
 
     <section class="section studio" id="studio">
       <div class="wrap">
@@ -629,7 +710,7 @@
           <article class="step"><b>4</b><h3>教室を見学</h3><p>完全防音スタジオやピアノの響きを体感できます。</p></article>
           <article class="step"><b>5</b><h3>料金をご案内</h3><p>内容・料金を分かりやすく説明。無理な勧誘はありません。</p></article>
         </div>
-        <div style="text-align:center;margin-top:34px"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></div>
+        <div style="text-align:center;margin-top:34px"><a class="btn secondary" href="#contact">お問い合わせ方法を見る</a></div>
       </div>
     </section>
 
@@ -661,7 +742,7 @@
             <span class="eyebrow">TEACHER</span>
             <h3>小川 公子</h3>
             <p>幼少期よりピアノ一筋。音楽系高校・音大を経て、地域で50年弱にわたり指導。「まず音楽を好きになる」を大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
-            <p>はじめてのお子さまから、好きな曲に挑戦したい大人の方まで、一人ひとりに合わせて丁寧にサポートします。</p>
+            <p>はじめてのお子さま、好きな曲に挑戦したい大人の方、音大受験や保育士・幼児教育を目指す方まで、一人ひとりに合わせて丁寧にサポートします。</p>
             <div style="margin-top:1.2rem"><a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" target="_blank" rel="noopener">Instagramを見る</a></div>
           </div>
         </div>
@@ -673,17 +754,20 @@
         <h2 class="section-title">よくある質問</h2>
         <div class="faq-list">
           <details><summary>Q. まったくの初心者でも大丈夫ですか？</summary><p>大丈夫です。音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。</p></details>
+          <details><summary>Q. 保護者がピアノ未経験でも大丈夫ですか？</summary><p>はい、大丈夫です。ご家庭の事情や練習環境もふまえて、無理なく続けられる方法を一緒に考えます。</p></details>
           <details><summary>Q. 無料体験は何分ですか？</summary><p>無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認していただけます。</p></details>
-          <details><summary>Q. 料金はいつ確認できますか？</summary><p>月謝や教材費、発表会費など、必要な費用は体験時に分かりやすくご案内します。</p></details>
+          <details><summary>Q. 水曜日や土曜日でも相談できますか？</summary><p>水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。</p></details>
           <details><summary>Q. 大人でも通えますか？</summary><p>はい。大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンもご相談ください。</p></details>
-          <details><summary>Q. 発表会前のサポートはありますか？</summary><p>はい。月謝はそのままで、本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。</p></details>
+          <details><summary>Q. 音大受験や保育志望のピアノにも対応していますか？</summary><p>はい。音大受験を考えている方や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。現在のレベルや目標に合わせてご相談いただけます。</p></details>
+          <details><summary>Q. 発表会前のサポートはありますか？</summary><p>はい。本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。</p></details>
           <details><summary>Q. 体験後にしつこい勧誘はありますか？</summary><p>ありません。ご家庭でゆっくりご相談いただき、LINE・電話・フォームのいずれかでお返事ください。</p></details>
           <details><summary>Q. 好きな曲を弾きたい場合も対応できますか？</summary><p>はい。生徒さんの個性やレベルに合わせて、講師が弾きやすく格好良く聴こえる形にアレンジして進めることもできます。</p></details>
-          <details><summary>Q. 発表会では何回くらい演奏できますか？</summary><p>当教室では、発表会で最低でも2回は出演の機会を設けています。余裕のある方は、何曲も挑戦して大きなステップアップを目指せます。</p></details>
-          <details><summary>Q. 小松市外からでも通えますか？</summary><p>はい。小松市内のほか、能美市・粟津駅周辺・加賀方面・金沢方面から通えるピアノ教室をお探しの方にもご相談いただいています。駐車場・駐輪場もありますので、お車での送迎にも対応しやすい環境です。</p></details>
+          <details><summary>Q. Etudeと同じ教室ですか？</summary><p>同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。レッスンのお問い合わせはアリスピアノ教室へお願いいたします。</p></details>
         </div>
       </div>
     </section>
+
+
 
     <section class="section contact" id="contact">
       <div class="wrap">
@@ -724,31 +808,31 @@
 
     <section class="section service-area" id="area">
       <div class="wrap">
-        <h2 class="section-title">小松市周辺から通えるピアノ教室です</h2>
+        <h2 class="section-title">通える地域</h2>
         <p class="section-lead">
-          アリスピアノ教室は石川県小松市小寺町にあります。
-          小松市内はもちろん、能美市・粟津駅周辺・加賀方面・金沢方面から、車で通える個別ピアノレッスンをお探しの方にもご相談いただいています。
+          アリスピアノ教室は石川県小松市小寺町にあります。小松市内のほか、粟津駅周辺・能美市方面からもご相談いただけます。
         </p>
         <div class="feature-grid">
           <article class="feature-card">
             <div class="feature-no">01</div>
-            <h3>小松市内から通いやすい</h3>
-            <p>小松駅周辺、小松市中心部、芦城・稚松・第一・苗代・符津方面など、小松市内でピアノ教室をお探しの方にご相談いただけます。</p>
+            <h3>小松市内</h3>
+            <p>小松駅周辺・小松市中心部からも通いやすい立地です。</p>
           </article>
           <article class="feature-card">
             <div class="feature-no">02</div>
-            <h3>能美市・粟津駅周辺からも</h3>
-            <p>能美市方面や粟津駅周辺から、送迎しやすく落ち着いて通える個別ピアノレッスンをお探しの方にもおすすめです。</p>
+            <h3>粟津駅周辺・能美市方面</h3>
+            <p>お車での送迎や、曜日・時間帯についてもお気軽にご相談ください。</p>
           </article>
           <article class="feature-card">
             <div class="feature-no">03</div>
-            <h3>石川県南部でお探しの方へ</h3>
-            <p>加賀方面・金沢方面からも、完全防音スタジオやグランドピアノでのレッスンを重視される方はお気軽にご相談ください。</p>
+            <h3>駐車場・駐輪場あり</h3>
+            <p>教室横に駐車場・駐輪場があります。初めての方にも分かりやすい外観です。</p>
           </article>
         </div>
-        <p class="area-note">※実際の通いやすさは交通手段や時間帯によって異なります。無料体験の際に、通学・送迎についてもお気軽にご相談ください。</p>
       </div>
     </section>
+
+
 
     <section class="section access" id="access">
       <div class="wrap">
@@ -756,17 +840,20 @@
         <div class="access-grid">
           <div class="access-card">
             <p><strong>〒923-0806<br>石川県小松市小寺町乙38番地1</strong></p>
-            <p>建物向かって左が教室です。横に駐車場・駐輪場があります。</p>
-            <p>小松市内はもちろん、能美市・粟津駅周辺・金沢方面からもお越しいただきやすい立地です。</p>
+            <p>鍵盤デザインの外観が目印です。建物向かって左が教室で、横に駐車場・駐輪場があります。</p>
             <ul>
               <li>小松駅より車で約5分・徒歩15分</li>
               <li>近隣バス停：小寺町（徒歩4分）</li>
+              <li>小松市内・粟津駅周辺・能美市方面からご相談いただけます</li>
             </ul>
+            <p class="micro-note">※同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。ピアノレッスンに関するお問い合わせは、アリスピアノ教室のLINEまたはお電話よりお願いいたします。</p>
           </div>
           <div class="map"><iframe loading="lazy" src="https://www.google.com/maps?q=%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%94%E3%82%A2%E3%83%8E%E6%95%99%E5%AE%A4%20%E5%B0%8F%E6%9D%BE%E5%B8%82%E5%B0%8F%E5%AF%BA%E7%94%BA%E4%B9%9938%E7%95%AA%E5%9C%B01&z=17&output=embed&hl=ja" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
       </div>
     </section>
+
+
   </main>
 
   <div class="floating-cta"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></div>
@@ -775,7 +862,7 @@
     <div class="wrap">
       <div class="footer-grid">
         <div><strong class="serif" style="font-size:1.2rem;color:#fff">アリスピアノ教室</strong><br>小松市の個別ピアノレッスン。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応しています。</div>
-        <div><strong style="color:#fff">メニュー</strong><br><a href="#features">特徴</a><br><a href="kids-piano.html">子ども向け</a><br><a href="adult-piano.html">大人向け</a><br><a href="trial-lesson.html">無料体験</a><br><a href="#pricing">料金</a><br><a href="#area">通える地域</a><br><a href="#access">アクセス</a></div>
+        <div><strong style="color:#fff">メニュー</strong><br><a href="#features">特徴</a><br><a href="#availability">募集状況</a><br><a href="#reviews">口コミ</a><br><a href="kids-piano.html">子ども向け</a><br><a href="adult-piano.html">大人向け</a><br><a href="trial-lesson.html">無料体験</a><br><a href="#pricing">料金</a><br><a href="#access">アクセス</a></div>
         <div><strong style="color:#fff">連絡先</strong><br>TEL：090-6526-4543<br>住所：石川県小松市小寺町乙38番地1</div>
       </div>
       <div class="copyright">&copy; 2026 アリスピアノ教室.</div>
