@@ -249,6 +249,20 @@
     .feature-card h3{font-family:'Noto Serif JP',serif;font-size:1.18rem;margin:0 0 .55rem;line-height:1.45}
     .feature-card p{margin:0;color:var(--sub);font-size:.92rem}
 
+    /* Visual reasons */
+    .visual-reasons{background:linear-gradient(180deg,#faf6ee,#fffaf2)}
+    .visual-reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+    .visual-reason-card{background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 14px 36px rgba(50,32,14,.08)}
+    .visual-reason-photo{position:relative;aspect-ratio:4/3;background:#ddd;overflow:hidden}
+    .visual-reason-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .visual-reason-card:hover .visual-reason-photo img{transform:scale(1.035)}
+    .visual-reason-badge{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;border-radius:50%;background:rgba(255,250,242,.92);border:1px solid rgba(255,255,255,.8);font-family:'Noto Serif JP',serif;font-weight:900;color:var(--gold);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+    .visual-reason-body{padding:1.15rem 1.1rem 1.25rem}
+    .visual-reason-body h3{font-family:'Noto Serif JP',serif;font-size:1.12rem;line-height:1.45;margin:0 0 .45rem;color:#2f261f}
+    .visual-reason-body p{margin:0;color:var(--sub);font-size:.9rem;line-height:1.65}
+    .reason-chip-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem;margin-top:28px}
+    .reason-chip{display:inline-flex;align-items:center;border:1px solid rgba(177,135,63,.25);background:#fff;border-radius:999px;padding:.48rem .82rem;font-size:.84rem;font-weight:900;color:#493b30;box-shadow:0 8px 22px rgba(50,32,14,.04)}
+    .reason-chip::before{content:"♪";color:var(--gold);margin-right:.42em;font-weight:900}
 
 
     /* Difference / Strengths */
@@ -352,6 +366,7 @@
       .availability-card{text-align:left}
       .hero-panel{display:none}
       .feature-grid{grid-template-columns:1fr 1fr}
+      .visual-reason-grid{grid-template-columns:1fr 1fr}
       .difference-grid{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr 1fr}
       .gallery{grid-template-rows:auto}
@@ -369,7 +384,7 @@
       .brand-logo{width:150px}
       .hero-inner{padding-bottom:84px}
       .hero-buttons .btn{width:100%}
-      .feature-grid,.steps,.quick-grid,.recommend-grid,.review-grid{grid-template-columns:1fr}
+      .feature-grid,.steps,.quick-grid,.recommend-grid,.review-grid,.visual-reason-grid{grid-template-columns:1fr}
       .aud-card{min-height:280px}
       .gallery figure{height:250px}
       .contact-grid{gap:14px}
@@ -603,17 +618,60 @@
 
 
 
-    <section class="section features" id="features">
+    <section class="section visual-reasons" id="features">
       <div class="wrap">
-        <h2 class="section-title">選ばれる理由</h2>
-        <p class="section-lead">小さなお子さまから大人の方まで、安心して続けられる環境と、一人ひとりに合わせた指導を大切にしています。</p>
-        <div class="feature-grid">
-          <article class="feature-card"><div class="feature-no">01</div><h3>指導歴50年弱</h3><p>一人ひとりの理解度や性格を見ながら、基礎から丁寧に進めます。</p></article>
-          <article class="feature-card"><div class="feature-no">02</div><h3>完全防音スタジオ</h3><p>周りを気にせず、落ち着いて音を出せる独立したレッスン環境です。</p></article>
-          <article class="feature-card"><div class="feature-no">03</div><h3>コンサート用グランドピアノ</h3><p>本格的な響きやタッチに触れながら、音色の違いを学べます。</p></article>
-          <article class="feature-card"><div class="feature-no">04</div><h3>楽曲アレンジ対応</h3><p>好きな曲を、レベルに合わせて弾きやすく格好良く整えます。</p></article>
-          <article class="feature-card"><div class="feature-no">05</div><h3>目的に合わせて対応</h3><p>幼児・小学生・親子・大人の初心者・再開レッスン、音大受験・保育志望の準備まで対応します。</p></article>
-          <article class="feature-card"><div class="feature-no">06</div><h3>無理な勧誘なし</h3><p>無料体験後は、ご家庭でゆっくり検討していただけます。</p></article>
+        <span class="eyebrow" style="display:block;text-align:center">WHY ALICE</span>
+        <h2 class="section-title">大切にしていること</h2>
+        <p class="section-lead">写真で見る、アリスピアノ教室の安心できるポイントです。レッスンの進め方、ピアノの環境、入口の分かりやすさまで、はじめての方にも伝わりやすくまとめています。</p>
+        <div class="visual-reason-grid">
+          <article class="visual-reason-card">
+            <div class="visual-reason-photo">
+              <img src="assets/lesson-teacher-child.jpg" alt="講師が子どもの手元を見ながらピアノを指導している様子" loading="lazy">
+              <div class="visual-reason-badge">01</div>
+            </div>
+            <div class="visual-reason-body">
+              <h3>一人ひとりの手元まで丁寧に</h3>
+              <p>先生が近くで確認しながら、姿勢・指の動き・音の出し方まで見ていきます。</p>
+            </div>
+          </article>
+          <article class="visual-reason-card">
+            <div class="visual-reason-photo">
+              <img src="assets/lesson-grand-piano-adult.jpg" alt="コンサート用グランドピアノで演奏している様子" loading="lazy">
+              <div class="visual-reason-badge">02</div>
+            </div>
+            <div class="visual-reason-body">
+              <h3>本格的な響きに触れられる環境</h3>
+              <p>完全防音スタジオで、コンサート用グランドピアノの音色を感じながら学べます。</p>
+            </div>
+          </article>
+          <article class="visual-reason-card">
+            <div class="visual-reason-photo">
+              <img src="assets/lesson-child-score.jpg" alt="子どもが楽譜を見ながらピアノレッスンを受けている様子" loading="lazy">
+              <div class="visual-reason-badge">03</div>
+            </div>
+            <div class="visual-reason-body">
+              <h3>小さな「できた」を積み重ねる</h3>
+              <p>音符やリズムの基礎から、子どものペースに合わせて少しずつ進めます。</p>
+            </div>
+          </article>
+          <article class="visual-reason-card">
+            <div class="visual-reason-photo">
+              <img src="assets/signboard-entrance.jpg" alt="アリスピアノ教室の入口と看板" loading="lazy">
+              <div class="visual-reason-badge">04</div>
+            </div>
+            <div class="visual-reason-body">
+              <h3>はじめてでも分かりやすい入口</h3>
+              <p>入口前の看板が目印です。体験レッスンにお越しの方も迷いにくいよう整えています。</p>
+            </div>
+          </article>
+        </div>
+        <div class="reason-chip-row" aria-label="アリスピアノ教室の特徴">
+          <span class="reason-chip">指導歴50年弱</span>
+          <span class="reason-chip">無料体験60〜120分</span>
+          <span class="reason-chip">音大受験・保育志望も対応</span>
+          <span class="reason-chip">好きな曲のアレンジ対応</span>
+          <span class="reason-chip">水曜・土曜も相談可</span>
+          <span class="reason-chip">無理な勧誘なし</span>
         </div>
       </div>
     </section>
