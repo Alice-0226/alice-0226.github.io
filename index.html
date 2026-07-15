@@ -964,67 +964,76 @@
   <!-- GA4 conversion / engagement tracking for Alice Piano School -->
   <script>
     (function () {
+      const GA4_ID = 'G-1B9Q314H3W';
+
       function sendEvent(name, params) {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', name, params || {});
-        }
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', name, Object.assign({
+          send_to: GA4_ID,
+          transport_type: 'beacon'
+        }, params || {}));
       }
 
-      // LINEへのクリックを計測
-      document.querySelectorAll('a[href*="lin.ee"]').forEach(function (link) {
-        link.addEventListener('click', function () {
+      // LINE・電話リンクはイベント委任で確実に拾う
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        const text = (link.textContent || '').trim();
+
+        if (href.includes('lin.ee')) {
           sendEvent('line_click', {
             link_url: link.href,
-            link_text: (link.textContent || '').trim(),
+            link_text: text,
             page_location: window.location.href
           });
-        });
-      });
+        }
 
-      // 電話リンクのクリックを計測
-      document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
-        link.addEventListener('click', function () {
+        if (href.startsWith('tel:')) {
           sendEvent('phone_click', {
-            phone_number: link.getAttribute('href').replace('tel:', ''),
-            link_text: (link.textContent || '').trim(),
+            phone_number: href.replace('tel:', ''),
+            link_text: text,
             page_location: window.location.href
           });
-        });
-      });
+        }
+      }, true);
 
       // 問い合わせフォーム送信を計測してから送信
-      var contactForm = document.getElementById('contactForm');
+      const contactForm = document.getElementById('contactForm');
       if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
           if (typeof window.gtag !== 'function') return;
 
           event.preventDefault();
-          var submitted = false;
-          function submitForm() {
+          let submitted = false;
+          const submitForm = function () {
             if (submitted) return;
             submitted = true;
             contactForm.submit();
-          }
+          };
 
           window.gtag('event', 'contact_form_submit', {
+            send_to: GA4_ID,
             form_id: 'contactForm',
             page_location: window.location.href,
             transport_type: 'beacon',
-            event_callback: submitForm
+            event_callback: submitForm,
+            event_timeout: 1000
           });
 
-          // 計測ブロック時などもフォーム送信を止めないための保険
-          window.setTimeout(submitForm, 900);
+          window.setTimeout(submitForm, 1200);
         });
       }
 
-      // 無料体験セクションが実際に見られたことを1回だけ計測
-      var trialSection = document.getElementById('trial');
+      // 無料体験セクションが見られたことを1回だけ計測
+      const trialSection = document.getElementById('trial');
       if (trialSection && 'IntersectionObserver' in window) {
-        var trialViewed = false;
-        var observer = new IntersectionObserver(function (entries) {
+        let trialViewed = false;
+        const observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
-            if (!trialViewed && entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+            // セクションが大きくても発火するよう10%表示で計測
+            if (!trialViewed && entry.isIntersecting && entry.intersectionRatio >= 0.10) {
               trialViewed = true;
               sendEvent('trial_section_view', {
                 section_id: 'trial',
@@ -1033,7 +1042,7 @@
               observer.disconnect();
             }
           });
-        }, { threshold: [0.45] });
+        }, { threshold: [0.10], rootMargin: '0px 0px -10% 0px' });
         observer.observe(trialSection);
       }
     })();
