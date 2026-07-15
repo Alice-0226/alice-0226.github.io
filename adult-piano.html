@@ -285,6 +285,16 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "大人の初心者でも大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "大丈夫です。基礎からゆっくり進めますので、初めての方も安心してご相談ください。"}}, {"@type": "Question", "name": "昔習っていたピアノの再開でも通えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。以前の経験や現在の目標に合わせて、無理なく再開できるようサポートします。"}}, {"@type": "Question", "name": "好きな曲から始められますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご相談いただけます。レベルに合わせて弾きやすくアレンジすることも可能です。"}}, {"@type": "Question", "name": "社会人でも無理なく続けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。仕事や生活のペースに合わせて、無理なく趣味として続けられるよう、一人ひとりに合わせて丁寧に進めます。"}}]}
   </script>
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1B9Q314H3W');
+  </script>
+
 </head>
 <body>
   <header class="site-header">
@@ -313,7 +323,7 @@
         <h1>小松市の大人のピアノレッスン</h1>
         <p>大人になってから始めたい方、昔習っていたピアノを再開したい方、社会人の趣味として無理なく続けたい方へ。目的に合わせて、楽しく続けられるレッスンを行っています。</p>
         <div class="hero-buttons">
-          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
+          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a>
           <a class="btn secondary" href="/#access">アクセスを見る</a>
         </div>
       </div>
@@ -387,7 +397,7 @@
       <div class="wrap">
         <h2 class="section-title">無料体験レッスン受付中</h2>
         <p class="section-lead">小松市・能美市・粟津駅周辺でピアノ教室をお探しの方は、お気軽にご相談ください。</p>
-        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></div>
+        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a></div>
       </div>
     </section>
   </main>
@@ -413,5 +423,20 @@
       hamb?.setAttribute('aria-expanded','false');
     }));
   </script>
+
+  <script>
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href*="lin.ee"]');
+      if (!link || typeof gtag !== 'function') return;
+
+      gtag('event', 'line_click', {
+        page_type: 'adult_piano',
+        link_url: link.href,
+        link_text: (link.textContent || '').trim(),
+        page_location: window.location.href
+      });
+    }, true);
+  </script>
+
 </body>
 </html>

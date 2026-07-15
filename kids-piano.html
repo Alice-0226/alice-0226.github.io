@@ -285,6 +285,16 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ピアノが初めてでも大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "大丈夫です。音符やリズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。"}}, {"@type": "Question", "name": "幼児でも通えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。音楽を楽しむ気持ちを大切にしながら、鍵盤やリズムに親しむところから始めます。"}}, {"@type": "Question", "name": "発表会はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。本番で自信を持って弾けるよう、発表会前も丁寧にサポートします。"}}]}
   </script>
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1B9Q314H3W');
+  </script>
+
 </head>
 <body>
   <header class="site-header">
@@ -313,7 +323,7 @@
         <h1>小松市の子ども向けピアノ教室</h1>
         <p>はじめてのお子さまも、音符・リズムの基礎から楽しく学べます。小松市・能美市・粟津駅周辺で子どものピアノ教室をお探しの方におすすめです。</p>
         <div class="hero-buttons">
-          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
+          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a>
           <a class="btn secondary" href="/#access">アクセスを見る</a>
         </div>
       </div>
@@ -358,7 +368,7 @@
       <div class="wrap">
         <h2 class="section-title">無料体験レッスン受付中</h2>
         <p class="section-lead">小松市・能美市・粟津駅周辺でピアノ教室をお探しの方は、お気軽にご相談ください。</p>
-        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></div>
+        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a></div>
       </div>
     </section>
   </main>
@@ -384,5 +394,20 @@
       hamb?.setAttribute('aria-expanded','false');
     }));
   </script>
+
+  <script>
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href*="lin.ee"]');
+      if (!link || typeof gtag !== 'function') return;
+
+      gtag('event', 'line_click', {
+        page_type: 'kids_piano',
+        link_url: link.href,
+        link_text: (link.textContent || '').trim(),
+        page_location: window.location.href
+      });
+    }, true);
+  </script>
+
 </body>
 </html>

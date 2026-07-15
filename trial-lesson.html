@@ -285,6 +285,16 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料体験は何分ですか？", "acceptedAnswer": {"@type": "Answer", "text": "60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認できます。"}}, {"@type": "Question", "name": "体験後に入会を急かされますか？", "acceptedAnswer": {"@type": "Answer", "text": "無理な勧誘はありません。ご家庭で相談してからお返事いただけます。"}}, {"@type": "Question", "name": "保護者がピアノ未経験でも大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "大丈夫です。教材やご自宅での練習方法も、体験時に分かりやすくご説明します。"}}]}
   </script>
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1B9Q314H3W');
+  </script>
+
 </head>
 <body>
   <header class="site-header">
@@ -313,7 +323,7 @@
         <h1>小松市の無料体験ピアノレッスン</h1>
         <p>無料体験では、教室の雰囲気、レッスン内容、料金、今後の進め方をゆっくり確認できます。はじめての方もお気軽にご相談ください。</p>
         <div class="hero-buttons">
-          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
+          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">無料体験をLINEで相談する</a>
           <a class="btn secondary" href="/#access">アクセスを見る</a>
         </div>
       </div>
@@ -355,7 +365,7 @@
       <div class="wrap">
         <h2 class="section-title">無料体験レッスン受付中</h2>
         <p class="section-lead">小松市・能美市・粟津駅周辺でピアノ教室をお探しの方は、お気軽にご相談ください。</p>
-        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></div>
+        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">無料体験をLINEで相談する</a></div>
       </div>
     </section>
   </main>
@@ -381,5 +391,20 @@
       hamb?.setAttribute('aria-expanded','false');
     }));
   </script>
+
+  <script>
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href*="lin.ee"]');
+      if (!link || typeof gtag !== 'function') return;
+
+      gtag('event', 'line_click', {
+        page_type: 'trial_lesson',
+        link_url: link.href,
+        link_text: (link.textContent || '').trim(),
+        page_location: window.location.href
+      });
+    }, true);
+  </script>
+
 </body>
 </html>
