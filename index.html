@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>小松市のピアノ教室｜アリスピアノ教室｜子ども・大人の個別レッスン</title>
-  <meta name="description" content="石川県小松市小寺町のアリスピアノ教室。子どものはじめてのピアノ、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備まで対応。無料体験レッスン60分〜120分受付中。" />
+  <title>小松市のピアノ教室｜子ども・中高生・大人の個別レッスン｜アリスピアノ教室</title>
+  <meta name="description" content="石川県小松市小寺町のアリスピアノ教室。子どものはじめてのピアノ、小学校高学年・中学生・高校生・経験者の上達、大人の初心者・再開、学校伴奏や音大受験・保育志望まで個別に対応。無料体験60分〜120分受付中。" />
   <link rel="canonical" href="https://alice-0226.github.io/" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="アリスピアノ教室" />
   <meta property="og:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-  <meta property="og:description" content="小松市の個別ピアノ教室。子ども・大人のピアノレッスンから、音大受験・保育志望の準備まで対応。無料体験60分〜120分受付中。" />
+  <meta property="og:description" content="小松市の個別ピアノ教室。幼児・小学生から中高生・経験者、大人まで対応。音色・表現、学校伴奏、好きな曲、音大受験・保育志望もご相談ください。" />
   <meta property="og:url" content="https://alice-0226.github.io/" />
   <meta property="og:image" content="https://alice-0226.github.io/assets/exterior.jpg" />
   <meta property="og:image:alt" content="アリスピアノ教室の鍵盤デザインの外観" />
@@ -18,12 +18,12 @@
   <meta property="og:image:height" content="630" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="theme-color" content="#fffaf2" />
-  <meta name="keywords" content="小松市 ピアノ教室, 小松市 ピアノレッスン, 小松市 子ども ピアノ教室, 小松市 社会人 ピアノ教室, 小松市 大人 ピアノ教室, 小松市 音大受験 ピアノ, 小松市 保育士 ピアノ, 保育志望 ピアノ 小松市, 能美市 ピアノ教室, 能美市 ピアノレッスン, 粟津駅 ピアノ教室, 粟津 ピアノ教室, 加賀市 ピアノ教室, アリスピアノ教室" />
+  <meta name="keywords" content="小松市 ピアノ教室, 小松市 ピアノレッスン, 小松市 子ども ピアノ教室, 小松市 社会人 ピアノ教室, 小松市 大人 ピアノ教室, 小松市 中学生 ピアノ教室, 小松市 高校生 ピアノ教室, 小松市 ピアノ 経験者, 小松市 合唱伴奏 ピアノ, 小松市 音大受験 ピアノ, 小松市 保育士 ピアノ, 保育志望 ピアノ 小松市, 能美市 ピアノ教室, 能美市 ピアノレッスン, 粟津駅 ピアノ教室, 粟津 ピアノ教室, 加賀市 ピアノ教室, アリスピアノ教室" />
   <link rel="preload" as="image" href="assets/exterior.jpg" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-  <meta name="twitter:description" content="小松市小寺町の個別ピアノ教室。子ども・大人のレッスン、音大受験・保育志望の準備にも対応。無料体験60分〜120分受付中。" />
+  <meta name="twitter:description" content="小松市小寺町の個別ピアノ教室。幼児・小学生、中高生・経験者、大人まで、目的と現在の課題に合わせて個別に指導します。" />
   <meta name="twitter:image" content="https://alice-0226.github.io/assets/exterior.jpg" />
   <meta name="application-name" content="アリスピアノ教室" />
   <meta name="apple-mobile-web-app-title" content="アリスピアノ教室" />
@@ -73,6 +73,32 @@
     .quick-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#fff8ea,#f1dfba);color:var(--gold);font-family:'Noto Serif JP',serif;font-weight:900;margin-bottom:.72rem}
     .quick-card h3{font-family:'Noto Serif JP',serif;margin:0 0 .4rem;font-size:1.06rem;line-height:1.45}
     .quick-card p{margin:0;color:var(--sub);font-size:.88rem;line-height:1.65}
+
+    /* Older students / experienced learners */
+    .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+    .path-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(22px,3.5vw,32px);box-shadow:0 14px 36px rgba(50,32,14,.07)}
+    .path-card::after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-52px;top:-52px;background:rgba(217,188,122,.15)}
+    .path-card .tag{display:inline-flex;border-radius:999px;background:#fff6e6;border:1px solid rgba(177,135,63,.22);color:#8c5f20;padding:.28rem .72rem;font-weight:900;font-size:.78rem;margin-bottom:.8rem}
+    .path-card h3{font-family:'Noto Serif JP',serif;font-size:clamp(1.25rem,2.7vw,1.65rem);line-height:1.45;margin:0 0 .6rem;position:relative}
+    .path-card p{margin:0;color:var(--sub);position:relative}
+    .path-card .path-link{display:inline-flex;margin-top:1rem;color:#8c5f20;font-weight:900;text-decoration:underline;text-underline-offset:.2em;position:relative}
+
+    .experienced{background:linear-gradient(135deg,#f7f2e9 0%,#fff 50%,#f2eadc 100%)}
+    .experienced-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,58px);align-items:center}
+    .experienced-copy h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.75rem,4vw,3rem);line-height:1.35;margin:.35rem 0 1rem;letter-spacing:.04em}
+    .experienced-copy>p{color:var(--sub);font-size:1rem;margin:0 0 1rem}
+    .experienced-points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1.35rem 0}
+    .experienced-point{background:#fff;border:1px solid var(--line);border-radius:18px;padding:.78rem .9rem;font-weight:800;color:#46392f;box-shadow:0 8px 22px rgba(50,32,14,.04)}
+    .experienced-point::before{content:"♪";color:var(--gold);font-weight:900;margin-right:.45em}
+    .experienced-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.3rem}
+    .experienced-photos{display:grid;grid-template-columns:.92fr 1.08fr;gap:14px;align-items:end}
+    .experienced-photo{margin:0;border-radius:26px;overflow:hidden;background:#ddd;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8);position:relative}
+    .experienced-photo:first-child{transform:translateY(28px)}
+    .experienced-photo img{width:100%;height:100%;object-fit:cover}
+    .experienced-photo:first-child img{aspect-ratio:4/3}
+    .experienced-photo:last-child img{aspect-ratio:4/5;object-position:center 42%}
+    .experienced-photo figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,250,242,.92);border-radius:999px;padding:.48rem .7rem;text-align:center;font-size:.78rem;font-weight:900;color:#3b3028;backdrop-filter:blur(8px)}
+
     .recommend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
     .recommend-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(20px,3vw,26px);box-shadow:0 12px 32px rgba(50,32,14,.07)}
     .recommend-card .tag{display:inline-flex;border-radius:999px;background:#fff6e6;border:1px solid rgba(177,135,63,.22);color:#8c5f20;padding:.25rem .7rem;font-weight:900;font-size:.78rem;margin-bottom:.8rem}
@@ -84,6 +110,8 @@
     .availability-card p{margin:0;color:var(--sub);font-weight:700}
     .availability-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
     .availability-pills span{display:inline-flex;border-radius:999px;border:1px solid var(--line);background:#fffaf2;padding:.42rem .78rem;font-size:.85rem;font-weight:900;color:#4a3d32}
+    .availability-pills .open{background:#eef8ee;border-color:#bdd8bf;color:#496b4e}
+    .availability-pills .limited{background:#fff8e8;border-color:#e4cf9b;color:#806127}
     .availability-pills .busy{background:#fff1e9;border-color:#e6c2b0;color:#94523c}
     .review-section{background:#fff}
     .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;align-items:stretch}
@@ -350,10 +378,11 @@
       .hamb{display:block}
       .nav.open .nav-links{display:flex;position:absolute;left:16px;right:16px;top:76px;background:#fffaf2;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:1rem;flex-direction:column;align-items:flex-start}
       .nav-actions .btn.secondary{display:none}
-      .hero-grid,.two-col,.audience-grid,.gallery,.teacher-card,.contact-grid,.access-grid,.footer-grid,.exterior-card{grid-template-columns:1fr}
-      .quick-grid{grid-template-columns:1fr 1fr}
+      .hero-grid,.two-col,.audience-grid,.gallery,.teacher-card,.contact-grid,.access-grid,.footer-grid,.exterior-card,.experienced-shell{grid-template-columns:1fr}
+      .quick-grid,.path-grid{grid-template-columns:1fr 1fr}
       .recommend-grid,.review-grid,.availability-card{grid-template-columns:1fr}
       .availability-card{text-align:left}
+      .experienced-photo:first-child{transform:none}
       .hero-panel{display:none}
       .feature-grid{grid-template-columns:1fr 1fr}
       .visual-reason-grid{grid-template-columns:1fr 1fr}
@@ -374,7 +403,7 @@
       .brand-logo{width:150px}
       .hero-inner{padding-bottom:84px}
       .hero-buttons .btn{width:100%}
-      .feature-grid,.steps,.quick-grid,.recommend-grid,.review-grid,.visual-reason-grid{grid-template-columns:1fr}
+      .feature-grid,.steps,.quick-grid,.path-grid,.recommend-grid,.review-grid,.visual-reason-grid,.experienced-points{grid-template-columns:1fr}
       .aud-card{min-height:280px}
       .gallery figure{height:250px}
       .contact-grid{gap:14px}
@@ -393,7 +422,7 @@
         "url":"https://alice-0226.github.io/",
         "image":"https://alice-0226.github.io/assets/exterior.jpg",
         "logo":"https://alice-0226.github.io/logo2.png",
-        "description":"石川県小松市の個別ピアノ教室。通常レッスンは1回60分。お子さまのはじめてのピアノから、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備まで対応。無料体験レッスン60分〜120分受付中。",
+        "description":"石川県小松市の個別ピアノ教室。通常レッスンは1回60分。幼児・小学生のはじめてのピアノから、小学校高学年・中学生・高校生・経験者の上達、学校伴奏、大人の初心者・再開、音大受験や保育志望まで対応。無料体験60分〜120分受付中。",
         "telephone":"090-6526-4543",
         "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
         "areaServed":["石川県小松市","石川県能美市","粟津","石川県加賀市","金沢方面","石川県南部"],
@@ -404,6 +433,7 @@
           "name":"ピアノレッスン",
           "itemListElement":[
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"子ども向けピアノレッスン","description":"音符・リズムの基礎から好きな曲への挑戦まで、一人ひとりに合わせて指導します。"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"小学校高学年・中高生・経験者向けピアノレッスン","description":"音色・表現・テクニック、学校の伴奏、発表会や好きな曲の仕上げなど、現在の課題と目標に合わせて指導します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"大人の初心者・再開ピアノレッスン","description":"大人の初心者や昔習っていた方の再開、好きな曲への挑戦にも対応します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"音大受験・保育志望のピアノレッスン","description":"音大受験や保育士・幼児教育を目指す方のピアノ準備にも対応します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"無料体験レッスン","description":"60分〜120分で教室の雰囲気やレッスン内容を確認できます。"}}
@@ -421,7 +451,7 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。"}},{"@type":"Question","name":"保護者がピアノ未経験でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"保護者の方がピアノ未経験でも大丈夫です。ご家庭の事情や練習環境もふまえて、無理なく続けられる方法を一緒に考えます。"}},{"@type":"Question","name":"通常のレッスンは何分ですか？","acceptedAnswer":{"@type":"Answer","text":"通常レッスンは1回60分です。個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"水曜日や土曜日でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンも相談できます。"}},{"@type":"Question","name":"音大受験や保育志望のピアノにも対応していますか？","acceptedAnswer":{"@type":"Answer","text":"音大受験を考えている方や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。現在のレベルや目標に合わせてご相談いただけます。"}},{"@type":"Question","name":"発表会前のサポートはありますか？","acceptedAnswer":{"@type":"Answer","text":"本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。"}},{"@type":"Question","name":"Etudeと同じ教室ですか？","acceptedAnswer":{"@type":"Answer","text":"同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。レッスンのお問い合わせはアリスピアノ教室へお願いいたします。"}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"音符読み・リズムの基礎から、一人ひとりのペースに合わせて丁寧に進めます。"}},{"@type":"Question","name":"保護者がピアノ未経験でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"保護者の方がピアノ未経験でも大丈夫です。ご家庭の事情や練習環境もふまえて、無理なく続けられる方法を一緒に考えます。"}},{"@type":"Question","name":"通常のレッスンは何分ですか？","acceptedAnswer":{"@type":"Answer","text":"通常レッスンは1回60分です。個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"水曜日や土曜日でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。"}},{"@type":"Question","name":"小学校高学年や中学生・高校生、経験者でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。譜読みの先にある音色・表現・テクニック、好きな曲や学校伴奏の仕上げなど、現在の課題と目標に合わせて指導します。"}},{"@type":"Question","name":"学校の合唱伴奏や発表会の曲も相談できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。期限や本番を確認しながら、譜読み、テンポ、音色、ペダル、表現まで丁寧に仕上げます。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンも相談できます。"}},{"@type":"Question","name":"音大受験や保育志望のピアノにも対応していますか？","acceptedAnswer":{"@type":"Answer","text":"音大受験を考えている方や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。現在のレベルや目標に合わせてご相談いただけます。"}},{"@type":"Question","name":"発表会前のサポートはありますか？","acceptedAnswer":{"@type":"Answer","text":"本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。"}},{"@type":"Question","name":"Etudeと同じ教室ですか？","acceptedAnswer":{"@type":"Answer","text":"同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。レッスンのお問い合わせはアリスピアノ教室へお願いいたします。"}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"アリスピアノ教室","item":"https://alice-0226.github.io/"}]}
@@ -444,6 +474,7 @@
       <a class="brand" href="#top" aria-label="トップへ"><img class="brand-logo" src="logo2.png" alt="アリスピアノ教室 ロゴ"></a>
       <nav class="nav-links" aria-label="メインメニュー">
         <a href="#komatsu-piano">対象</a>
+        <a href="#experienced">中高生・経験者</a>
         <a href="#features">特徴</a>
         <a href="#availability">募集状況</a>
         <a href="#reviews">口コミ</a>
@@ -467,11 +498,12 @@
           <div class="hero-copy">
             <p class="hero-kicker">KOMATSU CITY / ALICE PIANO SCHOOL</p>
             <h1><span>一人ひとりの進み方を見ながら</span>できていないところを、置いてけぼりにしない。</h1>
-            <p class="hero-lead">通常レッスンは1回60分。音符・リズムの基礎から、できていないところを一つずつ確認しながら、その方のペースで進めます。必要に応じて、レベルに合わせた楽譜のアレンジにも対応します。</p>
+            <p class="hero-lead">通常レッスンは1回60分。音符・リズムの基礎から、譜読み後の音色・表現・テクニック、学校の伴奏や憧れの曲の仕上げまで、現在の課題と目標に合わせて進めます。必要に応じて、レベルに合わせた楽譜のアレンジにも対応します。</p>
             <div class="hero-badges">
               <span class="pill">通常レッスン1回60分</span>
               <span class="pill">無料体験60分〜120分</span>
               <span class="pill">完全防音スタジオ</span>
+              <span class="pill">小学校高学年・中高生・経験者も歓迎</span>
               <span class="pill">グランドピアノ・楽曲アレンジ</span>
               <span class="pill">音大受験・保育志望にも対応</span>
             </div>
@@ -492,7 +524,7 @@
         <div>
           <div class="trial-notice-label">FREE TRIAL LESSON</div>
           <h2>現在、無料体験レッスン受付中です</h2>
-          <p>小松市・粟津周辺・能美市・加賀市方面からもご相談いただけます。教室の雰囲気や料金、先生との相性を、体験時にゆっくり確認できます。</p>
+          <p>小松市・粟津周辺・能美市・加賀市方面からもご相談いただけます。はじめての方は教室の雰囲気や先生との相性を、経験者の方は今弾いている曲の課題や今後の伸ばし方を、体験時にゆっくり確認できます。</p>
         </div>
         <div class="trial-notice-actions">
           <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで空き時間を聞く</a>
@@ -519,30 +551,62 @@
 
     <section class="section quick-start" id="quick-start">
       <div class="wrap">
-        <span class="eyebrow" style="display:block;text-align:center">FIRST CHECK</span>
-        <h2 class="section-title">はじめての方へ</h2>
-        <p class="section-lead">お子さまのはじめてのピアノ、大人の初心者・再開レッスン、音大受験や保育士・幼児教育を目指す方の準備にも対応しています。体験では、教室の雰囲気や料金をゆっくり確認できます。</p>
+        <span class="eyebrow" style="display:block;text-align:center">CHOOSE YOUR PATH</span>
+        <h2 class="section-title">はじめての方も、経験者の方も</h2>
+        <p class="section-lead">年齢だけで分けるのではなく、現在の経験や目標に合わせてレッスンを組み立てます。小さなお子さまの第一歩から、中高生・経験者のさらなる上達までご相談いただけます。</p>
+        <div class="path-grid">
+          <article class="path-card">
+            <span class="tag">BEGINNER</span>
+            <h3>はじめてピアノを習う方へ</h3>
+            <p>音符・リズム・指の動かし方から、一人ひとりのペースで丁寧に進めます。保護者の方がピアノ未経験でも大丈夫です。</p>
+            <a class="path-link" href="kids-piano.html">子ども向けレッスンを見る</a>
+          </article>
+          <article class="path-card">
+            <span class="tag">TEEN / EXPERIENCED</span>
+            <h3>小学校高学年・中高生・経験者の方へ</h3>
+            <p>音色・表現・テクニック、学校の伴奏、発表会や憧れの曲など、「弾けるようになった後」の課題と目標に合わせます。</p>
+            <a class="path-link" href="experienced-piano.html">中高生・経験者向けを見る</a>
+          </article>
+        </div>
         <div class="quick-grid">
-          <article class="quick-card">
-            <div class="quick-icon">1</div>
-            <h3>幅広い目的に対応</h3>
-            <p>子ども・大人のレッスンから、音大受験や保育志望の準備までご相談いただけます。</p>
-          </article>
-          <article class="quick-card">
-            <div class="quick-icon">2</div>
-            <h3>無料体験60〜120分</h3>
-            <p>教室の雰囲気・先生との相性・料金をゆっくり確認できます。</p>
-          </article>
-          <article class="quick-card">
-            <div class="quick-icon">3</div>
-            <h3>完全防音スタジオ</h3>
-            <p>コンサート用グランドピアノで、のびのび音を出せる環境です。</p>
-          </article>
-          <article class="quick-card">
-            <div class="quick-icon">4</div>
-            <h3>通常レッスンは1回60分</h3>
-            <p>毎回のレッスン時間が分かりやすく、落ち着いて取り組める個別レッスンです。</p>
-          </article>
+          <article class="quick-card"><div class="quick-icon">1</div><h3>通常レッスンは1回60分</h3><p>曲を落ち着いて見ながら、基礎から表現まで個別に確認できます。</p></article>
+          <article class="quick-card"><div class="quick-icon">2</div><h3>無料体験60〜120分</h3><p>経験者の方は、今弾いている曲や教材をお持ちいただけます。</p></article>
+          <article class="quick-card"><div class="quick-icon">3</div><h3>完全防音・グランドピアノ</h3><p>音色やタッチの違いを感じながら、のびのびと演奏できます。</p></article>
+          <article class="quick-card"><div class="quick-icon">4</div><h3>幅広い目標に対応</h3><p>学校伴奏、好きな曲、発表会、音大受験・保育志望までご相談ください。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experienced" id="experienced">
+      <div class="wrap">
+        <div class="experienced-shell">
+          <div class="experienced-copy">
+            <span class="eyebrow">FOR TEENS & EXPERIENCED STUDENTS</span>
+            <h2>弾けるようになってからの、次の一歩へ。</h2>
+            <p>譜読みができるようになった後も、音色、フレーズ、タッチ、ペダル、身体の使い方など、演奏には多くの伸びしろがあります。</p>
+            <p>小学校高学年・中学生・高校生、ピアノ経験者の方にも、今困っているところを確認しながら、目標の曲を自分らしく弾けるよう丁寧にサポートします。</p>
+            <div class="experienced-points">
+              <div class="experienced-point">学校の合唱伴奏・オーディション</div>
+              <div class="experienced-point">音色・表現・ペダルの使い方</div>
+              <div class="experienced-point">難しい曲・好きな曲への挑戦</div>
+              <div class="experienced-point">部活動や勉強と両立した継続</div>
+            </div>
+            <p>体験では、今弾いている曲やこれまで使ってきた教材をお持ちください。現在の課題と、これから伸ばせるポイントを一緒に確認します。</p>
+            <div class="experienced-actions">
+              <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">今弾いている曲を持って体験を相談する</a>
+              <a class="btn secondary" href="experienced-piano.html">詳しい内容を見る</a>
+            </div>
+          </div>
+          <div class="experienced-photos">
+            <figure class="experienced-photo">
+              <img src="assets/lesson-teen-keyboard.jpg" alt="中学生・高校生年代の生徒が鍵盤楽器を演奏している様子" loading="lazy">
+              <figcaption>中高生のレッスンにも対応</figcaption>
+            </figure>
+            <figure class="experienced-photo">
+              <img src="assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで楽譜を見ながら演奏している様子" loading="lazy">
+              <figcaption>音色・表現まで丁寧に</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -556,7 +620,7 @@
       <div class="wrap">
         <span class="eyebrow" style="display:block;text-align:center">LESSON SCENE</span>
         <h2 class="section-title">実際のレッスンの様子</h2>
-        <p class="section-lead">お子さまのはじめてのピアノから、大人の方のレッスン、先生と一緒に確認しながら進める個別指導まで。教室の雰囲気が伝わる写真を掲載しています。</p>
+        <p class="section-lead">小さなお子さまの第一歩から、小学校高学年・中高生・経験者、大人の方まで。年齢や進度に応じて、一人ひとりの手元と音を確認しながら進めます。</p>
         <div class="gallery">
           <figure><img src="assets/lesson-child-score.jpg" alt="子どもがグランドピアノで楽譜を見ながらレッスンを受けている様子" loading="lazy"><figcaption class="caption">小さなお子さまも、楽譜を見ながら一歩ずつ</figcaption></figure>
           <figure><img src="assets/lesson-grand-piano-adult.jpg" alt="グランドピアノで演奏する大人の生徒のレッスン風景" loading="lazy"><figcaption class="caption">大人の方・受験準備にも対応</figcaption></figure>
@@ -577,6 +641,11 @@
             <p>音符・リズムの基礎から、楽しく続けられるように丁寧に進めます。保護者がピアノ未経験でも大丈夫です。</p>
           </article>
           <article class="recommend-card">
+            <span class="tag">TEEN / EXPERIENCED</span>
+            <h3>小学校高学年・中高生・経験者</h3>
+            <p>学校の伴奏、発表会、好きな曲、音色や表現など、譜読みの先にある課題を丁寧に見ていきます。</p>
+          </article>
+          <article class="recommend-card">
             <span class="tag">ADULT</span>
             <h3>大人の初心者・再開レッスン</h3>
             <p>昔習っていた方、趣味で好きな曲を弾きたい方も歓迎。生活ペースに合わせて無理なく進めます。</p>
@@ -586,14 +655,10 @@
             <h3>音大受験・保育志望の準備</h3>
             <p>音大受験や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。</p>
           </article>
-          <article class="recommend-card">
-            <span class="tag">SUPPORT</span>
-            <h3>発表会前もしっかりサポート</h3>
-            <p>本番で自信を持って弾けるよう、音の出し方・表現・姿勢まで一人ひとりに合わせて整えます。</p>
-          </article>
         </div>
         <div class="compact-link-row">
           <a class="btn secondary" href="kids-piano.html">子ども向けを見る</a>
+          <a class="btn secondary" href="experienced-piano.html">中高生・経験者向けを見る</a>
           <a class="btn secondary" href="adult-piano.html">大人向けを見る</a>
           <a class="btn secondary" href="trial-lesson.html">無料体験の流れを見る</a>
         </div>
@@ -631,7 +696,7 @@
       <div class="wrap">
         <span class="eyebrow" style="display:block;text-align:center">WHY ALICE</span>
         <h2 class="section-title">大切にしていること</h2>
-        <p class="section-lead">写真で見る、アリスピアノ教室の安心できるポイントです。レッスンの進め方、ピアノの環境、入口の分かりやすさまで、はじめての方にも伝わりやすくまとめています。</p>
+        <p class="section-lead">写真で見る、アリスピアノ教室のレッスン環境です。はじめての基礎から、経験者の音色・表現、ピアノの環境、入口の分かりやすさまでご紹介します。</p>
         <div class="visual-reason-grid">
           <article class="visual-reason-card">
             <div class="visual-reason-photo">
@@ -655,12 +720,12 @@
           </article>
           <article class="visual-reason-card">
             <div class="visual-reason-photo">
-              <img src="assets/lesson-child-score.jpg" alt="子どもが楽譜を見ながらピアノレッスンを受けている様子" loading="lazy">
+              <img src="assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで楽譜を見ながら演奏している様子" loading="lazy" style="object-position:center 42%">
               <div class="visual-reason-badge">03</div>
             </div>
             <div class="visual-reason-body">
-              <h3>小さな「できた」を積み重ねる</h3>
-              <p>音符やリズムの基礎から、子どものペースに合わせて少しずつ進めます。</p>
+              <h3>譜読みの先の、音色と表現まで</h3>
+              <p>中高生・経験者には、タッチ、フレーズ、ペダル、曲の仕上げまで丁寧に伝えます。</p>
             </div>
           </article>
           <article class="visual-reason-card">
@@ -677,6 +742,8 @@
         <div class="reason-chip-row" aria-label="アリスピアノ教室の特徴">
           <span class="reason-chip">指導歴50年弱</span>
           <span class="reason-chip">無料体験60〜120分</span>
+          <span class="reason-chip">中高生・経験者も歓迎</span>
+          <span class="reason-chip">学校伴奏・ステージ準備</span>
           <span class="reason-chip">音大受験・保育志望も対応</span>
           <span class="reason-chip">好きな曲のアレンジ対応</span>
           <span class="reason-chip">水曜・土曜も相談可</span>
@@ -691,11 +758,11 @@
           <div>
             <span class="eyebrow">OPEN SLOTS</span>
             <h2>現在の募集状況</h2>
-            <p>水曜日と土曜日のレッスン枠は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはお気軽にお問い合わせください。</p>
+            <p>火曜日・木曜日・金曜日は比較的ご案内しやすく、月曜日は一部の時間帯で受付中です。水曜日・土曜日は混み合っていますが、ご希望の時間帯によってはご案内できる場合があります。</p>
             <div class="availability-pills">
-              <span class="busy">水曜：混み合っていますが相談可</span>
-              <span class="busy">土曜：混み合っていますが相談可</span>
-              <span>その他の曜日：ご相談ください</span>
+              <span class="open">火・木・金曜：比較的ご案内しやすい</span>
+              <span class="limited">月曜：一部時間帯でご案内可能</span>
+              <span class="busy">水・土曜：混み合っていますが時間帯により相談可</span>
             </div>
           </div>
           <div class="availability-cta">
@@ -760,13 +827,13 @@
           </article>
           <article class="difference-card">
             <span class="diff-label">02 / SOUND</span>
-            <h3>音の出し方まで丁寧に</h3>
-            <p>姿勢・タッチ・聴き方を少し整えるだけで、演奏の印象が変わることがあります。</p>
+            <h3>音色・表現・ペダルまで丁寧に</h3>
+            <p>譜読みの先にあるタッチ、フレーズ、聴き方、ペダルを整え、伝わる演奏へつなげます。</p>
           </article>
           <article class="difference-card">
             <span class="diff-label">03 / STAGE</span>
-            <h3>発表会前も心強くサポート</h3>
-            <p>本番で自信を持てるよう、通常時間にとらわれず最後まで丁寧に寄り添います。</p>
+            <h3>学校伴奏・発表会の曲も仕上げる</h3>
+            <p>本番の日程を確認しながら、テンポ、音色、バランス、表現まで丁寧に整えます。</p>
           </article>
           <article class="difference-card">
             <span class="diff-label">04 / CARE</span>
@@ -780,11 +847,11 @@
     <section class="section trial" id="trial">
       <div class="wrap">
         <h2 class="section-title">無料体験レッスンの流れ</h2>
-        <p class="section-lead">無料体験は60分〜120分。はじめての方でも安心してお越しいただけるよう、分かりやすくご案内します。</p>
+        <p class="section-lead">無料体験は60分〜120分。はじめての方は基礎から、経験者の方は今弾いている曲や教材を使いながら、現在の課題と今後の進め方をご案内します。</p>
         <div class="steps">
           <article class="step"><b>1</b><h3>LINEなどでお問い合わせ</h3><p>「空き時間を知りたい」「体験を相談したい」の一言だけでも大丈夫です。</p></article>
           <article class="step"><b>2</b><h3>ご希望日時を相談</h3><p>ご都合の良い日時をうかがい、体験日を決めます。</p></article>
-          <article class="step"><b>3</b><h3>無料体験</h3><p>レッスンを体験しながら教室の雰囲気も確認できます。</p></article>
+          <article class="step"><b>3</b><h3>無料体験</h3><p>経験者の方は今弾いている曲や教材を使い、課題と伸ばし方を確認します。</p></article>
           <article class="step"><b>4</b><h3>教室を見学</h3><p>完全防音スタジオやピアノの響きを体感できます。</p></article>
           <article class="step"><b>5</b><h3>料金をご案内</h3><p>内容・料金を分かりやすく説明。無理な勧誘はありません。</p></article>
         </div>
@@ -820,7 +887,7 @@
             <span class="eyebrow">TEACHER</span>
             <h3>小川 公子</h3>
             <p>幼少期よりピアノ一筋。音楽系高校・音大を経て、地域で50年弱にわたり指導。「まず音楽を好きになる」を大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
-            <p>はじめてのお子さま、好きな曲に挑戦したい大人の方、音大受験や保育士・幼児教育を目指す方まで、一人ひとりに合わせて丁寧にサポートします。</p>
+            <p>はじめてのお子さま、小学校高学年・中高生・経験者、好きな曲に挑戦したい大人の方、音大受験や保育士・幼児教育を目指す方まで、一人ひとりに合わせて丁寧にサポートします。</p>
             <div style="margin-top:1.2rem"><a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" target="_blank" rel="noopener">Instagramを見る</a></div>
           </div>
         </div>
@@ -836,6 +903,8 @@
           <details><summary>Q. 通常のレッスンは何分ですか？</summary><p>通常レッスンは1回60分です。落ち着いて取り組める個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。</p></details>
           <details><summary>Q. 無料体験は何分ですか？</summary><p>無料体験レッスンは60分〜120分で受付しています。教室の雰囲気やレッスン内容をゆっくり確認していただけます。</p></details>
           <details><summary>Q. 水曜日や土曜日でも相談できますか？</summary><p>水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。</p></details>
+          <details><summary>Q. 小学校高学年や中学生・高校生、経験者でも通えますか？</summary><p>はい。譜読みの先にある音色・表現・テクニック、好きな曲や学校伴奏の仕上げなど、現在の課題と目標に合わせて進めます。</p></details>
+          <details><summary>Q. 学校の合唱伴奏や発表会の曲も相談できますか？</summary><p>はい。本番の日程を確認しながら、譜読み、テンポ、音色、ペダル、表現まで丁寧に仕上げます。現在弾いている楽譜をお持ちください。</p></details>
           <details><summary>Q. 大人でも通えますか？</summary><p>はい。大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。好きな曲からのレッスンもご相談ください。</p></details>
           <details><summary>Q. 音大受験や保育志望のピアノにも対応していますか？</summary><p>はい。音大受験を考えている方や、保育士・幼児教育を目指す方のピアノ準備にも対応しています。現在のレベルや目標に合わせてご相談いただけます。</p></details>
           <details><summary>Q. 発表会前のサポートはありますか？</summary><p>はい。本番で自信を持って弾けるようになるまで、通常のレッスン時間にとらわれず丁寧にサポートします。</p></details>
@@ -851,7 +920,7 @@
     <section class="section contact" id="contact">
       <div class="wrap">
         <h2 class="section-title">まずは気軽にご相談ください</h2>
-        <p class="section-lead">「空き時間を知りたい」「料金について聞きたい」「無料体験を相談したい」など、質問だけでも大丈夫です。LINE・お電話・フォームよりお気軽にご相談ください。</p>
+        <p class="section-lead">「空き時間を知りたい」「今弾いている曲を見てほしい」「学校の伴奏を相談したい」など、質問だけでも大丈夫です。LINE・お電話・フォームよりお気軽にご相談ください。</p>
         <div class="contact-grid">
           <div class="contact-card" style="text-align:center">
             <h3>LINEで気軽に相談</h3>
@@ -940,8 +1009,8 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div><strong class="serif" style="font-size:1.2rem;color:#fff">アリスピアノ教室</strong><br>小松市の個別ピアノレッスン。お子さまのはじめてのピアノから、大人の初心者・再開レッスンまで対応しています。</div>
-        <div><strong style="color:#fff">メニュー</strong><br><a href="#features">特徴</a><br><a href="#availability">募集状況</a><br><a href="#reviews">口コミ</a><br><a href="kids-piano.html">子ども向け</a><br><a href="adult-piano.html">大人向け</a><br><a href="trial-lesson.html">無料体験</a><br><a href="#pricing">料金</a><br><a href="#access">アクセス</a></div>
+        <div><strong class="serif" style="font-size:1.2rem;color:#fff">アリスピアノ教室</strong><br>小松市の個別ピアノレッスン。幼児・小学生の第一歩から、小学校高学年・中高生・経験者、大人の初心者・再開まで対応しています。</div>
+        <div><strong style="color:#fff">メニュー</strong><br><a href="#features">特徴</a><br><a href="#availability">募集状況</a><br><a href="#reviews">口コミ</a><br><a href="kids-piano.html">子ども向け</a><br><a href="experienced-piano.html">中高生・経験者向け</a><br><a href="adult-piano.html">大人向け</a><br><a href="trial-lesson.html">無料体験</a><br><a href="#pricing">料金</a><br><a href="#access">アクセス</a></div>
         <div><strong style="color:#fff">連絡先</strong><br>TEL：090-6526-4543<br>住所：石川県小松市小寺町乙38番地1</div>
       </div>
       <div class="copyright">&copy; 2026 アリスピアノ教室.</div>
@@ -988,6 +1057,14 @@
             link_text: text,
             page_location: window.location.href
           });
+
+          if (link.hasAttribute('data-experienced-cta')) {
+            sendEvent('experienced_interest_click', {
+              link_url: link.href,
+              link_text: text,
+              page_location: window.location.href
+            });
+          }
         }
 
         if (href.startsWith('tel:')) {
@@ -1044,6 +1121,25 @@
           });
         }, { threshold: [0.10], rootMargin: '0px 0px -10% 0px' });
         observer.observe(trialSection);
+      }
+
+      // 中高生・経験者向けセクションの閲覧を1回だけ計測
+      const experiencedSection = document.getElementById('experienced');
+      if (experiencedSection && 'IntersectionObserver' in window) {
+        let experiencedViewed = false;
+        const experiencedObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!experiencedViewed && entry.isIntersecting && entry.intersectionRatio >= 0.10) {
+              experiencedViewed = true;
+              sendEvent('experienced_section_view', {
+                section_id: 'experienced',
+                page_location: window.location.href
+              });
+              experiencedObserver.disconnect();
+            }
+          });
+        }, { threshold: [0.10], rootMargin: '0px 0px -10% 0px' });
+        experiencedObserver.observe(experiencedSection);
       }
     })();
   </script>
