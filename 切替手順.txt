@@ -1,0 +1,46 @@
+アリスピアノ教室・独自ドメイン切替チェックリスト
+
+取得ドメイン
+alicepiano-komatsu.com
+
+1. GitHubプロフィール設定でドメインを検証
+   GitHub右上アイコン → Settings → Pages → Add a domain
+   alicepiano-komatsu.com を入力
+   表示されたTXTレコードをXServerドメインへ追加
+   GitHubへ戻ってVerify
+   TXTレコードは削除しない
+
+2. GitHubリポジトリのPages設定
+   alice-0226.github.io のリポジトリ → Settings → Pages
+   Custom domain に alicepiano-komatsu.com を入力してSave
+
+3. XServerドメインのDNS設定
+   ルート（ホスト空欄）へAレコードを4件
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+   wwwへCNAMEを1件
+   ホスト: www
+   種別: CNAME
+   内容: alice-0226.github.io
+   TTL: 3600（初期値のままで可）
+
+   ワイルドカード（*）は追加しない
+
+4. GitHubのPages画面でDNS checkが成功するまで待つ
+   反映はすぐの場合もあるが、最大24時間程度かかることがある
+
+5. Enforce HTTPSにチェック
+   証明書の発行に少し時間がかかる場合がある
+
+6. 次の両方を確認
+   https://alicepiano-komatsu.com/
+   https://www.alicepiano-komatsu.com/
+
+7. 正常表示後、このZIPの中身をリポジトリのルートへアップロード
+   assetsフォルダなど既存ファイルは削除しない
+
+8. Search Consoleへ alicepiano-komatsu.com をドメインプロパティとして追加
+   sitemap.xml を送信
