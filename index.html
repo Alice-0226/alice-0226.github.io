@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-<title>小松市のピアノ教室｜1回60分・子どもから中高生・大人まで｜アリスピアノ教室</title>
-<meta content="石川県小松市小寺町の個別ピアノ教室。通常レッスンは1回60分。幼児・小学生、中高生・経験者、大人の初心者・再開、学校伴奏、音大受験・保育志望まで対応。無料体験は60分を基本に、最大120分まで対応受付中。" name="description"/>
+<title>小松市のピアノ教室｜通常1回60分（初級者を除く）｜アリスピアノ教室</title>
+<meta content="石川県小松市小寺町の個別ピアノ教室。通常レッスンは1回60分（初級者を除く）。幼児・小学生、中高生・経験者、大人の初心者・再開、学校伴奏、音大受験・保育志望まで対応。無料体験は60分を基本に、ご希望に応じて最大120分まで対応。" name="description"/>
 <link href="https://alicepiano-komatsu.com/" rel="canonical"/>
 <meta content="ja_JP" property="og:locale"/>
 <meta content="website" property="og:type"/>
@@ -138,7 +138,12 @@
 
     /* Hero */
     .hero{min-height:100svh;padding-top:70px;position:relative;overflow:hidden;background:#18100b;color:#fff;display:grid;align-items:end}
-    .hero-bg{position:absolute;inset:0;overflow:hidden;background:#18100b url('assets/exterior.jpg') center 52%/cover no-repeat}
+    .hero-bg{position:absolute;inset:0;overflow:hidden;background:#18100b}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.04);animation:heroFade 18s infinite;filter:saturate(.98);will-change:opacity,transform}
+    .hero-slide:nth-child(1){background-image:url('assets/exterior.jpg');background-position:center 52%;animation-delay:0s}
+    .hero-slide:nth-child(2){background-image:url('assets/grand-piano-front.jpg');background-position:center 50%;animation-delay:6s}
+    .hero-slide:nth-child(3){background-image:url('assets/classroom-wide.jpg');background-position:center 50%;animation-delay:12s}
+    @keyframes heroFade{0%{opacity:0;transform:scale(1.04)}8%{opacity:1;transform:scale(1)}33%{opacity:1;transform:scale(1)}43%{opacity:0;transform:scale(1.02)}100%{opacity:0;transform:scale(1.04)}}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,12,7,.66) 0%,rgba(19,12,7,.38) 42%,rgba(19,12,7,.10) 72%,rgba(19,12,7,.32) 100%)}
 
     .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(218,180,102,.10),transparent 32%),linear-gradient(180deg,transparent 62%,rgba(18,12,8,.62));pointer-events:none}
@@ -289,6 +294,12 @@
   line-height:1.65;
 }
 
+
+    @media (prefers-reduced-motion: reduce){
+      .hero-slide{animation:none;opacity:0;transform:none}
+      .hero-slide:first-child{opacity:1}
+    }
+
 </style>
 <script type="application/ld+json">
   {
@@ -302,7 +313,7 @@
         "url":"https://alicepiano-komatsu.com/",
         "image":"https://alicepiano-komatsu.com/assets/exterior.jpg",
         "logo":"https://alicepiano-komatsu.com/logo2.png",
-        "description":"石川県小松市の個別ピアノ教室。通常レッスンは1回60分。幼児・小学生のはじめてのピアノから、小学校高学年・中学生・高校生・経験者の上達、学校伴奏、大人の初心者・再開、音大受験や保育志望まで対応。無料体験は60分を基本に、最大120分まで対応受付中。",
+        "description":"石川県小松市の個別ピアノ教室。通常レッスンは1回60分（初級者を除く）。幼児・小学生のはじめてのピアノから、小学校高学年・中学生・高校生・経験者の上達、学校伴奏、大人の初心者・再開、音大受験や保育志望まで対応。無料体験は60分を基本に、ご希望に応じて最大120分まで対応。",
         "telephone":"090-6526-4543",
         "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
         "areaServed":["石川県小松市","石川県能美市","粟津","石川県加賀市","金沢方面","石川県南部"],
@@ -333,7 +344,7 @@
     ]
   }
   </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"大丈夫です。音符読み・リズムの基礎から、一人ひとりのペースに合わせて進めます。保護者の方がピアノ未経験でも、ご家庭で無理なく続けられる方法を一緒に考えます。"}},{"@type":"Question","name":"通常のレッスンは何分ですか？","acceptedAnswer":{"@type":"Answer","text":"通常レッスンは1回60分です。個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分です。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"水曜日や土曜日でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご案内できる場合があります。"}},{"@type":"Question","name":"小学校高学年や中学生・高校生、経験者でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。音色・表現・テクニック、好きな曲や学校伴奏の仕上げなど、現在の課題と目標に合わせて進めます。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。"}},{"@type":"Question","name":"体験後にしつこい勧誘はありますか？","acceptedAnswer":{"@type":"Answer","text":"ありません。ご家庭でゆっくりご相談いただけます。"}},{"@type":"Question","name":"Etudeと同じ教室ですか？","acceptedAnswer":{"@type":"Answer","text":"同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"まったくの初心者でも大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"大丈夫です。音符読み・リズムの基礎から、一人ひとりのペースに合わせて進めます。保護者の方がピアノ未経験でも、ご家庭で無理なく続けられる方法を一緒に考えます。"}},{"@type":"Question","name":"通常のレッスンは何分ですか？","acceptedAnswer":{"@type":"Answer","text":"通常レッスンは1回60分（初級者を除く）です。個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。"}},{"@type":"Question","name":"無料体験は何分ですか？","acceptedAnswer":{"@type":"Answer","text":"無料体験レッスンは60分〜120分です。教室の雰囲気やレッスン内容をゆっくり確認できます。"}},{"@type":"Question","name":"水曜日や土曜日でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご案内できる場合があります。"}},{"@type":"Question","name":"小学校高学年や中学生・高校生、経験者でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。音色・表現・テクニック、好きな曲や学校伴奏の仕上げなど、現在の課題と目標に合わせて進めます。"}},{"@type":"Question","name":"大人でも通えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。大人の初心者や、昔習っていたピアノを再開したい方も歓迎しています。"}},{"@type":"Question","name":"体験後にしつこい勧誘はありますか？","acceptedAnswer":{"@type":"Answer","text":"ありません。ご家庭でゆっくりご相談いただけます。"}},{"@type":"Question","name":"Etudeと同じ教室ですか？","acceptedAnswer":{"@type":"Answer","text":"同じ建物内にピアノレンタルスタジオEtudeがありますが、アリスピアノ教室とは別会社です。"}}]}</script>
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"アリスピアノ教室","item":"https://alicepiano-komatsu.com/"}]}
   </script>
@@ -369,19 +380,23 @@
 </header>
 <main>
 <section class="hero" id="top">
-<div aria-hidden="true" class="hero-bg"></div>
+<div aria-hidden="true" class="hero-bg">
+<div class="hero-slide"></div>
+<div class="hero-slide"></div>
+<div class="hero-slide"></div>
+</div>
 <div class="wrap hero-inner">
 <div class="hero-grid">
 <div class="hero-copy">
 <p class="hero-kicker">KOMATSU CITY / ALICE PIANO SCHOOL</p>
-<h1><span>一人ひとりの進み方を見ながら</span>できていないところを、置いてけぼりにしない。</h1>
-<p class="hero-lead">通常レッスンは1回60分。音符・リズムの基礎から、譜読み後の音色・表現・テクニック、学校の伴奏や憧れの曲の仕上げまで、現在の課題と目標に合わせて進めます。必要に応じて、レベルに合わせた楽譜のアレンジにも対応します。</p>
+<h1><span>一人ひとりの進み方を見ながら</span>「弾けた」という自信につながるレッスン。</h1>
+<p class="hero-lead">通常レッスンは1回60分（初級者を除く）。音符・リズムの基礎から、譜読み後の音色・表現・テクニック、学校の伴奏や憧れの曲の仕上げまで、現在の課題と目標に合わせて進めます。生徒さんが取り組む曲は、一人ひとりのレベルに合わせ、専用ソフトで弾きやすく格好良い楽譜にアレンジしています。</p>
 <div class="hero-badges">
-<span class="pill">通常レッスン1回60分</span>
+<span class="pill">通常レッスン1回60分（初級者を除く）</span>
 <span class="pill">無料体験は60分を基本に、最大120分まで対応</span>
 <span class="pill">完全防音スタジオ</span>
 <span class="pill">小学校高学年・中高生・経験者も歓迎</span>
-<span class="pill">グランドピアノ・楽曲アレンジ</span>
+<span class="pill">専用ソフトで楽譜をアレンジ</span>
 <span class="pill">音大受験・保育志望にも対応</span>
 </div>
 <div class="hero-buttons">
@@ -501,7 +516,7 @@
 <span class="reason-chip">中高生・経験者も歓迎</span>
 <span class="reason-chip">学校伴奏・ステージ準備</span>
 <span class="reason-chip">音大受験・保育志望も対応</span>
-<span class="reason-chip">好きな曲のアレンジ対応</span>
+<span class="reason-chip">弾きやすく格好良い楽譜にアレンジ</span>
 <span class="reason-chip">水曜・土曜も相談可</span>
 <span class="reason-chip">無理な勧誘なし</span>
 </div>
@@ -584,13 +599,13 @@
 <h2 class="section-title">料金プラン</h2>
 <div class="price-box">
 <div>
-<p class="price-title">レッスン（月4回・1回60分）</p>
+<p class="price-title">レッスン（月4回・1回60分／初級者を除く）</p>
 <p style="margin:0;color:var(--sub)">教材・発表会費は別途。学年・進度によって段階的に調整します。</p>
 <ul>
-<li>通常レッスンは1回60分の個別レッスン</li>
-<li>無料体験は60分を基本に、最大120分まで対応受付中</li>
+<li>通常レッスンは1回60分（初級者を除く）の個別レッスン</li>
+<li>無料体験は60分を基本に、ご希望に応じて最大120分まで対応</li>
 <li>兄妹割あり</li>
-<li>レベルに合わせた楽曲アレンジにも対応</li>
+<li>専用ソフトで、レベルに合わせて弾きやすく格好良い楽譜にアレンジ</li>
 </ul>
 </div>
 <div class="price-num">6,500円〜</div>
@@ -617,7 +632,7 @@
 <h2 class="section-title">よくある質問</h2>
 <div class="faq-list">
 <details><summary>Q. まったくの初心者でも大丈夫ですか？</summary><p>大丈夫です。音符読み・リズムの基礎から、一人ひとりのペースに合わせて進めます。保護者の方がピアノ未経験でも、ご家庭で無理なく続けられる方法を一緒に考えます。</p></details>
-<details><summary>Q. 通常のレッスンは何分ですか？</summary><p>通常レッスンは1回60分です。落ち着いて取り組める個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。</p></details>
+<details><summary>Q. 通常のレッスンは何分ですか？</summary><p>通常レッスンは1回60分（初級者を除く）です。落ち着いて取り組める個別レッスンで、一人ひとりの進み方に合わせて丁寧に進めます。</p></details>
 <details><summary>Q. 無料体験は何分ですか？</summary><p>無料体験レッスンは60分を基本に、ご希望やご相談内容に応じて最大120分まで対応しています。教室の雰囲気やレッスン内容をゆっくり確認していただけます。</p></details>
 <details><summary>Q. 水曜日や土曜日でも相談できますか？</summary><p>水曜日と土曜日は混み合っていますが、ご希望の時間帯によってはご相談できる場合があります。水曜・土曜をご希望の方も、まずはLINEでお問い合わせください。</p></details>
 <details><summary>Q. 小学校高学年や中学生・高校生、経験者でも通えますか？</summary><p>はい。譜読みの先にある音色・表現・テクニック、好きな曲や学校伴奏の仕上げなど、現在の課題と目標に合わせて進めます。</p></details>
