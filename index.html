@@ -202,8 +202,10 @@
     /* Price */
     .pricing{background:#fff}
     .price-box{max-width:780px;margin:auto;background:linear-gradient(135deg,#fff,#fff8ed);border:1px solid var(--line);border-radius:32px;padding:clamp(24px,5vw,44px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+    .price-label{display:inline-flex;align-items:center;border-radius:999px;background:#fff6e6;border:1px solid rgba(177,135,63,.24);color:#8c5f20;padding:.3rem .72rem;font-size:.78rem;font-weight:900;margin-bottom:.7rem}
     .price-title{font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:800;margin:0 0 .5rem}
     .price-num{font-family:'Noto Serif JP',serif;font-size:clamp(2.3rem,6vw,4.2rem);line-height:1;color:var(--gold);font-weight:800;white-space:nowrap}
+    .price-num small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:.82rem;line-height:1.4;color:var(--sub);font-weight:800;text-align:center;margin-bottom:.45rem}
     .price-box ul{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem;color:var(--sub);font-weight:700}
     .price-box li::before{content:"✓";color:var(--gold);font-weight:900;margin-right:.45em}
 
@@ -333,7 +335,7 @@
         "telephone":"090-6526-4543",
         "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
         "areaServed":["石川県小松市","石川県能美市","粟津","石川県加賀市","金沢方面","石川県南部"],
-        "priceRange":"月4回 6,500円〜",
+        "priceRange":"子ども向け 月4回 6,500円〜（その他の料金は要相談）",
         "sameAs":["https://www.instagram.com/alice_piano0226/"],
         "mainEntityOfPage":{"@id":"https://alicepiano-komatsu.com/#website"},
         "hasOfferCatalog":{
@@ -642,8 +644,9 @@
 <h2 class="section-title">料金プラン</h2>
 <div class="price-box">
 <div>
-<p class="price-title">レッスン（月4回・1回60分／初級者を除く）</p>
-<p style="margin:0;color:var(--sub)">教材・発表会費は別途。学年・進度によって段階的に調整します。</p>
+<span class="price-label">子ども向けレッスン</span>
+<p class="price-title">月4回・通常1回60分</p>
+<p style="margin:0;color:var(--sub)">初級者は30〜40分程度。教材・発表会費は別途。学年・進度によって段階的に調整します。</p>
 <ul>
 <li>通常レッスンは1回60分（初級者を除く）の個別レッスン</li>
 <li>無料体験は60分を基本に、ご希望に応じて最大120分まで対応</li>
@@ -651,7 +654,7 @@
 <li>専用ソフトで、レベルに合わせて弾きやすく格好良い楽譜にアレンジ</li>
 </ul>
 </div>
-<div class="price-num">6,500円〜</div>
+<div class="price-num"><small>月謝</small>6,500円〜</div>
 </div>
 </div>
 </section>
