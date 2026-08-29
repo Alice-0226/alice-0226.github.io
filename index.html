@@ -43,7 +43,7 @@
       --cream2:#fffaf2;
       --rose:#a85b5b;
       --green:#697463;
-      --shadow:0 18px 60px rgba(55,38,18,.16);
+      --shadow:0 10px 30px rgba(55,38,18,.08);
       --radius:26px;
       --max:1120px;
     }
@@ -58,10 +58,10 @@
     .section{padding:clamp(64px,9vw,112px) 0;position:relative}
     .section-title{font-family:'Noto Serif JP',serif;font-size:clamp(1.65rem,4vw,2.8rem);line-height:1.35;margin:0 0 .75rem;text-align:center;letter-spacing:.04em}
     .section-lead{max-width:760px;margin:0 auto 36px;text-align:center;color:var(--sub);font-size:clamp(.95rem,2.2vw,1.05rem)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;border-radius:999px;padding:.95rem 1.55rem;font-weight:800;letter-spacing:.03em;transition:.25s ease;box-shadow:0 12px 30px rgba(177,135,63,.22);border:1px solid transparent;white-space:nowrap}
-    .btn.primary{background:linear-gradient(135deg,#c59a4a,#9c7130);color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;border-radius:999px;padding:.9rem 1.45rem;font-weight:700;letter-spacing:.02em;transition:.2s ease;box-shadow:none;border:1px solid transparent;white-space:nowrap}
+    .btn.primary{background:#8f7040;color:#fff;border-color:#8f7040}
     .btn.secondary{background:rgba(255,255,255,.86);border-color:var(--line);color:var(--ink);box-shadow:none}
-    .btn:hover{transform:translateY(-2px);filter:brightness(1.02);text-decoration:none}
+    .btn:hover{filter:brightness(.98);text-decoration:none}
     .pill{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--line);background:rgba(255,255,255,.74);border-radius:999px;padding:.45rem .78rem;font-size:.82rem;font-weight:800;color:#544330}
 
     /* Compact conversion sections */
@@ -318,6 +318,17 @@
 .early-learning-photo figcaption strong{color:#35271e;font-size:.9rem}
 @media(max-width:860px){.early-learning-shell{grid-template-columns:1fr;padding:1.3rem}.early-learning-photos{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.early-learning-photos{grid-template-columns:1fr}.early-learning-photo img{max-height:none}}
+
+/* Calm, trust-focused refinements */
+.path-card,.visual-reason-card,.review-card,.step,.contact-card{box-shadow:0 8px 24px rgba(50,32,14,.05)}
+.availability{background:#fbf8f2}
+.availability-card{box-shadow:0 8px 24px rgba(50,32,14,.05);border-radius:24px}
+.availability-card p{font-weight:500}
+.review-stars{font-size:.86rem;letter-spacing:.12em;opacity:.72}
+.hero-kicker{letter-spacing:.10em;text-transform:none}
+.hero-lead{line-height:1.9}
+.contact-card{border-color:rgba(232,217,191,.9)}
+@media(max-width:620px){.hero-buttons .btn{width:auto}.hero-buttons{align-items:flex-start}}
 </style>
 <script type="application/ld+json">
   {
@@ -383,14 +394,15 @@
 <a href="#experienced">中高生・経験者</a>
 <a href="#features">特徴</a>
 <a href="#availability">募集状況</a>
-<a href="#reviews">口コミ</a>
+<a href="#reviews">生徒さん・保護者さまの声</a>
 <a href="#trial">無料体験</a>
 <a href="#pricing">料金</a>
 <a href="#access">アクセス</a>
+<a href="#contact">お問い合わせ</a>
 </nav>
 <div class="nav-actions">
 <a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" rel="noopener" target="_blank">Instagram</a>
-<a class="btn primary" data-line-intent="availability" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">LINEで問い合わせる</a>
+<a class="btn primary" href="#contact">お問い合わせ</a>
 <button aria-expanded="false" aria-label="メニュー" class="hamb" id="hamb">☰</button>
 </div>
 </div>
@@ -405,23 +417,14 @@
 <div class="wrap hero-inner">
 <div class="hero-grid">
 <div class="hero-copy">
-<p class="hero-kicker">KOMATSU CITY / ALICE PIANO SCHOOL</p>
+<p class="hero-kicker">石川県小松市の個別ピアノ教室</p>
 <h1><span>一人ひとりの進み方を見ながら</span>「弾けた」という自信につながるレッスン。</h1>
-<p class="hero-lead">通常レッスンは1回60分（初級者を除く）。音符・リズムの基礎から、譜読み後の音色・表現・テクニック、学校の伴奏や憧れの曲の仕上げまで、現在の課題と目標に合わせて進めます。生徒さんが取り組む曲は、一人ひとりのレベルに合わせ、専用ソフトで弾きやすく格好良い楽譜にアレンジしています。</p>
-<div class="hero-badges">
-<span class="pill">通常レッスン1回60分（初級者を除く）</span>
-<span class="pill">無料体験は60分を基本に、最大120分まで対応</span>
-<span class="pill">完全防音スタジオ</span>
-<span class="pill">小学校高学年・中高生・経験者も歓迎</span>
-<span class="pill">専用ソフトで楽譜をアレンジ</span>
-<span class="pill">音大受験・保育志望にも対応</span>
-</div>
+<p class="hero-lead">一人ひとりの理解や進み方を見ながら、基礎から曲の仕上げまで丁寧に進めます。小さなお子さまから、中高生・経験者、大人の方まで、それぞれの目的に合わせてレッスンしています。</p>
 <div class="hero-buttons">
-<a class="btn primary" data-line-intent="availability" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">LINEで問い合わせる</a>
-<a class="btn secondary" href="#trial">無料体験を相談する</a>
+<a class="btn primary" href="#contact">お問い合わせ方法を見る</a>
+<a class="btn secondary" href="#features">教室について見る</a>
 </div>
 <p class="hero-note">小松市小寺町／鍵盤デザインの外観が目印／駐車場あり</p>
-<p class="hero-reassurance">LINEでお問い合わせの際は、お名前・年齢（学年）・ご希望内容・通える曜日や時間帯をお知らせください。</p>
 </div>
 </div>
 </div>
@@ -554,43 +557,29 @@
 </div>
 </article>
 </div>
-<div aria-label="アリスピアノ教室の特徴" class="reason-chip-row">
-<span class="reason-chip">指導歴50年弱</span>
-<span class="reason-chip">無料体験60〜120分</span>
-<span class="reason-chip">中高生・経験者も歓迎</span>
-<span class="reason-chip">学校伴奏・ステージ準備</span>
-<span class="reason-chip">音大受験・保育志望も対応</span>
-<span class="reason-chip">弾きやすく格好良い楽譜にアレンジ</span>
-<span class="reason-chip">水曜・土曜も相談可</span>
-<span class="reason-chip">無理な勧誘なし</span>
-</div>
+
 </div>
 </section>
 <section class="section availability" id="availability">
 <div class="wrap">
 <div class="availability-card">
 <div>
-<span class="eyebrow">OPEN SLOTS</span>
-<h2>現在の募集状況</h2>
-<p>火曜日・木曜日・金曜日は比較的ご案内しやすく、月曜日は一部の時間帯で受付中です。水曜日・土曜日は混み合っていますが、ご希望の時間帯によってはご案内できる場合があります。</p>
-<div class="availability-pills">
-<span class="open">火・木・金曜：比較的ご案内しやすい</span>
-<span class="limited">月曜：一部時間帯でご案内可能</span>
-<span class="busy">水・土曜：混み合っていますが時間帯により相談可</span>
-</div>
+<span class="eyebrow">LESSON AVAILABILITY</span>
+<h2>曜日ごとの空き状況</h2>
+<p>現在は火曜日・木曜日・金曜日に比較的空きがあり、月曜日は一部の時間帯でご案内しています。水曜日・土曜日は混み合っていますが、時間帯によってはお受けできる場合があります。</p>
 </div>
 <div class="availability-cta">
-<a class="btn primary" data-line-intent="availability" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">LINEで問い合わせる</a>
-<p class="cta-note">空き時間を確認するため、お名前・年齢（学年）・通える曜日や時間帯をお知らせください。</p>
+<a class="btn secondary" href="#contact">空き状況を問い合わせる</a>
+<p class="cta-note">ご希望の曜日や時間帯をお知らせいただけると、確認がスムーズです。</p>
 </div>
 </div>
 </div>
 </section>
 <section class="section review-section" id="reviews">
 <div class="wrap">
-<span class="eyebrow" style="display:block;text-align:center">GOOGLE REVIEWS</span>
-<h2 class="section-title">生徒さん・保護者さまの声</h2>
-<p class="section-lead">先生の関わり方やお子さまの変化、体験レッスンでの印象について、保護者さまから温かいお声をいただいています。</p>
+<span class="eyebrow" style="display:block;text-align:center">VOICES</span>
+<h2 class="section-title">生徒さん・保護者さまからいただいた声</h2>
+<p class="section-lead">実際に通われている生徒さんや保護者さまからいただいたご感想の一部をご紹介します。</p>
 <div class="review-grid">
 <article class="review-card">
 <div class="review-stars">★★★★★</div>
@@ -635,12 +624,12 @@
 <article class="step"><b>4</b><h3>教室を見学</h3><p>完全防音スタジオやピアノの響きを体感できます。</p></article>
 <article class="step"><b>5</b><h3>料金をご案内</h3><p>内容・料金を分かりやすく説明。無理な勧誘はありません。</p></article>
 </div>
-<div style="text-align:center;margin-top:34px"><a class="btn primary" data-line-intent="trial" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">無料体験をLINEで相談する</a><p class="cta-note">体験をご希望の方は、お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p></div>
+<div style="text-align:center;margin-top:34px"><a class="btn secondary" href="#contact">体験レッスンについて問い合わせる</a><p class="cta-note">ご希望の方は、お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p></div>
 </div>
 </section>
 <section class="section pricing" id="pricing">
 <div class="wrap">
-<h2 class="section-title">料金プラン</h2>
+<h2 class="section-title">レッスン料金</h2>
 <div class="price-box">
 <div>
 <span class="price-label">子ども向けレッスン</span>
@@ -648,9 +637,8 @@
 <p style="margin:0;color:var(--sub)">初級者は30〜40分程度。教材・発表会費は別途。学年・進度によって段階的に調整します。</p>
 <ul>
 <li>通常レッスンは1回60分（初級者を除く）の個別レッスン</li>
-<li>無料体験は60分を基本に、ご希望に応じて最大120分まで対応</li>
+<li>初級者は30〜40分程度</li>
 <li>兄妹割あり</li>
-<li>専用ソフトで、レベルに合わせて弾きやすく格好良い楽譜にアレンジ</li>
 </ul>
 </div>
 <div class="price-num"><small>月謝</small>6,500円〜</div>
@@ -674,8 +662,8 @@
 </section>
 <section class="section contact" id="contact">
 <div class="wrap">
-<h2 class="section-title">まずは気軽にご相談ください</h2>
-<p class="section-lead">「空き時間を知りたい」「今弾いている曲を見てほしい」「学校の伴奏を相談したい」など、LINE・お電話・フォームよりご相談ください。LINEでは、お名前・年齢（学年）・ご希望内容・通える曜日や時間帯をお知らせいただけるとスムーズです。</p>
+<h2 class="section-title">お問い合わせ</h2>
+<p class="section-lead">レッスン内容、空き時間、体験レッスンについては、LINE・お電話・フォームからお問い合わせいただけます。お名前・年齢（学年）・ご希望内容・通える曜日や時間帯をお知らせください。</p>
 <div class="contact-grid">
 <div class="contact-card" style="text-align:center">
 <h3>LINEでお問い合わせ</h3><p class="line-easy-note"><strong>お問い合わせの際にお知らせください。</strong><br/>お名前・年齢（学年）・ご希望内容・通える曜日や時間帯</p>
@@ -726,12 +714,11 @@
 </div>
 </section>
 </main>
-<div class="floating-cta"><a class="btn primary" data-line-intent="availability" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">LINEで問い合わせる</a></div>
 <footer class="footer">
 <div class="wrap">
 <div class="footer-grid">
 <div><strong class="serif" style="font-size:1.2rem;color:#fff">アリスピアノ教室</strong><br/>小松市の個別ピアノレッスン。幼児・小学生の第一歩から、小学校高学年・中高生・経験者、大人の初心者・再開まで対応しています。</div>
-<div><strong style="color:#fff">メニュー</strong><br/><a href="#features">特徴</a><br/><a href="#availability">募集状況</a><br/><a href="#reviews">口コミ</a><br/><a href="kids-piano.html">子ども向け</a><br/><a href="experienced-piano.html">中高生・経験者向け</a><br/><a href="adult-piano.html">大人向け</a><br/><a href="trial-lesson.html">無料体験</a><br/><a href="#pricing">料金</a><br/><a href="#access">アクセス</a></div>
+<div><strong style="color:#fff">メニュー</strong><br/><a href="#features">特徴</a><br/><a href="#availability">募集状況</a><br/><a href="#reviews">生徒さん・保護者さまの声</a><br/><a href="kids-piano.html">子ども向け</a><br/><a href="experienced-piano.html">中高生・経験者向け</a><br/><a href="adult-piano.html">大人向け</a><br/><a href="trial-lesson.html">無料体験</a><br/><a href="#pricing">料金</a><br/><a href="#access">アクセス</a></div>
 <div><strong style="color:#fff">連絡先</strong><br/>TEL：090-6526-4543<br/>住所：石川県小松市小寺町乙38番地1</div>
 </div>
 <div class="copyright">© 2026 アリスピアノ教室.</div>
