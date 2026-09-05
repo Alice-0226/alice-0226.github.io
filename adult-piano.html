@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>小松市の大人・社会人向けピアノレッスン｜初心者・再開歓迎｜アリスピアノ教室</title>
-  <meta name="description" content="小松市で大人・社会人向けのピアノレッスンをお探しの方へ。初心者、昔習っていたピアノの再開、仕事や生活のペースに合わせた趣味のピアノ、好きな曲への挑戦まで個別に丁寧にサポートします。" />
+  <meta name="description" content="小松市の大人・社会人向け個別ピアノレッスン。月2回または月4回コースで、30分は1回あたり2,500円、60分は1回あたり4,000円。初心者・再開・好きな曲への挑戦にも対応します。" />
   <link rel="canonical" href="https://alicepiano-komatsu.com/adult-piano.html" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="アリスピアノ教室" />
   <meta property="og:title" content="小松市の大人・社会人向けピアノレッスン｜アリスピアノ教室" />
-  <meta property="og:description" content="小松市で大人・社会人向けのピアノレッスンをお探しの方へ。初心者・再開・趣味のピアノまで、一人ひとりのペースに合わせて丁寧にサポートします。" />
+  <meta property="og:description" content="小松市の大人・社会人向け個別ピアノレッスン。月2回・月4回コース。30分は1回あたり2,500円、60分は1回あたり4,000円です。" />
   <meta property="og:url" content="https://alicepiano-komatsu.com/adult-piano.html" />
   <meta property="og:image" content="https://alicepiano-komatsu.com/assets/exterior.jpg" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
@@ -46,10 +46,10 @@
     .section{padding:clamp(64px,9vw,112px) 0;position:relative}
     .section-title{font-family:'Noto Serif JP',serif;font-size:clamp(1.65rem,4vw,2.8rem);line-height:1.35;margin:0 0 .75rem;text-align:center;letter-spacing:.04em}
     .section-lead{max-width:760px;margin:0 auto 36px;text-align:center;color:var(--sub);font-size:clamp(.95rem,2.2vw,1.05rem)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;border-radius:999px;padding:.95rem 1.55rem;font-weight:800;letter-spacing:.03em;transition:.25s ease;box-shadow:0 12px 30px rgba(177,135,63,.22);border:1px solid transparent;white-space:nowrap}
-    .btn.primary{background:linear-gradient(135deg,#c59a4a,#9c7130);color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;border-radius:999px;padding:.9rem 1.45rem;font-weight:700;letter-spacing:.02em;transition:.2s ease;box-shadow:none;border:1px solid transparent;white-space:nowrap}
+    .btn.primary{background:#8f7040;color:#fff;border-color:#8f7040}
     .btn.secondary{background:rgba(255,255,255,.86);border-color:var(--line);color:var(--ink);box-shadow:none}
-    .btn:hover{transform:translateY(-2px);filter:brightness(1.02);text-decoration:none}
+    .btn:hover{filter:brightness(.98);text-decoration:none}
     .pill{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--line);background:rgba(255,255,255,.74);border-radius:999px;padding:.45rem .78rem;font-size:.82rem;font-weight:800;color:#544330}
     .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:20px auto;max-width:520px}
 
@@ -194,6 +194,19 @@
     .price-num{font-family:'Noto Serif JP',serif;font-size:clamp(2.3rem,6vw,4.2rem);line-height:1;color:var(--gold);font-weight:800;white-space:nowrap}
     .price-box ul{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem;color:var(--sub);font-weight:700}
     .price-box li::before{content:"✓";color:var(--gold);font-weight:900;margin-right:.45em}
+    .adult-price-grid{max-width:820px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .adult-price-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,32px);text-align:center;box-shadow:0 8px 24px rgba(50,32,14,.05)}
+    .adult-price-card h3{font-family:'Noto Serif JP',serif;font-size:1.2rem;margin:0 0 .55rem}
+    .adult-price-amount{font-family:'Noto Serif JP',serif;font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:var(--gold);font-weight:800;margin:.25rem 0}
+    .adult-price-note{color:var(--sub);font-size:.9rem;margin:.5rem 0 0}
+    .adult-price-unit{margin:.15rem 0 .85rem;color:var(--sub);font-size:.9rem}
+    .adult-price-unit strong{color:var(--gold);font-size:1.15rem}
+    .adult-monthly-list{display:grid;gap:.45rem;margin-top:.8rem;text-align:left}
+    .adult-monthly-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-top:1px solid var(--line);padding-top:.55rem}
+    .adult-monthly-row span{color:var(--sub);font-weight:700}
+    .adult-monthly-row strong{font-family:'Noto Serif JP',serif;color:var(--gold);font-size:1.28rem}
+    .adult-price-caution{max-width:820px;margin:14px auto 0;color:var(--muted);font-size:.82rem;line-height:1.7;text-align:center}
+    @media(max-width:620px){.adult-price-grid{grid-template-columns:1fr}}
 
     /* Teacher */
     .teacher{background:var(--cream)}
@@ -286,6 +299,22 @@
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "大人の初心者でも大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "大丈夫です。基礎からゆっくり進めますので、初めての方も安心してご相談ください。"}}, {"@type": "Question", "name": "昔習っていたピアノの再開でも通えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。以前の経験や現在の目標に合わせて、無理なく再開できるようサポートします。"}}, {"@type": "Question", "name": "好きな曲から始められますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご相談いただけます。レベルに合わせて弾きやすくアレンジすることも可能です。"}}, {"@type": "Question", "name": "社会人でも無理なく続けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。仕事や生活のペースに合わせて、無理なく趣味として続けられるよう、一人ひとりに合わせて丁寧に進めます。"}}]}
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"大人・社会人向けピアノレッスン",
+    "provider":{"@type":"MusicSchool","name":"アリスピアノ教室","url":"https://alicepiano-komatsu.com/"},
+    "areaServed":"石川県小松市",
+    "offers":[
+      {"@type":"Offer","name":"30分・月2回コース","price":"5000","priceCurrency":"JPY","description":"1回30分、月2回。1回あたり2,500円。"},
+      {"@type":"Offer","name":"30分・月4回コース","price":"10000","priceCurrency":"JPY","description":"1回30分、月4回。1回あたり2,500円。"},
+      {"@type":"Offer","name":"60分・月2回コース","price":"8000","priceCurrency":"JPY","description":"1回60分、月2回。1回あたり4,000円。"},
+      {"@type":"Offer","name":"60分・月4回コース","price":"16000","priceCurrency":"JPY","description":"1回60分、月4回。1回あたり4,000円。"}
+    ]
+  }
+  </script>
+
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
   <script>
@@ -305,12 +334,12 @@
         <a href="kids-piano.html">子ども向け</a>
         <a href="adult-piano.html">大人向け</a>
         <a href="trial-lesson.html">無料体験</a>
-        <a href="/#pricing">料金</a>
+        <a href="#pricing">料金</a>
         <a href="/#access">アクセス</a>
       </nav>
       <div class="nav-actions">
         <a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">無料体験へ</a>
+        <a class="btn primary" href="#contact">お問い合わせ</a>
         <button class="hamb" id="hamb" aria-label="メニュー" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -321,9 +350,9 @@
         <div class="breadcrumb"><a href="/">アリスピアノ教室</a> / ADULT PIANO LESSON</div>
         <p class="hero-kicker">ADULT PIANO LESSON</p>
         <h1>小松市の大人のピアノレッスン</h1>
-        <p>大人になってから始めたい方、昔習っていたピアノを再開したい方、社会人の趣味として無理なく続けたい方へ。目的に合わせて、楽しく続けられるレッスンを行っています。</p>
+        <p>初めての方も、昔習っていたピアノを再開したい方も。目的や生活のペースに合わせて、一人ひとり丁寧に進めます。</p>
         <div class="hero-buttons">
-          <a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a>
+          <a class="btn primary" href="#pricing">料金を見る</a>
           <a class="btn secondary" href="/#access">アクセスを見る</a>
         </div>
       </div>
@@ -374,14 +403,29 @@
       </div>
     </section>
 
-    <section class="section features">
+    <section class="section pricing" id="pricing">
       <div class="wrap">
-        <h2 class="section-title">大人の方に選ばれる理由</h2>
-        <div class="feature-grid">
-          <article class="feature-card"><div class="feature-no">01</div><h3>目的に合わせて進める</h3><p>基礎から学びたい方、好きな曲を弾きたい方、それぞれに合わせて進めます。</p></article>
-          <article class="feature-card"><div class="feature-no">02</div><h3>一人ひとりのペースで</h3><p>忙しい大人の方も、無理なく続けられるよう丁寧にサポートします。</p></article>
-          <article class="feature-card"><div class="feature-no">03</div><h3>本格的な音に触れられる</h3><p>コンサート用グランドピアノの響きやタッチを感じながらレッスンできます。</p></article>
+        <h2 class="section-title">大人のレッスン料金</h2>
+        <p class="section-lead">月2回または月4回のコースで、1回30分・60分からお選びいただけます。</p>
+        <div class="adult-price-grid">
+          <article class="adult-price-card">
+            <h3>30分コース</h3>
+            <p class="adult-price-unit">1回あたり <strong>2,500円</strong></p>
+            <div class="adult-monthly-list">
+              <div class="adult-monthly-row"><span>月2回</span><strong>5,000円</strong></div>
+              <div class="adult-monthly-row"><span>月4回</span><strong>10,000円</strong></div>
+            </div>
+          </article>
+          <article class="adult-price-card">
+            <h3>60分コース</h3>
+            <p class="adult-price-unit">1回あたり <strong>4,000円</strong></p>
+            <div class="adult-monthly-list">
+              <div class="adult-monthly-row"><span>月2回</span><strong>8,000円</strong></div>
+              <div class="adult-monthly-row"><span>月4回</span><strong>16,000円</strong></div>
+            </div>
+          </article>
         </div>
+        <p class="adult-price-caution">※1回あたりの金額は、月2回または月4回コースで受講する場合の料金です。単発レッスンの料金ではありません。</p>
       </div>
     </section>
 
@@ -393,11 +437,11 @@
         </div>
       </div>
     </section>
-    <section class="section page-cta">
+    <section class="section page-cta" id="contact">
       <div class="wrap">
-        <h2 class="section-title">無料体験レッスン受付中</h2>
-        <p class="section-lead">小松市・能美市・粟津駅周辺でピアノ教室をお探しの方は、お気軽にご相談ください。</p>
-        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間をLINEで聞く</a></div>
+        <h2 class="section-title">体験レッスン・お問い合わせ</h2>
+        <p class="section-lead">体験や空き時間については、お名前・ピアノ経験・ご希望の曜日や時間帯などを添えてお問い合わせください。</p>
+        <div style="text-align:center"><a class="btn primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで問い合わせる</a></div>
       </div>
     </section>
   </main>

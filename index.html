@@ -73,7 +73,7 @@
     .quick-card p{margin:0;color:var(--sub);font-size:.88rem;line-height:1.65}
 
     /* Older students / experienced learners */
-    .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+    .path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
     .path-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(22px,3.5vw,32px);box-shadow:0 14px 36px rgba(50,32,14,.07)}
     .path-card::after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-52px;top:-52px;background:rgba(217,188,122,.15)}
     .path-card .tag{display:inline-flex;border-radius:999px;background:#fff6e6;border:1px solid rgba(177,135,63,.22);color:#8c5f20;padding:.28rem .72rem;font-weight:900;font-size:.78rem;margin-bottom:.8rem}
@@ -106,7 +106,7 @@
     .availability-pills .limited{background:#fff8e8;border-color:#e4cf9b;color:#806127}
     .availability-pills .busy{background:#fff1e9;border-color:#e6c2b0;color:#94523c}
     .review-section{background:#fff}
-    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;align-items:stretch}
+    .review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px;align-items:stretch}
     .review-card{background:linear-gradient(180deg,#fff,#fffaf2);border:1px solid var(--line);border-radius:26px;padding:clamp(20px,3vw,28px);box-shadow:0 12px 34px rgba(50,32,14,.07)}
     .review-stars{color:var(--gold);font-weight:900;letter-spacing:.08em;margin-bottom:.65rem}
     .review-card blockquote{margin:0;color:#3a3028;font-weight:700;line-height:1.8}
@@ -208,6 +208,20 @@
     .price-num small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:.82rem;line-height:1.4;color:var(--sub);font-weight:800;text-align:center;margin-bottom:.45rem}
     .price-box ul{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem;color:var(--sub);font-weight:700}
     .price-box li::before{content:"✓";color:var(--gold);font-weight:900;margin-right:.45em}
+    .pricing-grid{max-width:920px;margin:auto;display:grid;gap:18px}
+    .adult-price-list{display:grid;gap:.6rem;margin-top:1rem;min-width:220px}
+    .adult-price-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--line);padding:.45rem 0}
+    .adult-price-row:last-child{border-bottom:0}
+    .adult-price-row span{color:var(--sub);font-weight:700}
+    .adult-price-row strong{font-family:'Noto Serif JP',serif;font-size:1.7rem;color:var(--gold);white-space:nowrap}
+    .adult-course-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
+    .adult-course-card{border:1px solid var(--line);background:#fff;border-radius:18px;padding:1rem}
+    .adult-course-card h4{font-family:'Noto Serif JP',serif;font-size:1.08rem;margin:0 0 .25rem}
+    .adult-course-unit{margin:0 0 .65rem;color:var(--sub);font-size:.86rem}
+    .adult-course-unit strong{color:var(--gold);font-size:1.12rem}
+    .adult-course-card .adult-price-row strong{font-size:1.28rem}
+    .adult-price-caution{margin:.85rem 0 0;color:var(--muted);font-size:.8rem;line-height:1.65}
+    @media(max-width:620px){.adult-course-grid{grid-template-columns:1fr}}
 
     /* Teacher */
     .teacher{background:var(--cream)}
@@ -216,6 +230,9 @@
     .teacher-photo img{width:100%;height:100%;object-fit:cover}
     .teacher-card h3{font-family:'Noto Serif JP',serif;font-size:1.7rem;margin:0 0 .5rem}
     .teacher-card p{color:var(--sub);margin:.5rem 0}
+    .teacher-profile-list{margin:1.05rem 0 0;padding:0;list-style:none;display:grid;gap:.7rem}
+    .teacher-profile-list li{padding:.8rem .9rem;border-left:3px solid var(--gold2);background:#fffaf2;border-radius:0 12px 12px 0;color:var(--sub)}
+    .teacher-profile-list strong{color:var(--ink)}
 
     /* FAQ and contact */
     .faq{background:#fff}
@@ -346,7 +363,7 @@
         "telephone":"090-6526-4543",
         "address":{"@type":"PostalAddress","postalCode":"923-0806","addressRegion":"石川県","addressLocality":"小松市","streetAddress":"小寺町乙38番地1","addressCountry":"JP"},
         "areaServed":["石川県小松市","石川県能美市","粟津","石川県加賀市","金沢方面","石川県南部"],
-        "priceRange":"子ども向け 月4回 6,500円〜（その他の料金は要相談）",
+        "priceRange":"子ども向け 月4回 6,500円〜／大人向け 30分:月2回5,000円・月4回10,000円、60分:月2回8,000円・月4回16,000円",
         "sameAs":["https://www.instagram.com/alice_piano0226/"],
         "mainEntityOfPage":{"@id":"https://alicepiano-komatsu.com/#website"},
         "hasOfferCatalog":{
@@ -355,7 +372,7 @@
           "itemListElement":[
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"子ども向けピアノレッスン","description":"音符・リズムの基礎から好きな曲への挑戦まで、一人ひとりに合わせて指導します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"小学校高学年・中高生・経験者向けピアノレッスン","description":"音色・表現・テクニック、学校の伴奏、発表会や好きな曲の仕上げなど、現在の課題と目標に合わせて指導します。"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"大人の初心者・再開ピアノレッスン","description":"大人の初心者や昔習っていた方の再開、好きな曲への挑戦にも対応します。"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"大人の初心者・再開ピアノレッスン","description":"大人の初心者や昔習っていた方の再開、好きな曲への挑戦にも対応します。月2回または月4回コース。30分は1回あたり2,500円、60分は1回あたり4,000円。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"音大受験・保育志望のピアノレッスン","description":"音大受験や保育士・幼児教育を目指す方のピアノ準備にも対応します。"}},
             {"@type":"Offer","itemOffered":{"@type":"Service","name":"無料体験レッスン","description":"60分〜120分で教室の雰囲気やレッスン内容を確認できます。"}}
           ]
@@ -440,6 +457,12 @@
 <h3>小学校高学年・中高生・経験者の方へ</h3>
 <p>音色・表現・テクニック、学校の伴奏、発表会や憧れの曲など、「弾けるようになった後」の課題と目標に合わせます。</p>
 <a class="path-link" href="experienced-piano.html">中高生・経験者向けを見る</a>
+</article>
+<article class="path-card">
+<span class="tag">ADULT</span>
+<h3>大人の方へ</h3>
+<p>はじめての方も、昔習っていた方の再開も歓迎しています。好きな曲や目標に合わせて、無理なく続けられる内容で進めます。</p>
+<a class="path-link" href="adult-piano.html">大人向けレッスンを見る</a>
 </article>
 </div>
 </div>
@@ -601,6 +624,18 @@
 </blockquote>
 <cite>Google口コミより</cite>
 </article>
+
+<article class="review-card">
+<div class="review-stars">★★★★★</div>
+<blockquote>
+<p>年中の息子がピアノに興味を持ちはじめ、こちらの教室がプライベート空間の中で個人レッスンができると知り入会しました。</p>
+<p>まだ息子はピアノが弾けるわけではなく、興味を持ったレベルだったので、息子が楽しんで通えるか心配な気持ちはありましたが、個のレベルに合わせて進めてくださるので、今では安心して通えています。</p>
+<p>まずは音楽を楽しむをモットーに進めてくださるので、ピアノに触れるだけではなくリズム遊びで身体を動かしたり、指使いの練習をかねたゲームをして、子供が楽しい！音楽は楽しい！という気持ちにさせていただき、息子も楽しんで通えています。</p>
+<p>個人レッスンなので、周りの子と比べられることもなく、のびのびと学ぶことが出来るので、今の息子にはあっているようです。</p>
+</blockquote>
+<cite>Google口コミより</cite>
+</article>
+
 </div>
 <div class="compact-link-row">
 <a class="btn secondary" href="https://www.google.com/search?q=%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%94%E3%82%A2%E3%83%8E%E6%95%99%E5%AE%A4+%E5%B0%8F%E6%9D%BE%E5%B8%82" rel="noopener" target="_blank">Google口コミを見る</a>
@@ -624,6 +659,7 @@
 <section class="section pricing" id="pricing">
 <div class="wrap">
 <h2 class="section-title">レッスン料金</h2>
+<div class="pricing-grid">
 <div class="price-box">
 <div>
 <span class="price-label">子ども向けレッスン</span>
@@ -637,6 +673,31 @@
 </div>
 <div class="price-num"><small>月謝</small>6,500円〜</div>
 </div>
+
+<div class="price-box" style="grid-template-columns:1fr">
+<div>
+<span class="price-label">大人向けレッスン</span>
+<p class="price-title">月2回・月4回コース</p>
+<p style="margin:0;color:var(--sub)">30分または60分からお選びいただけます。はじめての方、再開したい方、好きな曲への挑戦など、目的に合わせて進めます。</p>
+<div class="adult-course-grid" aria-label="大人向けレッスン料金">
+<div class="adult-course-card">
+<h4>30分コース</h4>
+<p class="adult-course-unit">1回あたり <strong>2,500円</strong></p>
+<div class="adult-price-row"><span>月2回</span><strong>5,000円</strong></div>
+<div class="adult-price-row"><span>月4回</span><strong>10,000円</strong></div>
+</div>
+<div class="adult-course-card">
+<h4>60分コース</h4>
+<p class="adult-course-unit">1回あたり <strong>4,000円</strong></p>
+<div class="adult-price-row"><span>月2回</span><strong>8,000円</strong></div>
+<div class="adult-price-row"><span>月4回</span><strong>16,000円</strong></div>
+</div>
+</div>
+<p class="adult-price-caution">※1回あたりの金額は、月2回または月4回コースで受講する場合の料金です。単発レッスンの料金ではありません。</p>
+<div style="margin-top:1rem"><a class="path-link" href="adult-piano.html">大人向けレッスンの詳細を見る</a></div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section class="section teacher" id="teacher">
@@ -647,8 +708,12 @@
 <div>
 <span class="eyebrow">TEACHER</span>
 <h3>小川 公子</h3>
-<p>幼少期よりピアノ一筋。音楽系高校・音大を経て、地域で50年弱にわたり指導。「まず音楽を好きになる」を大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
+<p>音楽系高校・音大ピアノ科を卒業後、地域で50年弱にわたりピアノ指導を続けています。「まず音楽を好きになる」ことを大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
 <p>はじめてのお子さま、小学校高学年・中高生・経験者、好きな曲に挑戦したい大人の方、音大受験や保育士・幼児教育を目指す方まで、一人ひとりに合わせて丁寧にサポートします。</p>
+<ul class="teacher-profile-list">
+<li><strong>岡田流大正琴 指導者</strong><br/>名古屋の家元にて学び、小松市初の指導者資格を取得。</li>
+<li><strong>音楽大学進学・保育系資格試験</strong><br/>これまで指導した生徒の合格率は100％。</li>
+</ul>
 <div style="margin-top:1.2rem"><a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" rel="noopener" target="_blank">Instagramを見る</a></div>
 </div>
 </div>
