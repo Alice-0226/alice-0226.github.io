@@ -36,11 +36,44 @@
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-1B9Q314H3W');</script>
-</head>
-<body>
+<style>
+/* === Torepia-informed subpage refinement; copy unchanged === */
+:root{
+  --ink:#342a2f!important;--sub:#6b5b62!important;--muted:#948087!important;
+  --line:#efd9e2!important;--gold:#c05b87!important;--gold2:#e3b4c4!important;
+  --cream:#fff5f8!important;--cream2:#fffafd!important;--rose:#b74f79!important;
+  --shadow:0 16px 40px rgba(92,51,69,.07)!important;--radius:28px!important;
+}
+body{background:#fff!important;color:var(--ink)!important}
+.wrap{max-width:1080px!important}
+.site-header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #f0dfe6!important;box-shadow:0 4px 20px rgba(78,43,58,.035)!important}
+.nav{height:72px!important}.nav-links{font-size:.84rem!important;gap:1.15rem!important;color:#56464d!important}.nav-links a::after{background:#c05b87!important}
+.btn{box-shadow:none!important;font-weight:700!important;letter-spacing:.015em!important;padding:.82rem 1.35rem!important}.btn.primary{background:#b9537a!important;color:#fff!important;border-color:#b9537a!important}.btn.secondary{background:#fff!important;border-color:#e7ced8!important;color:#57454d!important}
+.section{padding:clamp(74px,8vw,104px) 0!important}.section-title{font-size:clamp(1.72rem,3.5vw,2.55rem)!important;line-height:1.42!important;letter-spacing:.02em!important}.section-title::after{content:"";display:block;width:46px;height:3px;border-radius:999px;background:#d26f98;margin:18px auto 0}.section-lead{max-width:720px!important;line-height:1.95!important;color:#74646b!important;margin-bottom:42px!important}.eyebrow{font-size:.73rem!important;letter-spacing:.19em!important;color:#bb567f!important;font-weight:800!important}
+/* sub hero */
+.sub-hero{min-height:auto!important;padding:110px 0 72px!important;background:#fff6f9!important;color:#342a2f!important;display:block!important}.sub-hero::before{opacity:.18!important;filter:saturate(.7)!important}.sub-hero .wrap{padding-top:0!important;padding-bottom:0!important;position:relative!important}.sub-hero h1{color:#342a2f!important;text-shadow:none!important;font-size:clamp(1.9rem,4vw,3.25rem)!important;line-height:1.4!important;max-width:760px!important}.sub-hero p{color:#6b5b62!important;max-width:720px!important;line-height:1.95!important}.sub-hero .hero-kicker{color:#b9537a!important}.breadcrumb{color:#8e7580!important}.breadcrumb a{color:#b9537a!important}
+/* intro / split */
+.intro{background:#fff!important}.two-col{gap:52px!important}.photo-card{border-radius:26px!important;border:1px solid #efdce4!important;box-shadow:0 16px 40px rgba(92,51,69,.08)!important}.copy h2{font-size:clamp(1.7rem,3.4vw,2.6rem)!important;line-height:1.5!important}.copy p{line-height:1.92!important;color:#6c5b63!important}.check-list{gap:10px!important}.check-list li{background:#fff8fb!important;border:1px solid #ecd7df!important;border-radius:14px!important;color:#58474e!important}.check-list li::before{color:#bd5b83!important}
+/* cards */
+.features,.service-area{background:#fff7fa!important}.feature-grid{gap:18px!important}.feature-card{background:#fff!important;border:1px solid #ecd8e0!important;border-radius:22px!important;box-shadow:0 11px 30px rgba(96,52,70,.05)!important;padding:26px 23px!important}.feature-no{color:#bf5d85!important}.feature-card h3{font-size:1.15rem!important}.feature-card p{line-height:1.82!important;color:#6a5960!important}
+/* pricing */
+.pricing{background:#fff!important}.adult-price-grid{gap:20px!important}.adult-price-card{border:1px solid #ecd8e0!important;border-radius:24px!important;box-shadow:0 12px 32px rgba(95,51,70,.055)!important;background:#fff!important;padding:28px!important}.adult-price-card h3{color:#48383f!important}.adult-monthly-row{border-top:1px solid #f0dfe5!important;padding:.65rem 0!important}.adult-monthly-row strong{color:#3e3237!important;font-size:1rem!important}.single-lesson-note{background:#fff5f8!important;border:1px solid #ecd4de!important;border-radius:14px!important;padding:.8rem 1rem!important;color:#5f4b54!important}
+/* trial/flow */
+.trial,.flow{background:#fff!important}.steps{position:relative!important;gap:16px!important}.step{background:#fff!important;border:1px solid #ead6de!important;border-radius:20px!important;box-shadow:none!important}.step b{background:#b9537a!important}.step h3{font-size:1rem!important}.step p{line-height:1.75!important}.flow-grid{gap:18px!important}
+/* experienced generic sections */
+.lesson{background:#fff7fa!important}.lesson .wrap,.flow .wrap{max-width:980px!important}.cards,.problem-grid,.lesson-grid{gap:18px!important}.card,.problem-card,.lesson-card{border-color:#ecd8e0!important;border-radius:22px!important;box-shadow:0 11px 30px rgba(96,52,70,.05)!important}.num,.number,.problem-no{color:#bd5b83!important}
+/* FAQ if present: quieter, not a major visual block */
+.faq{background:#fff!important}.faq-list{max-width:820px!important}.faq details,details{border:1px solid #ead7df!important;border-radius:16px!important;box-shadow:none!important;background:#fff!important}.faq summary,summary{color:#4a3a41!important}
+/* CTA */
+.page-cta,.cta{background:linear-gradient(135deg,#ffeaf2,#fff8fb 70%,#fff)!important;color:#342a2f!important}.page-cta .section-title,.page-cta .section-lead,.cta h2,.cta p{color:#342a2f!important}.page-cta .btn.primary,.cta .btn.primary{background:#b9537a!important;color:#fff!important;border-color:#b9537a!important}
+.footer{background:#2e2026!important;color:#d8c9cf!important}
+@media(max-width:980px){.feature-grid{grid-template-columns:1fr 1fr!important}.two-col{grid-template-columns:1fr!important}.adult-price-grid{grid-template-columns:1fr!important}}
+@media(max-width:640px){.section{padding:62px 0!important}.feature-grid{grid-template-columns:1fr!important}.sub-hero{padding:96px 0 58px!important}.sub-hero h1{font-size:2rem!important}}
+</style></head>
+<body><div style="position:fixed;right:12px;bottom:12px;z-index:9999;background:#38272f;color:#fff;padding:.45rem .75rem;border-radius:999px;font-size:.72rem;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.16)">TEST PREVIEW</div>
   <header class="header">
     <div class="wrap nav">
-      <a href="index.html"><img class="logo" src="logo2.png" alt="アリスピアノ教室"></a>
+      <a href="index.html"><img class="logo" src="https://alicepiano-komatsu.com/logo2.png" alt="アリスピアノ教室"></a>
       <div class="nav-actions"><a class="btn secondary" href="index.html">トップへ戻る</a><a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験を相談する</a></div>
     </div>
   </header>
@@ -55,7 +88,7 @@
           <div class="badges"><span class="badge">1回60分の個別レッスン</span><span class="badge">学校伴奏・発表会</span><span class="badge">好きな曲・難しい曲</span><span class="badge">完全防音・グランドピアノ</span></div>
           <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">今弾いている曲を持って体験を相談する</a>
         </div>
-        <figure class="hero-photo"><img src="assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで演奏している様子"></figure>
+        <figure class="hero-photo"><img src="https://alicepiano-komatsu.com/assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで演奏している様子"></figure>
       </div>
     </section>
 
@@ -75,8 +108,8 @@
     <section class="section lesson">
       <div class="wrap lesson-grid">
         <div class="photo-pair">
-          <figure><img src="assets/lesson-teen-keyboard.jpg" alt="中学生・高校生年代の生徒が鍵盤楽器を演奏している様子" loading="lazy"></figure>
-          <figure><img src="assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで楽譜を見ながら演奏している様子" loading="lazy"></figure>
+          <figure><img src="https://alicepiano-komatsu.com/assets/lesson-teen-keyboard.jpg" alt="中学生・高校生年代の生徒が鍵盤楽器を演奏している様子" loading="lazy"></figure>
+          <figure><img src="https://alicepiano-komatsu.com/assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで楽譜を見ながら演奏している様子" loading="lazy"></figure>
         </div>
         <div class="lesson-copy">
           <span class="eyebrow">LESSON CONTENT</span>
