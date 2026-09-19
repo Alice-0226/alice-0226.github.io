@@ -589,21 +589,322 @@ input,textarea{border-color:#e3cfd7!important;background:#fff!important}
   .experienced-points{grid-template-columns:1fr!important}
   .price-box{padding:24px 20px!important}
 }
+</style><style>
+/* ===== Agency refinement v5 =====
+   Text and TOP slideshow are intentionally preserved.
+   Main changes: hierarchy, whitespace, section rhythm, CTA clarity.
+*/
+:root{
+  --ink:#342a2f !important;
+  --sub:#6b5b62 !important;
+  --muted:#958189 !important;
+  --line:#ecd8e0 !important;
+  --gold:#bb567f !important;
+  --gold2:#dfaabc !important;
+  --cream:#fff5f8 !important;
+  --cream2:#fffafd !important;
+  --rose:#b34f77 !important;
+  --shadow:0 15px 38px rgba(91,50,69,.065) !important;
+  --radius:26px !important;
+}
+body{background:#fff!important;color:var(--ink)!important}
+.wrap{max-width:1080px!important}
+
+/* Header: fewer items, more breathing room */
+.site-header{
+  background:rgba(255,255,255,.965)!important;
+  border-bottom:1px solid #f0dfe6!important;
+  box-shadow:0 3px 18px rgba(82,46,62,.035)!important;
+}
+.nav{height:72px!important;gap:22px!important}
+.brand-logo{width:clamp(160px,18vw,218px)!important}
+.nav-links{gap:1.3rem!important;font-size:.85rem!important;color:#57484f!important}
+.nav-links a{padding:.55rem 0!important}
+.nav-links a::after{background:#c6658d!important;bottom:.18rem!important}
+.nav-actions .btn{padding:.75rem 1.15rem!important}
+
+/* TOP slideshow: no selectors that change slide images/animation/copy */
+.hero-copy{max-width:690px!important}
+
+/* Reference-site rhythm */
+.section{padding:clamp(76px,8vw,108px) 0!important}
+.section-title{
+  font-size:clamp(1.75rem,3.5vw,2.55rem)!important;
+  line-height:1.45!important;
+  letter-spacing:.02em!important;
+  margin-bottom:.8rem!important;
+}
+.section-title::after{
+  content:"";
+  display:block;
+  width:42px;
+  height:3px;
+  margin:17px auto 0;
+  border-radius:999px;
+  background:#cf7196;
+}
+.section-lead{
+  max-width:710px!important;
+  margin:0 auto 42px!important;
+  line-height:1.95!important;
+  color:#73636a!important;
+}
+.eyebrow{
+  color:#b6547c!important;
+  font-size:.72rem!important;
+  letter-spacing:.19em!important;
+  margin-bottom:.55rem!important;
+}
+
+/* Section zoning: mostly white, pink only as guide */
+.quick-start{background:#fff!important}
+.early-learning{background:#fff7fa!important}
+.experienced{background:#fff!important}
+.visual-reasons{background:#fff7fa!important}
+.review-section{background:#fff!important}
+.availability{background:#fff6f9!important;padding:54px 0!important}
+.trial{background:#fff!important}
+.teacher{background:#fff7fa!important}
+.pricing{background:#fff!important}
+.contact{background:#39272f!important}
+.access{background:#fff8fb!important}
+
+/* Target cards */
+.path-grid{gap:18px!important;margin-top:34px!important}
+.path-card{
+  background:#fff!important;border:1px solid #ecd7df!important;
+  border-radius:24px!important;padding:28px 25px!important;
+  box-shadow:0 12px 32px rgba(96,52,71,.05)!important;
+  min-height:250px!important;display:flex!important;flex-direction:column!important;
+}
+.path-card::after{display:none!important}
+.path-card .tag{
+  align-self:flex-start;background:#fff0f5!important;border-color:#eccbd7!important;
+  color:#a84d71!important;font-size:.71rem!important;letter-spacing:.08em!important;
+}
+.path-card h3{font-size:1.22rem!important;line-height:1.55!important;margin-top:.15rem!important}
+.path-card p{line-height:1.88!important}
+.path-card .path-link{
+  margin-top:auto!important;padding-top:1.1rem!important;
+  color:#a94e72!important;text-decoration:none!important;font-weight:800!important;
+}
+.path-card .path-link::after{content:"  →"}
+
+/* Learning: editorial image + text, less "box inside box" */
+.early-learning-shell{
+  padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;
+  grid-template-columns:.92fr 1.08fr!important;gap:52px!important;
+}
+.early-learning-copy h2{font-size:clamp(1.75rem,3.2vw,2.45rem)!important;line-height:1.5!important}
+.early-learning-copy p{line-height:1.95!important}
+.early-learning-points span{
+  background:#fff!important;border-color:#ead5dd!important;color:#604b54!important;
+  padding:.48rem .72rem!important;
+}
+.early-learning-photo{
+  border:1px solid #ecd8df!important;border-radius:22px!important;
+  box-shadow:0 13px 34px rgba(96,52,70,.065)!important;background:#fff!important;
+}
+.early-learning-photo figcaption{background:#fff!important;line-height:1.65!important}
+
+/* Experienced: visually compact editorial feature */
+.experienced-shell{gap:54px!important}
+.experienced-copy h2{font-size:clamp(1.7rem,3.2vw,2.55rem)!important;line-height:1.5!important}
+.experienced-copy>p{line-height:1.94!important;color:#705f67!important}
+.experienced-points{gap:9px!important}
+.experienced-point{
+  background:#fff9fb!important;border:1px solid #ead5dd!important;border-radius:14px!important;
+  box-shadow:none!important;padding:.78rem .86rem!important;color:#57474e!important;
+}
+.experienced-point::before{color:#bf5d84!important}
+.experienced-photo{border-radius:22px!important;box-shadow:0 14px 34px rgba(88,48,65,.08)!important}
+.experienced-photo figcaption{background:rgba(255,255,255,.95)!important;border-radius:13px!important}
+
+/* "What we value" : 2x2 clear visual blocks */
+.visual-reason-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;margin-top:38px!important}
+.visual-reason-card{
+  background:#fff!important;border:1px solid #ebd6de!important;border-radius:24px!important;
+  box-shadow:0 12px 32px rgba(96,52,70,.05)!important;
+}
+.visual-reason-photo{aspect-ratio:16/8.8!important}
+.visual-reason-badge{
+  width:38px!important;height:38px!important;background:#fff!important;color:#b6537a!important;
+  border:1px solid #ead5dd!important;box-shadow:0 7px 18px rgba(83,45,61,.07)!important;
+}
+.visual-reason-body{padding:1.35rem 1.3rem 1.5rem!important}
+.visual-reason-body h3{font-size:1.14rem!important;line-height:1.55!important}
+.visual-reason-body p{line-height:1.85!important}
+
+/* Reviews: strongest trust block before CTA */
+.review-grid{gap:20px!important}
+.review-card{
+  background:#fff!important;border:1px solid #ecd7df!important;border-radius:23px!important;
+  padding:27px 26px!important;box-shadow:0 10px 28px rgba(97,52,71,.045)!important;
+  position:relative!important;overflow:hidden!important;
+}
+.review-card::before{
+  content:"“";position:absolute;right:18px;top:-13px;
+  font-family:Georgia,serif;font-size:6rem;line-height:1;color:#f3dae4;
+}
+.review-stars{position:relative!important;color:#c57795!important;font-size:.78rem!important;opacity:.82!important}
+.review-card blockquote{position:relative!important;font-weight:500!important;line-height:1.92!important;color:#55464d!important}
+.review-card cite{color:#9b858e!important;font-weight:600!important}
+
+/* Mid-page CTA: availability only; avoids "salesy" repeated badges */
+.availability-card{
+  max-width:970px!important;background:linear-gradient(135deg,#ffe9f1 0%,#fff5f8 60%,#fff 100%)!important;
+  border:1px solid #eccbd8!important;border-radius:28px!important;
+  padding:32px 36px!important;box-shadow:none!important;
+}
+.availability-card h2{font-size:clamp(1.45rem,3vw,2rem)!important;margin-bottom:.55rem!important}
+.availability-card p{color:#6d5962!important;line-height:1.88!important}
+.availability-cta{min-width:245px!important}
+.availability-cta .btn{background:#b6537a!important;color:#fff!important;border-color:#b6537a!important}
+.availability-cta .cta-note{font-size:.78rem!important;color:#8e737d!important;text-align:center!important}
+
+/* Trial flow: three visual stages, existing explanatory text retained */
+.steps{
+  grid-template-columns:repeat(3,1fr)!important;gap:18px!important;
+  margin-top:38px!important;position:relative!important;
+}
+.step{
+  background:#fff!important;border:1px solid #ead5dd!important;border-radius:20px!important;
+  padding:1.35rem 1.2rem!important;box-shadow:none!important;
+}
+.step b{
+  width:43px!important;height:43px!important;background:#b6537a!important;
+  box-shadow:none!important;margin-bottom:.9rem!important;
+}
+.step h3{font-size:1.03rem!important;line-height:1.55!important}
+.step p{line-height:1.78!important}
+.step p + p{margin-top:.6rem!important}
+
+/* Teacher before fee = trust before price */
+.teacher-card{
+  grid-template-columns:270px 1fr!important;gap:42px!important;background:#fff!important;
+  border:1px solid #ecd8df!important;border-radius:27px!important;padding:30px!important;
+  box-shadow:0 12px 32px rgba(94,51,69,.05)!important;
+}
+.teacher-photo{aspect-ratio:4/5!important;border-radius:22px!important;box-shadow:none!important}
+.teacher-card h3{font-size:1.65rem!important}
+.teacher-card p{line-height:1.92!important;color:#695860!important}
+.teacher-profile-list li{
+  background:#fff7fa!important;border:1px solid #ecd6de!important;border-left:3px solid #d07a9a!important;
+  border-radius:13px!important;padding:.88rem 1rem!important;
+}
+
+/* Child fee: clear but intentionally quiet */
+.price-box{
+  background:#fff!important;border:1px solid #ecd8df!important;border-radius:24px!important;
+  box-shadow:0 11px 30px rgba(94,51,69,.045)!important;padding:28px!important;
+}
+.price-label{
+  background:#fff0f5!important;border:1px solid #ebced8!important;color:#a74d70!important;
+  font-size:.71rem!important;letter-spacing:.06em!important;
+}
+.price-title{font-size:1.25rem!important}
+.price-num{font-size:1.22rem!important;color:#403339!important;font-weight:700!important}
+.price-num small{font-size:.83rem!important;color:#806c74!important}
+
+/* Contact: calmer, reference-like final conversion section */
+.contact{padding-top:90px!important;padding-bottom:90px!important;background:#39272f!important}
+.contact::before{
+  background-image:linear-gradient(90deg,rgba(57,39,47,.97),rgba(57,39,47,.82)),url('https://alicepiano-komatsu.com/assets/music-score.jpg')!important;
+}
+.contact .section-title::after{background:#e0a6bb!important}
+.contact .section-lead{color:#eadde2!important;max-width:760px!important}
+.contact-grid{grid-template-columns:.9fr .78fr 1.2fr!important;gap:18px!important}
+.contact-card{
+  background:#fff!important;border:0!important;border-radius:21px!important;padding:1.45rem!important;
+  box-shadow:0 15px 36px rgba(0,0,0,.12)!important;
+}
+.line-easy-note,.trial-reassurance{
+  background:#fff3f6!important;border-color:#e9ccd7!important;color:#654e58!important;
+}
+.tel{color:#9e476b!important}
+.line-url{display:none!important} /* duplicate raw URL-style link is visually unnecessary */
+input,textarea{border-color:#e3cfd7!important}
+
+/* Access / footer */
+.access-card{
+  background:#fff!important;border:1px solid #ead7df!important;border-radius:21px!important;
+  box-shadow:0 9px 25px rgba(96,52,70,.04)!important;
+}
+.map iframe{border-radius:21px!important;box-shadow:0 9px 28px rgba(93,50,68,.05)!important}
+.footer{background:#302128!important}
+
+/* Mobile */
+@media(max-width:980px){
+  .path-grid,.visual-reason-grid{grid-template-columns:1fr 1fr!important}
+  .teacher-card,.contact-grid{grid-template-columns:1fr!important}
+  .teacher-photo{max-width:285px!important;width:100%!important;margin:auto!important}
+}
+@media(max-width:700px){
+  .section{padding:62px 0!important}
+  .path-grid,.visual-reason-grid,.review-grid,.steps{grid-template-columns:1fr!important}
+  .path-card{min-height:0!important}
+  .early-learning-shell{grid-template-columns:1fr!important;gap:30px!important}
+  .experienced-shell{gap:34px!important}
+  .experienced-points{grid-template-columns:1fr!important}
+  .availability-card{grid-template-columns:1fr!important;padding:26px 22px!important}
+  .availability-cta{min-width:0!important;width:100%!important}
+  .price-box{padding:23px 20px!important}
+}
+</style><style>
+/* ===== Overflow & full-review safety ===== */
+.btn{
+  white-space:normal !important;
+  text-align:center !important;
+  line-height:1.45 !important;
+  max-width:100% !important;
+}
+.path-card,.visual-reason-card,.review-card,.step,.teacher-card,
+.availability-card,.contact-card,.price-box,.experienced-copy,
+.early-learning-copy,.nav-actions{
+  min-width:0 !important;
+}
+.review-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  align-items:start !important;
+}
+.review-card{
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+}
+.review-card blockquote,
+.review-card blockquote p,
+.review-card cite{
+  white-space:normal !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  overflow-wrap:break-word !important;
+  word-break:normal !important;
+}
+.path-card h3,.visual-reason-body h3,.step h3,
+.teacher-card h3,.availability-card h2{
+  overflow-wrap:break-word !important;
+  word-break:normal !important;
+}
+@media(max-width:700px){
+  .review-grid{grid-template-columns:1fr !important}
+  .review-card{padding:22px 20px !important}
+  .btn{width:100% !important}
+  .nav-actions .btn{width:auto !important}
+  .section-title{overflow-wrap:break-word !important}
+}
 </style></head>
 <body>
 <header class="site-header">
 <div class="wrap nav" id="nav">
 <a aria-label="トップへ" class="brand" href="#top"><img alt="アリスピアノ教室 ロゴ" class="brand-logo" decoding="async" src="https://alicepiano-komatsu.com/logo2.png"/></a>
 <nav aria-label="メインメニュー" class="nav-links">
-<a href="#quick-start">対象</a>
-<a href="#experienced">中高生・経験者</a>
-<a href="#features">特徴</a>
-<a href="#availability">募集状況</a>
-<a href="#reviews">生徒さん・保護者さまの声</a>
-<a href="#trial">無料体験</a>
+<a href="#quick-start">レッスン</a>
+<a href="#features">教室について</a>
+<a href="#reviews">口コミ</a>
+<a href="#teacher">講師</a>
 <a href="#pricing">料金</a>
 <a href="#access">アクセス</a>
-<a href="#contact">お問い合わせ</a>
 </nav>
 <div class="nav-actions">
 <a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" rel="noopener" target="_blank">Instagram</a>
@@ -765,26 +1066,11 @@ input,textarea{border-color:#e3cfd7!important;background:#fff!important}
 
 </div>
 </section>
-<section class="section availability" id="availability">
-<div class="wrap">
-<div class="availability-card">
-<div>
-<span class="eyebrow">LESSON AVAILABILITY</span>
-<h2>曜日ごとの空き状況</h2>
-<p>現在の空き状況は曜日・時間帯によって異なります。ご希望の曜日とお時間を添えてお問い合わせください。</p>
-</div>
-<div class="availability-cta">
-<a class="btn secondary" href="#contact">空き状況を問い合わせる</a>
-<p class="cta-note">ご希望の曜日とお時間をお知らせください。</p>
-</div>
-</div>
-</div>
-</section>
 <section class="section review-section" id="reviews">
 <div class="wrap">
 <span class="eyebrow" style="display:block;text-align:center">VOICES</span>
 <h2 class="section-title">生徒さん・保護者さまからいただいた声</h2>
-<p class="section-lead">実際に通われている生徒さんや保護者さまからいただいたご感想の一部をご紹介します。</p>
+<p class="section-lead">実際に通われている生徒さんや保護者さまからいただいたGoogle口コミを、原文のまま掲載しています。</p>
 <div class="review-grid">
 <article class="review-card">
 <div class="review-stars">★★★★★</div>
@@ -799,7 +1085,10 @@ input,textarea{border-color:#e3cfd7!important;background:#fff!important}
 <article class="review-card">
 <div class="review-stars">★★★★★</div>
 <blockquote>
-<p>いつも笑顔で優しく、教え方が丁寧でわかりやすく、子供のペースに合わせて指導してくださいます。おかげでピアノがどんどん好きになりました。</p>
+<p>粟津方面から通っている大人の男性です。</p>
+<p>フォームの矯正から丁寧に教えていただきました。今では芯のある音で弾けるようになり、譜読みのスピードも自分自身で実感できるほど早くなって驚いてます。</p>
+<p>生徒のやる気にしっかり応えてくださる先生です。</p>
+<p>環境良し、先生良しで後は自分の頑張り次第でどこまでも成長できると感じています。</p>
 </blockquote>
 <cite>Google口コミより</cite>
 </article>
@@ -830,35 +1119,31 @@ input,textarea{border-color:#e3cfd7!important;background:#fff!important}
 </div>
 </div>
 </section>
+<section class="section availability" id="availability">
+<div class="wrap">
+<div class="availability-card">
+<div>
+<span class="eyebrow">LESSON AVAILABILITY</span>
+<h2>現在の空き状況</h2>
+<p>現在の空き状況は曜日・時間帯によって異なります。ご希望の曜日とお時間を添えてお問い合わせください。</p>
+</div>
+<div class="availability-cta">
+<a class="btn secondary" href="#contact">空き状況を問い合わせる</a>
+<p class="cta-note">ご希望の曜日とお時間をお知らせください。</p>
+</div>
+</div>
+</div>
+</section>
 <section class="section trial" id="trial">
 <div class="wrap">
 <h2 class="section-title">無料体験レッスンの流れ</h2>
 <p class="section-lead">無料体験は60分程度を目安に行っています。はじめての方は基礎から、経験者の方は今弾いている曲や教材を使いながら、現在の課題と今後の進め方をご案内します。</p>
 <div class="steps">
-<article class="step"><b>1</b><h3>LINEなどでお問い合わせ</h3><p>お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p></article>
-<article class="step"><b>2</b><h3>ご希望日時を相談</h3><p>ご都合の良い日時をうかがい、体験日を決めます。</p></article>
-<article class="step"><b>3</b><h3>無料体験</h3><p>経験者の方は今弾いている曲や教材を使い、課題と伸ばし方を確認します。</p></article>
-<article class="step"><b>4</b><h3>教室を見学</h3><p>完全防音スタジオやピアノの響きを体感できます。</p></article>
-<article class="step"><b>5</b><h3>料金をご案内</h3><p>内容・料金を分かりやすく説明。無理な勧誘はありません。</p></article>
+<article class="step"><b>1</b><h3>お問い合わせ・日時のご相談</h3><p>お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p><p>ご都合の良い日時をうかがい、体験日を決めます。</p></article>
+<article class="step"><b>2</b><h3>無料体験</h3><p>経験者の方は今弾いている曲や教材を使い、課題と伸ばし方を確認します。</p></article>
+<article class="step"><b>3</b><h3>教室見学・料金のご案内</h3><p>完全防音スタジオやピアノの響きを体感できます。</p><p>内容・料金を分かりやすく説明。無理な勧誘はありません。</p></article>
 </div>
 <div style="text-align:center;margin-top:34px"><a class="btn secondary" href="#contact">体験レッスンについて問い合わせる</a><p class="cta-note">ご希望の方は、お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p></div>
-</div>
-</section>
-<section class="section pricing" id="pricing">
-<div class="wrap">
-<h2 class="section-title">レッスン料金</h2>
-<div class="pricing-grid">
-<div class="price-box">
-<div>
-<span class="price-label">子ども向けレッスン</span>
-<p class="price-title">月4回</p>
-<p style="margin:0;color:var(--sub)">通常1回60分。初級者は30〜40分程度です。教材・発表会費は別途。学年・進度によって段階的に調整します。兄妹割もあります。</p>
-</div>
-<div class="price-num"><small>月謝</small>6,500円〜</div>
-</div>
-
-
-</div>
 </div>
 </section>
 <section class="section teacher" id="teacher">
@@ -880,13 +1165,30 @@ input,textarea{border-color:#e3cfd7!important;background:#fff!important}
 </div>
 </div>
 </section>
+<section class="section pricing" id="pricing">
+<div class="wrap">
+<h2 class="section-title">レッスン料金</h2>
+<div class="pricing-grid">
+<div class="price-box">
+<div>
+<span class="price-label">子ども向けレッスン</span>
+<p class="price-title">月4回</p>
+<p style="margin:0;color:var(--sub)">通常1回60分。初級者は30〜40分程度です。教材・発表会費は別途。学年・進度によって段階的に調整します。兄妹割もあります。</p>
+</div>
+<div class="price-num"><small>月謝</small>6,500円〜</div>
+</div>
+
+
+</div>
+</div>
+</section>
 <section class="section contact" id="contact">
 <div class="wrap">
 <h2 class="section-title">お問い合わせ</h2>
 <p class="section-lead">レッスン内容、空き時間、体験レッスンについては、LINE・お電話・フォームからお問い合わせいただけます。お名前・年齢（学年）・ご希望の曜日や時間帯をお知らせください。</p>
 <div class="contact-grid">
 <div class="contact-card" style="text-align:center">
-<h3>LINEでお問い合わせ</h3><p class="line-easy-note"><strong>LINEでお知らせください。</strong><br/>お名前・年齢（学年）・ご希望の曜日や時間帯</p>
+<h3>LINEでお問い合わせ</h3>
 <div class="trial-reassurance"><strong>無料体験は60分程度です。</strong><span>体験後に入会を急いで決める必要はありません。</span><span>LINEでは「お名前・年齢（学年）・希望曜日や時間帯」をお知らせください。</span></div>
 <img alt="アリスピアノ教室 LINE QRコード" class="qr" decoding="async" loading="lazy" src="https://qr-official.line.me/gs/M_816cipfh_BW.png?oat_content=qr"/>
 <p>内容を確認後、空き時間や体験日についてご案内します。</p>
