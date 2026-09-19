@@ -30,7 +30,23 @@
     .cta{background:#201811;color:#fff;text-align:center}.cta h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.7rem,4vw,2.8rem);margin:0 0 .8rem}.cta p{max-width:720px;margin:0 auto 1.5rem;color:#f0dfc7}.footer{background:#15100d;color:#bfae9a;text-align:center;padding:30px 0;font-size:.84rem}.footer a{color:#fff}
     @media(max-width:900px){.hero-grid,.lesson-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.photo-pair figure:last-child{transform:none}.nav-actions .secondary{display:none}}
     @media(max-width:620px){.cards,.steps{grid-template-columns:1fr}.hero{padding-top:105px}.nav-actions .btn{padding:.72rem .9rem;font-size:.82rem}.photo-pair{grid-template-columns:1fr 1fr}}
-  </style>
+  
+.trial-reassurance{
+  max-width:720px;
+  margin:1.1rem auto 1.25rem;
+  padding:1rem 1.15rem;
+  text-align:left;
+  border:1px solid #ead2dc;
+  border-radius:16px;
+  background:#fff7fa;
+  color:#604e56;
+  font-size:.92rem;
+  line-height:1.75;
+}
+.trial-reassurance strong{display:block;color:#3b3035;margin-bottom:.2rem}
+.trial-reassurance span{display:block}
+
+</style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","name":"小学校高学年・中高生・経験者向けピアノレッスン","provider":{"@type":"MusicSchool","name":"アリスピアノ教室","url":"https://alicepiano-komatsu.com/"},"areaServed":["石川県小松市","石川県能美市","石川県加賀市"],"description":"音色・表現・テクニック、学校の合唱伴奏、発表会や好きな曲の仕上げを、1回60分の個別レッスンでサポートします。"}
   </script>
@@ -70,11 +86,11 @@ body{background:#fff!important;color:var(--ink)!important}
 @media(max-width:980px){.feature-grid{grid-template-columns:1fr 1fr!important}.two-col{grid-template-columns:1fr!important}.adult-price-grid{grid-template-columns:1fr!important}}
 @media(max-width:640px){.section{padding:62px 0!important}.feature-grid{grid-template-columns:1fr!important}.sub-hero{padding:96px 0 58px!important}.sub-hero h1{font-size:2rem!important}}
 </style></head>
-<body><div style="position:fixed;right:12px;bottom:12px;z-index:9999;background:#38272f;color:#fff;padding:.45rem .75rem;border-radius:999px;font-size:.72rem;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.16)">TEST PREVIEW</div>
+<body>
   <header class="header">
     <div class="wrap nav">
       <a href="index.html"><img class="logo" src="https://alicepiano-komatsu.com/logo2.png" alt="アリスピアノ教室"></a>
-      <div class="nav-actions"><a class="btn secondary" href="index.html">トップへ戻る</a><a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験を相談する</a></div>
+      <div class="nav-actions"><a class="btn secondary" href="index.html">トップへ戻る</a><a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener" data-cta-location="header">無料体験の日程をLINEで相談する</a></div>
     </div>
   </header>
 
@@ -86,7 +102,7 @@ body{background:#fff!important;color:var(--ink)!important}
           <h1>弾けるようになってからの、<br>次の一歩へ。</h1>
           <p>小学校高学年・中学生・高校生・ピアノ経験者の方へ。譜読みの先にある音色、表現、タッチ、ペダル、身体の使い方まで、現在の課題と目標に合わせて丁寧にレッスンします。</p>
           <div class="badges"><span class="badge">1回60分の個別レッスン</span><span class="badge">学校伴奏・発表会</span><span class="badge">好きな曲・難しい曲</span><span class="badge">完全防音・グランドピアノ</span></div>
-          <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">今弾いている曲を持って体験を相談する</a>
+          <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener" data-cta-location="hero">無料体験の日程をLINEで相談する</a>
         </div>
         <figure class="hero-photo"><img src="https://alicepiano-komatsu.com/assets/lesson-teen-grand-piano.jpg" alt="経験のある生徒がグランドピアノで演奏している様子"></figure>
       </div>
@@ -130,7 +146,8 @@ body{background:#fff!important;color:var(--ink)!important}
           <article class="step"><b>2</b><h3>実際の演奏を確認</h3><p>今の弾き方を見ながら、良いところと改善できるポイントを具体的にお伝えします。</p></article>
           <article class="step"><b>3</b><h3>今後の進め方をご提案</h3><p>練習方法やレッスンの方向性を説明します。体験後の無理な勧誘はありません。</p></article>
         </div>
-        <div style="text-align:center;margin-top:30px"><a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">空き時間と体験日をLINEで相談する</a></div>
+        <div class="trial-reassurance"><strong>無料体験は60分程度です。</strong><span>体験後に入会を急いで決める必要はありません。</span><span>LINEでは「お名前・年齢（学年）・希望曜日や時間帯」をお知らせください。</span></div>
+        <div style="text-align:center;margin-top:30px"><a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener" data-cta-location="trial_section">無料体験の日程をLINEで相談する</a></div>
       </div>
     </section>
 
@@ -149,8 +166,9 @@ body{background:#fff!important;color:var(--ink)!important}
     <section class="section cta">
       <div class="wrap">
         <h2>今弾いている曲から、ご相談ください。</h2>
-        <p>「この曲を仕上げたい」「伴奏を任された」「中学生になっても続けたい」など、現在の状況をLINEでお知らせください。空き時間の確認だけでも大丈夫です。</p>
-        <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで相談する</a>
+        <p>「この曲を仕上げたい」「伴奏を任された」「中学生になっても続けたい」など、現在の状況があればあわせてお知らせください。</p>
+        <div class="trial-reassurance"><strong>無料体験は60分程度です。</strong><span>体験後に入会を急いで決める必要はありません。</span><span>LINEでは「お名前・年齢（学年）・希望曜日や時間帯」をお知らせください。</span></div>
+        <a class="btn primary" data-experienced-cta href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener" data-cta-location="final_cta">無料体験の日程をLINEで相談する</a>
       </div>
     </section>
   </main>
@@ -167,9 +185,10 @@ body{background:#fff!important;color:var(--ink)!important}
         if(!a)return;
         const href=a.getAttribute('href')||'';
         if(href.includes('lin.ee')&&typeof gtag==='function'){
-          gtag('event','line_click',{link_url:a.href,link_text:(a.textContent||'').trim(),page_location:window.location.href,transport_type:'beacon'});
+          gtag('event','line_click',{cta_location: link.dataset.ctaLocation || 'unknown',
+        link_url:a.href,link_text:(a.textContent||'').trim(),page_location:window.location.href,transport_type:'beacon'});
           if(a.hasAttribute('data-experienced-cta')){
-            gtag('event','experienced_interest_click',{link_url:a.href,link_text:(a.textContent||'').trim(),page_location:window.location.href,transport_type:'beacon'});
+            gtag('event','experienced_interest_click',{cta_location:a.dataset.ctaLocation||'unknown',link_url:a.href,link_text:(a.textContent||'').trim(),page_location:window.location.href,transport_type:'beacon'});
           }
         }
       },true);
