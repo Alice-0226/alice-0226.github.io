@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>お問い合わせ後のご案内｜アリスピアノ教室</title><meta name="robots" content="noindex,follow"/>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff7fa;color:#382d33;font-family:'Noto Sans JP','Yu Gothic',Meiryo,sans-serif;line-height:1.9;padding:52px 20px}main{max-width:680px;margin:auto;padding:clamp(26px,6vw,48px);border:1px solid #ead5df;border-radius:24px;background:#fff;box-shadow:0 12px 40px rgba(91,50,69,.06)}.brand{font-family:'Yu Mincho',serif;color:#80415a;text-decoration:none;font-size:1.03rem}h1{font-family:'Yu Mincho',serif;font-size:clamp(1.5rem,5vw,2rem);line-height:1.5;margin:30px 0 16px}p{color:#65555f;margin:0 0 18px}a{color:#914261}a:focus-visible{outline:3px solid #914261;outline-offset:4px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 0}.actions a{padding:10px 18px;border:1px solid #d7b5c4;border-radius:10px;text-decoration:none}.actions a:first-child{background:#ad4e75;border-color:#ad4e75;color:#fff}.note{font-size:.87rem;background:#fff5f8;padding:16px;border-radius:12px;margin:24px 0 0}.back{display:block;margin-top:26px;font-size:.9rem}[hidden]{display:none!important}@media(max-width:480px){body{padding:24px 15px}.actions{display:grid}.actions a{text-align:center}}
+</style></head><body><main>
+<a class="brand" href="/">アリスピアノ教室</a>
+<h1 id="return-title">お問い合わせ後のご案内</h1>
+<p id="return-message">フォームを送信された方は、教室からの返信をお待ちください。</p>
+<p>2日以内に返信がない場合は、迷惑メールをご確認のうえ、LINEまたはお電話でお知らせください。</p>
+<p class="note">このページでは、教室のメール受信箱への到着までは確認できません。まだお問い合わせを送信されていない方は、TOPのお問い合わせ欄をご利用ください。</p>
+<div class="actions"><a href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">LINEで連絡する</a><a href="tel:09065264543">電話：090-6526-4543</a></div>
+<a class="back" href="/#contact">お問い合わせ欄に戻る</a>
+</main>
+<script>
+(function(){
+  const live=location.protocol==='https:'&&['alicepiano-komatsu.com','www.alicepiano-komatsu.com'].includes(location.hostname);
+  if(!live)return;
+  let stamp=0;
+  try{stamp=Number(sessionStorage.getItem('alice_contact_pending_v2')||'0');sessionStorage.removeItem('alice_contact_pending_v2');}catch(_){}
+  let fromService=false;try{fromService=new URL(document.referrer).hostname==='formsubmit.co';}catch(_){}
+  // Count a service return, not inbox delivery. Missing referrer intentionally undercounts.
+  const validReturn=fromService&&stamp>0&&Date.now()-stamp>=0&&Date.now()-stamp<60*60*1000;
+  if(validReturn){
+    document.getElementById('return-title').textContent='お問い合わせありがとうございます';
+    document.getElementById('return-message').textContent='フォームの送信手続きが完了しました。内容を確認して、教室よりご返信いたします。';
+  }
+  window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};
+  window.gtag('js',new Date());window.gtag('config','G-1B9Q314H3W');
+  if(validReturn)window.gtag('event','contact_form_return',{send_to:'G-1B9Q314H3W',form_id:'contactForm',page_location:'https://alicepiano-komatsu.com/contact-complete.html',transport_type:'beacon'});
+  const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W';document.head.appendChild(s);
+})();
+</script></body></html>
