@@ -437,11 +437,11 @@
           },
           {
             "@type": "Offer",
-            "name": "大人向け・30分コース（1レッスン）",
+            "name": "大人向け・30分（1レッスン）",
             "price": "2500",
             "priceCurrency": "JPY",
             "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの場合の料金です。月1回も承っております。",
+            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・30分"
@@ -449,11 +449,11 @@
           },
           {
             "@type": "Offer",
-            "name": "大人向け・40分コース（1レッスン）",
+            "name": "大人向け・40分（1レッスン）",
             "price": "3000",
             "priceCurrency": "JPY",
             "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの場合の料金です。月1回も承っております。",
+            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・40分"
@@ -461,11 +461,11 @@
           },
           {
             "@type": "Offer",
-            "name": "大人向け・60分コース（1レッスン）",
+            "name": "大人向け・60分（1レッスン）",
             "price": "4000",
             "priceCurrency": "JPY",
             "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの場合の料金です。月1回も承っております。",
+            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・60分"
@@ -483,8 +483,24 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "無料体験レッスン",
-              "description": "40分〜を目安に、教室の雰囲気やレッスン内容を確認できます。大人の体験レッスンは500円で、ご入会の場合は初回レッスン料から500円引きいたします。"
+              "name": "子ども・中高生の無料体験レッスン",
+              "description": "体験レッスンは40分〜。教室の雰囲気やレッスン内容を確認できます。"
+            },
+            "name": "子ども・中高生の体験レッスン",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "url": "https://alicepiano-komatsu.com/trial-lesson.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "大人の体験レッスン",
+            "price": "500",
+            "priceCurrency": "JPY",
+            "url": "https://alicepiano-komatsu.com/adult-piano.html",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "大人の体験レッスン",
+              "description": "体験レッスンは40分〜。ご入会の場合は、初回の月謝から500円差し引きます。"
             }
           }
         ]
@@ -1109,7 +1125,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
  .brand-logo{width:clamp(132px,38vw,175px)!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head>
+</style><style id="alice-revision-20260924-v3">
+
+.fee-unit-label{font-size:.82rem;color:#6b5b62;margin:0 0 8px}
+.trial-fee-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:780px;margin:0 auto 28px}
+.trial-fee-card{padding:20px 22px;border:1px solid #ecd8e0;border-radius:18px;background:#fffafd;min-width:0}
+.trial-fee-card h3{font-size:.95rem;font-weight:500;margin:0 0 6px}
+.trial-fee-amount{font-size:1.1rem;font-weight:700;margin:0;color:#49383f}
+.trial-fee-credit{font-size:.86rem;color:#65555e;margin:8px 0 0;line-height:1.85}
+@media(max-width:520px){.trial-fee-grid{grid-template-columns:1fr;gap:12px}.trial-fee-card{padding:17px 19px}}
+
+</style>
+</head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
 <div class="wrap nav" id="nav">
@@ -1280,12 +1307,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 <section class="section trial" id="trial">
 <div class="wrap">
-<h2 class="section-title">無料体験レッスンの流れ</h2>
+<h2 class="section-title">体験レッスンのご案内</h2>
 <p class="section-lead">体験レッスンは40分〜を目安に行っています。教室やレッスンの雰囲気を実際にご確認いただけます。</p>
-<p class="cta-note" style="text-align:center;max-width:760px;margin:0 auto 28px">※ 子ども・中高生の体験レッスンは無料です。大人の体験レッスンは500円で、ご入会の場合は初回レッスン料から500円引きいたします。</p>
+<div class="trial-fee-grid" aria-label="体験レッスンの料金">
+<article class="trial-fee-card"><h3>子ども・中高生</h3><p class="trial-fee-amount">無料</p></article>
+<article class="trial-fee-card"><h3>大人</h3><p class="trial-fee-amount">500円</p><p class="trial-fee-credit">ご入会の場合は、初回の月謝から500円差し引きます。</p></article>
+</div>
 <div class="steps">
 <article class="step"><b>1</b><h3>お問い合わせ・日時のご相談</h3><p>ご希望の曜日・時間帯をうかがい、体験日を決めます。</p></article>
-<article class="step"><b>2</b><h3>無料体験</h3><p>実際にピアノに触れながら、レッスンを体験していただきます。</p></article>
+<article class="step"><b>2</b><h3>体験レッスン</h3><p>実際にピアノに触れながら、レッスンを体験していただきます。</p></article>
 <article class="step"><b>3</b><h3>教室・料金のご案内</h3><p>教室をご覧いただき、レッスン内容や料金をご説明します。</p></article>
 </div>
 <div style="text-align:center;margin-top:34px"><a class="btn secondary" data-cta-location="trial_contact" href="#contact">体験レッスンについて問い合わせる</a><p class="cta-note">体験後に入会を急いで決める必要はありません。</p></div>
@@ -1299,10 +1329,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <div>
 <span class="eyebrow">TEACHER</span>
 <h3>小川 公子</h3>
-<p>音楽系高校・音大ピアノ科を卒業後、地域で50年弱にわたりピアノ指導を続けています。「まず音楽を好きになる」ことを大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
+<p>県外の音楽系高校・音大ピアノ科を卒業後、地域で50年弱にわたりピアノ指導を続けています。「まず音楽を好きになる」ことを大切に、耳・リズム・表現をバランス良く育てるレッスンを行っています。</p>
 <ul class="teacher-profile-list">
 <li><strong>岡田流大正琴 指導者</strong><br/>名古屋の家元にて学び、小松市初の指導者資格を取得。</li>
-<li><strong>音楽大学進学・保育系資格試験</strong><br/>これまで指導した生徒の合格率は100％。</li>
+<li><strong>進学・資格取得のサポート</strong><br/>音楽大学への進学や、保育系資格試験に向けたピアノ指導にも対応しています。</li>
 </ul>
 <div style="margin-top:1.2rem"><a class="btn secondary" href="https://www.instagram.com/alice_piano0226/" rel="noopener" target="_blank">Instagramを見る</a></div>
 </div>
@@ -1317,17 +1347,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <h3 id="child-fee-title">子ども向けレッスン</h3>
 <p class="fee-course">月4回</p>
 <dl class="fee-lines"><div><dt>月謝</dt><dd>6,500円〜</dd></div></dl>
-<p class="fee-description">通常1回60分。初級者は30〜40分程度です。教材・発表会費は別途。学年・進度によって段階的に調整します。兄妹割もあります。</p>
+<p class="fee-description">通常1回60分。初級者は30〜40分程度です。教材・発表会費は別途。進度に応じて、月謝は段階的に上がります。兄妹割もあります。</p>
 </article>
 <article aria-labelledby="adult-fee-title" class="fee-panel">
 <h3 id="adult-fee-title">大人向けレッスン</h3>
-<p class="fee-course">1レッスンの場合（月1回も承っております）</p>
+<p class="fee-course">1レッスンから承っております。<br>月2回・月4回のコースもございます。</p>
+<p class="fee-unit-label">1レッスンの料金</p>
 <dl class="fee-lines">
-<div><dt>30分コース</dt><dd>2,500円</dd></div>
-<div><dt>40分コース</dt><dd>3,000円</dd></div>
-<div><dt>60分コース</dt><dd>4,000円</dd></div>
+<div><dt>30分</dt><dd>2,500円</dd></div>
+<div><dt>40分</dt><dd>3,000円</dd></div>
+<div><dt>60分</dt><dd>4,000円</dd></div>
 </dl>
-<p class="fee-description">※ 大人の体験レッスンは500円です。ご入会の場合は初回レッスン料から500円引きいたします。</p>
+<p class="fee-description">※ 大人の体験レッスンは500円です。ご入会の場合は、初回の月謝から500円差し引きます。</p>
 </article>
 </div>
 <p class="fee-contact-link"><a data-cta-location="pricing_contact" href="#contact">体験・通える日時について相談する <span aria-hidden="true">→</span></a></p>
@@ -1341,7 +1372,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <section aria-labelledby="line-title" class="contact-option">
 <h3 id="line-title">LINEで相談する</h3>
 <p>お名前・年齢（学年）・希望曜日や時間帯をお知らせください。</p>
-<a class="btn primary" data-cta-location="contact_button" data-line-intent="trial" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">無料体験の日程をLINEで相談する</a>
+<a class="btn primary" data-cta-location="contact_button" data-line-intent="trial" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">体験レッスンの日程をLINEで相談する</a>
 <div class="desktop-qr"><img alt="アリスピアノ教室のLINE友だち追加用QRコード" decoding="async" height="198" loading="lazy" src="assets/line-qr.png" width="198"/><p>スマートフォンで読み取れます。</p></div>
 </section>
 <section aria-labelledby="phone-title" class="contact-option contact-option-secondary">
@@ -1397,7 +1428,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <div class="wrap">
 <div class="footer-grid">
 <div><strong class="serif" style="font-size:1.2rem;color:#fff">アリスピアノ教室</strong><br/>小松市の個別ピアノレッスン。幼児・小学生の第一歩から、小学校高学年・中高生・経験者、大人の初心者・再開まで対応しています。</div>
-<div><strong style="color:#fff">メニュー</strong><br/><a href="#features">特徴</a><br/><a href="#contact">体験・お問い合わせ</a><br/><a href="#reviews">生徒さん・保護者さまの声</a><br/><a href="kids-piano.html">子ども向け</a><br/><a href="experienced-piano.html">中高生・経験者向け</a><br/><a href="adult-piano.html">大人向け</a><br/><a href="trial-lesson.html">無料体験</a><br/><a href="#pricing">料金</a><br/><a href="#access">アクセス</a></div>
+<div><strong style="color:#fff">メニュー</strong><br/><a href="#features">特徴</a><br/><a href="#contact">体験・お問い合わせ</a><br/><a href="#reviews">生徒さん・保護者さまの声</a><br/><a href="kids-piano.html">子ども向け</a><br/><a href="experienced-piano.html">中高生・経験者向け</a><br/><a href="adult-piano.html">大人向け</a><br/><a href="trial-lesson.html">体験レッスン</a><br/><a href="#pricing">料金</a><br/><a href="#access">アクセス</a></div>
 <div><strong style="color:#fff">連絡先</strong><br/>TEL：090-6526-4543<br/>住所：石川県小松市小寺町乙38番地1</div>
 </div>
 <div class="copyright">© 2026 アリスピアノ教室.</div>
