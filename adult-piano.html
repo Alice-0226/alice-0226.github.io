@@ -99,6 +99,17 @@ img{display:block;max-width:100%;height:auto}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
 
+
+/* v4: concise copy, unified headings and restrained links. */
+
+main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
+.quiet-link-row{margin:18px 0 0;text-align:center;font-size:.9rem;line-height:1.8}
+.quiet-link-row a{display:inline-flex;align-items:center;min-height:44px;color:#81435b;text-decoration:underline;text-underline-offset:4px;max-width:100%;overflow-wrap:break-word}
+
+.hero-detail{color:var(--sub);font-size:.88rem;line-height:1.85;margin:0 0 24px}
+.lesson-focus-title{margin-bottom:30px}
+.card h3{font-size:1.15rem;line-height:1.65}
+
 </style>
 </head>
 <body>
@@ -118,12 +129,8 @@ img{display:block;max-width:100%;height:auto}
     <div>
       <span class="eyebrow">ADULT PIANO LESSON</span>
       <h1>小松市の大人の<br>ピアノレッスン</h1>
-      <p class="lead">初めての方も、昔習っていた方の再開も歓迎しています。目的やペースに合わせて、落ち着いて続けられる個別レッスンです。</p>
-      <div class="pills">
-        <span class="pill">初心者・再開歓迎</span>
-        <span class="pill">好きな曲にも対応</span>
-        <span class="pill">グランドピアノで学べる環境</span>
-      </div>
+      <p class="lead">初めての方も、独学や久しぶりの再開も。今の弾き方から、次の一歩を一緒に考えます。</p>
+      <p class="hero-detail">防音の独立教室・グランドピアノでの個別レッスン。</p>
       <div class="header-actions" style="justify-content:flex-start">
         <a class="btn btn-outline" href="index.html#access">アクセスを見る</a>
         <a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンを相談する</a>
@@ -136,13 +143,13 @@ img{display:block;max-width:100%;height:auto}
 </section>
 <section class="section alt">
   <div class="wrap">
-    <h2 class="section-title">大人になってからのピアノも、始められます。</h2>
-    <p class="section-lead">「もう一度ピアノを弾きたい」「好きな曲を弾けるようになりたい」など、目的に合わせてレッスンします。</p>
-    <div class="cards" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-      <article class="card"><div class="num">01</div><h3>はじめてピアノを習う方</h3><p>基礎から始めたい方もご相談いただけます。</p></article>
-      <article class="card"><div class="num">02</div><h3>昔習っていたピアノを再開したい方</h3><p>ブランクがあっても、今の状態から始められます。</p></article>
-      <article class="card"><div class="num">03</div><h3>好きな曲を弾きたい方</h3><p>弾きたい曲や目標に合わせて進めます。</p></article>
+    <h2 class="section-title lesson-focus-title">弾いてみたい気持ちを、演奏に。</h2>
+        <div class="cards" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <article class="card"><div class="num">01</div><h3>初めてのピアノ</h3><p>鍵盤や楽譜の読み方から。弾いてみたい曲をうかがい、基礎を学びます。</p></article>
+      <article class="card"><div class="num">02</div><h3>独学・久しぶりの再開</h3><p>今の演奏を聴きながら、手の使い方や音の出し方、練習方法を確認します。</p></article>
+      <article class="card"><div class="num">03</div><h3>好きな曲を、自分の一曲に</h3><p>難しい曲は、弾ける形への編曲も。曲の魅力を生かした仕上げを支えます。</p></article>
     </div>
+<p class="quiet-link-row"><a href="index.html#adult-voice">大人の生徒さんの声を見る</a></p>
   </div>
 </section>
 <section class="section">
@@ -159,9 +166,9 @@ img{display:block;max-width:100%;height:auto}
     <div class="note-box" style="margin-top:24px">
       <p><strong>大人の体験レッスンは500円です。</strong></p>
       <p>体験レッスンは40分〜を目安に行っています。ご入会の場合は、<strong>初回の月謝から500円差し引きます。</strong></p>
-      <p>まずはLINEからご相談ください。</p>
-    </div>
+          </div>
     <div class="cta"><a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">大人の体験レッスンを相談する</a></div>
+<p class="quiet-link-row"><a href="index.html#contact" data-cta-location="adult_contact_other">電話・メールで相談する</a></p>
   </div>
 </section>
 

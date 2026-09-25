@@ -99,6 +99,18 @@ img{display:block;max-width:100%;height:auto}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
 
+
+/* v4: concise copy, unified headings and restrained links. */
+
+main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
+.quiet-link-row{margin:18px 0 0;text-align:center;font-size:.9rem;line-height:1.8}
+.quiet-link-row a{display:inline-flex;align-items:center;min-height:44px;color:#81435b;text-decoration:underline;text-underline-offset:4px;max-width:100%;overflow-wrap:break-word}
+
+.hero-detail{color:var(--sub);font-size:.88rem;line-height:1.85;margin:0 0 24px}
+.experienced-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card h3{font-size:1.15rem;line-height:1.65}
+@media(max-width:900px){.experienced-cards{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -118,13 +130,8 @@ img{display:block;max-width:100%;height:auto}
     <div>
       <span class="eyebrow">TEENS / EXPERIENCED STUDENTS</span>
       <h1>弾けるようになってからの、<br>次の一歩へ。</h1>
-      <p class="lead">小学校高学年・中高生・ピアノ経験者の方へ。学校伴奏、音色・表現、好きな曲など、現在の目標に合わせてレッスンします。</p>
-      <div class="pills">
-        <span class="pill">1回60分の個別レッスン</span>
-        <span class="pill">学校伴奏・発表会</span>
-        <span class="pill">好きな曲・難しい曲</span>
-        <span class="pill">完全防音・グランドピアノ</span>
-      </div>
+      <p class="lead">学校の伴奏や発表会、今弾いている曲のご相談に。小学校高学年・中高生から、大人の経験者まで対応しています。</p>
+      <p class="hero-detail">防音の教室で、グランドピアノを使って学べます。</p>
       <a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンの日程をLINEで相談する</a>
     </div>
     <div class="hero-media">
@@ -135,13 +142,12 @@ img{display:block;max-width:100%;height:auto}
 <section class="section alt">
   <div class="wrap">
     <h2 class="section-title">こんな悩みや目標に</h2>
-    <p class="section-lead">「上級者」と名乗るほどではなくても大丈夫です。ある程度弾けるようになり、次に何を伸ばせばよいか迷っている方もご相談ください。</p>
-    <div class="cards">
-      <article class="card"><div class="num">01</div><h3>曲は弾けるが、演奏が平坦になる</h3><p>音色、フレーズ、強弱、呼吸を整え、音楽の流れが伝わる演奏を目指します。</p></article>
-      <article class="card"><div class="num">02</div><h3>学校の合唱伴奏を仕上げたい</h3><p>歌を支えるテンポ、バランス、ペダル、本番に向けた安定感を確認します。</p></article>
-      <article class="card"><div class="num">03</div><h3>難しい曲・憧れの曲に挑戦したい</h3><p>現在の力に合わせて練習方法を整理し、必要に応じて弾きやすい形へのアレンジも行います。</p></article>
-      <article class="card"><div class="num">04</div><h3>中学生以降も無理なく続けたい</h3><p>部活動や勉強との両立を考えながら、目標と生活に合う進め方を相談します。</p></article>
-    </div>
+    <p class="section-lead">上級者でなくても、今困っているところからご相談いただけます。</p>
+    <div class="cards experienced-cards">
+<article class="card"><div class="num">01</div><h3>学校の伴奏を仕上げたい</h3><p>苦手な箇所の弾き方や練習方法を整理し、本番に向けて仕上げます。</p></article>
+<article class="card"><div class="num">02</div><h3>音色や表現を深めたい</h3><p>タッチやペダル、フレーズを見直し、曲の流れが伝わる弾き方を学びます。</p></article>
+<article class="card"><div class="num">03</div><h3>憧れの曲に挑戦したい</h3><p>今の力に合う形への編曲も行い、弾きやすさと曲の魅力を両立します。</p></article>
+</div>
   </div>
 </section>
 
@@ -149,12 +155,13 @@ img{display:block;max-width:100%;height:auto}
   <div class="wrap">
     <h2 class="section-title">経験者の体験レッスン</h2>
     <div class="note-box">
-      <p>現在弾いている曲、これまで使った教材、学校の伴奏譜などをお持ちください。</p>
+      <p>現在練習している曲や、学校の伴奏譜をお持ちください。</p>
       <p><strong>体験レッスンは40分〜を目安に行っています。</strong></p>
       <p>子ども・中高生は無料、大人は500円です。ご入会の場合は、初回の月謝から500円差し引きます。</p>
-      <p>弾きたい曲、学校伴奏、発表会、現在困っている部分などを確認し、今後の進め方をご提案します。体験後の無理な勧誘はありません。</p>
+      <p>演奏を聴き、つまずいている部分と練習の進め方を確認します。体験後の無理な勧誘はありません。</p>
     </div>
     <div class="cta"><a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">今弾いている曲から相談する</a></div>
+<p class="quiet-link-row"><a href="index.html#contact" data-cta-location="experienced_contact_other">電話・メールで相談する</a></p>
   </div>
 </section>
 
