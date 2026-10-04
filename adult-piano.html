@@ -111,6 +111,45 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 .card h3{font-size:1.15rem;line-height:1.65}
 
 </style>
+<style id="alice-trial-refinement-v5">
+
+/* Trial guidance v5: no pop-ups, animation, new images or price changes. */
+.trial-quiet-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:12px 22px;border:1px solid #c897aa;border-radius:999px;background:#fff;color:#82455d;font-family:'Noto Sans JP',sans-serif;font-size:.94rem;font-weight:700;line-height:1.65;text-align:center;white-space:normal;overflow-wrap:break-word;text-decoration:none}
+.trial-quiet-button:hover{background:#fff8fa;border-color:#a9607c}
+.trial-other-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;color:#6b5660;font-size:.84rem;line-height:1.7;text-decoration:underline;text-underline-offset:4px;overflow-wrap:break-word}
+.trial-quiet-button:focus-visible,.trial-other-link:focus-visible{outline:3px solid #944966;outline-offset:4px}
+.trial-quick{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px 28px;margin:32px 0 0;padding:25px 0 0;border-top:1px solid #e8dce1;scroll-margin-top:96px}
+.trial-quick-copy,.trial-quick-actions{min-width:0}
+.trial-quick h3{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:600;line-height:1.6;letter-spacing:.025em;margin:0 0 9px;color:#42353c}
+.trial-quick h3 span{display:inline-block;font-family:'Noto Sans JP',sans-serif;font-size:.86rem;font-weight:500;letter-spacing:0;margin-left:12px;color:#66565e}
+.trial-quick-fees{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:baseline;margin:0;color:#53444c;font-size:.93rem;line-height:1.85}
+.trial-quick-fees span{display:inline-block}
+.trial-credit-line{margin:7px 0 0;color:#6b5962;font-size:.85rem;line-height:1.85;overflow-wrap:break-word}
+.trial-quick-actions{display:flex;flex-direction:column;align-items:center;gap:4px}
+.trial-quick-actions .trial-quiet-button{width:100%}
+.trial-terms-inline{max-width:780px;margin:0 auto 25px;text-align:center}
+.trial-terms-inline .trial-quick-fees{justify-content:center}
+.trial-calm-actions{display:flex;flex-direction:column;align-items:center;gap:3px;margin:26px 0 0}
+.trial-calm-actions .trial-quiet-button{width:auto}
+.trial-calm-note{max-width:760px;margin:10px auto 0;color:#6b5962;font-size:.86rem;line-height:1.85;text-align:center}
+.trial-copy-block{max-width:880px;scroll-margin-top:110px}
+.trial-copy-block h3{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:600;line-height:1.65;margin:0 0 9px;color:#42353c}
+.trial-copy-block .trial-copy{margin:12px 0 0;font-size:.96rem;line-height:1.95;color:#62525a}
+.trial-copy-block .trial-credit-line{margin-top:12px;font-size:.85rem;line-height:1.85}
+.trial-meta{color:#53444c;font-size:.94rem;font-weight:500;line-height:1.8;margin:0 0 12px}
+@media(max-width:780px){
+ .trial-quick{grid-template-columns:1fr;gap:18px;margin-top:25px;padding-top:23px}
+ .trial-quick-actions{align-items:center}
+ .trial-quick-actions .trial-quiet-button{width:100%;max-width:360px}
+ .trial-quick h3{font-size:1.12rem}
+}
+@media(max-width:420px){
+ .trial-quiet-button{font-size:.9rem;padding:12px 16px}
+ .trial-quick-fees{font-size:.9rem;gap:3px 14px}
+ .trial-calm-actions .trial-quiet-button{width:100%}
+}
+
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -163,12 +202,16 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
       <article class="price-card"><h3>40分</h3><div class="price">3,000円</div></article>
       <article class="price-card"><h3>60分</h3><div class="price">4,000円</div></article>
     </div>
-    <div class="note-box" style="margin-top:24px">
-      <p><strong>大人の体験レッスンは500円です。</strong></p>
-      <p>体験レッスンは40分〜を目安に行っています。ご入会の場合は、<strong>初回の月謝から500円差し引きます。</strong></p>
-          </div>
-    <div class="cta"><a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">大人の体験レッスンを相談する</a></div>
-<p class="quiet-link-row"><a href="index.html#contact" data-cta-location="adult_contact_other">電話・メールで相談する</a></p>
+    <div class="note-box trial-copy-block" id="adult-trial" style="margin-top:24px">
+<h3>大人の体験レッスン</h3>
+<p class="trial-meta">40分〜・500円</p>
+<p class="trial-copy">初めての方は、鍵盤や手の置き方から。再開・経験のある方は、今弾いている曲をもとに、弾き方や練習の悩みをご相談いただけます。</p>
+<p class="trial-credit-line">ご入会の場合は、初回の月謝から500円差し引きます。</p>
+</div>
+    <div class="trial-calm-actions">
+<a class="trial-quiet-button" data-cta-location="adult_trial_line" data-line-intent="trial" href="https://lin.ee/s7dxB4M" rel="noopener" target="_blank">大人の体験をLINEで相談する</a>
+<a class="trial-other-link" data-cta-location="adult_trial_other" href="index.html#contact">電話・メールで相談する</a>
+</div>
   </div>
 </section>
 
