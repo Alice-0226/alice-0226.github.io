@@ -150,6 +150,29 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 }
 
 </style>
+
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1B9Q314H3W');
+document.addEventListener('click', function(event){
+  if (!(event.target instanceof Element)) return;
+  const link = event.target.closest('a');
+  if (!link) return;
+  const href = link.getAttribute('href') || '';
+  const locationName = link.dataset.ctaLocation || 'other';
+  if (href === 'https://lin.ee/s7dxB4M') {
+    gtag('event', 'line_click', {page_type: 'adult', cta_location: locationName, link_text: link.textContent.trim(), link_url: href});
+  } else if (href.startsWith('tel:')) {
+    gtag('event', 'phone_click', {page_type: 'adult', cta_location: locationName});
+  } else if (href.startsWith('mailto:')) {
+    gtag('event', 'email_click', {page_type: 'adult', cta_location: locationName});
+  }
+}, true);
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -172,7 +195,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
       <p class="hero-detail">防音の独立教室・グランドピアノでの個別レッスン。</p>
       <div class="header-actions" style="justify-content:flex-start">
         <a class="btn btn-outline" href="index.html#access">アクセスを見る</a>
-        <a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンを相談する</a>
+        <a class="btn btn-primary" data-cta-location="adult_hero" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンを相談する</a>
       </div>
     </div>
     <div class="hero-media">
@@ -195,7 +218,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
   <div class="wrap">
     <span class="eyebrow" style="text-align:center">LESSON FEE</span>
     <h2 class="section-title">大人向けレッスン料金</h2>
-    <p class="section-lead">1レッスンからも承っております。<br>月2回・月4回のコースもございます。</p>
+    <p class="section-lead">1レッスンから承っております。<br>月2回・月4回のコースもございます。</p>
     <p class="pricing-caption">1レッスンの料金</p>
     <div class="pricing">
       <article class="price-card"><h3>30分</h3><div class="price">2,500円</div></article>

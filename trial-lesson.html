@@ -148,6 +148,29 @@ main h2,main h3{font-family:'Noto Serif JP',serif}
 @media(max-width:900px){.trial-flow-cards{grid-template-columns:1fr}}
 
 </style>
+
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1B9Q314H3W');
+document.addEventListener('click', function(event){
+  if (!(event.target instanceof Element)) return;
+  const link = event.target.closest('a');
+  if (!link) return;
+  const href = link.getAttribute('href') || '';
+  const locationName = link.dataset.ctaLocation || 'other';
+  if (href === 'https://lin.ee/s7dxB4M') {
+    gtag('event', 'line_click', {page_type: 'trial', cta_location: locationName, link_text: link.textContent.trim(), link_url: href});
+  } else if (href.startsWith('tel:')) {
+    gtag('event', 'phone_click', {page_type: 'trial', cta_location: locationName});
+  } else if (href.startsWith('mailto:')) {
+    gtag('event', 'email_click', {page_type: 'trial', cta_location: locationName});
+  }
+}, true);
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -155,7 +178,7 @@ main h2,main h3{font-family:'Noto Serif JP',serif}
     <a class="brand" href="index.html" aria-label="トップへ戻る"><img src="https://alicepiano-komatsu.com/logo2.png" alt="アリスピアノ教室 ロゴ"></a>
     <div class="header-actions">
       <a class="btn btn-outline" href="index.html">トップへ戻る</a>
-      <a class="btn btn-primary" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンの日程をLINEで相談する</a>
+      <a class="btn btn-primary" data-cta-location="trial_header" href="https://lin.ee/s7dxB4M" target="_blank" rel="noopener">体験レッスンの日程をLINEで相談する</a>
     </div>
   </div>
 </header>

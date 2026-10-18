@@ -372,6 +372,25 @@
 .trial-reassurance strong{display:block;color:#3b3035;margin-bottom:.2rem}
 .trial-reassurance span{display:block}
 
+
+/* Compact school facts: useful to visitors and machine-readable summaries without making the page busy. */
+.school-overview{padding:0 0 clamp(54px,7vw,82px);background:#fffdfb}
+.school-overview-card{max-width:1040px;margin:0 auto;border:1px solid #ecd8e1;border-radius:24px;background:#fff;padding:clamp(22px,3vw,32px);box-shadow:0 10px 28px rgba(75,46,60,.05)}
+.school-overview .section-title{font-size:clamp(1.45rem,3vw,2rem);margin-bottom:22px}
+.school-overview-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border-top:1px solid #f0e2e8}
+.school-overview-list>div{display:grid;grid-template-columns:minmax(84px,112px) 1fr;gap:12px;padding:14px 10px;border-bottom:1px solid #f0e2e8;min-width:0}
+.school-overview-list>div:nth-child(odd){border-right:1px solid #f0e2e8;padding-right:22px}
+.school-overview-list>div:nth-child(even){padding-left:22px}
+.school-overview-list dt{font-weight:800;color:#8d4563}
+.school-overview-list dd{margin:0;color:#54464d;min-width:0}
+.field-help{margin:-2px 0 2px;color:#7d6972;font-size:.8rem;line-height:1.55}
+@media(max-width:720px){
+ .school-overview-list{grid-template-columns:1fr}
+ .school-overview-list>div:nth-child(odd){border-right:0;padding-right:10px}
+ .school-overview-list>div:nth-child(even){padding-left:10px}
+ .school-overview-list>div{grid-template-columns:92px 1fr}
+}
+
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -385,13 +404,19 @@
       "name": "アリスピアノ教室",
       "alternateName": [
         "Alice Piano School",
-        "小松市 アリスピアノ教室"
+        "アリスピアノ教室 小松市"
       ],
       "url": "https://alicepiano-komatsu.com/",
-      "image": "https://alicepiano-komatsu.com/assets/exterior.jpg",
+      "image": [
+        "https://alicepiano-komatsu.com/assets/exterior.jpg",
+        "https://alicepiano-komatsu.com/assets/grand-piano-front.jpg",
+        "https://alicepiano-komatsu.com/assets/classroom-wide.jpg"
+      ],
       "logo": "https://alicepiano-komatsu.com/logo2.png",
-      "description": "石川県小松市小寺町の個別ピアノ教室。幼児・小学生、中高生・経験者、大人の初心者・再開、学校伴奏、音大受験・保育志望まで対応。子どもは月4回6,500円〜、大人は30分・40分・60分のレッスン。体験レッスンは40分〜です。",
-      "telephone": "090-6526-4543",
+      "description": "石川県小松市小寺町の個別ピアノ教室。幼児・小学生、中高生・経験者、大人の初心者・再開、学校伴奏、音大受験・保育志望まで対応。つまずきに応じて教え方や課題を工夫し、必要に応じて生徒の力に合う編曲も行います。",
+      "slogan": "できないで終わらせず、その子に合う方法で「弾けた」まで。",
+      "telephone": "+81-90-6526-4543",
+      "email": "ponpoko2121@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "postalCode": "923-0806",
@@ -400,18 +425,50 @@
         "streetAddress": "小寺町乙38番地1",
         "addressCountry": "JP"
       },
+      "hasMap": "https://www.google.com/maps?q=%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%94%E3%82%A2%E3%83%8E%E6%95%99%E5%AE%A4%20%E5%B0%8F%E6%9D%BE%E5%B8%82%E5%B0%8F%E5%AF%BA%E7%94%BA%E4%B9%9938%E7%95%AA%E5%9C%B01",
       "areaServed": [
         "石川県小松市",
         "石川県能美市",
-        "粟津",
         "石川県加賀市",
-        "金沢方面",
-        "石川県南部"
+        "粟津周辺"
       ],
       "priceRange": "子ども：月4回6,500円〜／大人：1レッスン2,500円〜4,000円",
       "sameAs": [
-        "https://www.instagram.com/alice_piano0226/"
+        "https://www.instagram.com/alice_piano0226/",
+        "https://teacher.piano.or.jp/705141",
+        "https://chordiq.jp/school/alice-piano-kyoshitsu",
+        "https://torepia.com/school/5423",
+        "https://www.ekiten.jp/shop_68002136/",
+        "https://map.yahoo.co.jp/v3/place/QkFEadaiNL2"
       ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "体験レッスン・お問い合わせ",
+        "telephone": "+81-90-6526-4543",
+        "availableLanguage": [
+          "ja"
+        ]
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "完全防音の独立教室",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "グランドピアノ",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "駐車場",
+          "value": true
+        }
+      ],
+      "employee": {
+        "@id": "https://alicepiano-komatsu.com/#teacher-ogawa"
+      },
       "mainEntityOfPage": {
         "@id": "https://alicepiano-komatsu.com/#website"
       },
@@ -423,16 +480,16 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "子ども向けピアノレッスン",
-              "description": "音符・リズムの基礎から好きな曲への挑戦まで、一人ひとりに合わせて指導します。"
+              "name": "子ども向け個別ピアノレッスン",
+              "description": "音符・リズムの基礎から好きな曲への挑戦まで、理解の仕方や進度に合わせて指導します。"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "小学校高学年・中高生・経験者向けピアノレッスン",
-              "description": "音色・表現・テクニック、学校の伴奏、発表会や好きな曲の仕上げなど、現在の課題と目標に合わせて指導します。"
+              "name": "中高生・経験者向けピアノレッスン",
+              "description": "学校伴奏、発表会、音色・表現、好きな曲など、現在の課題と目標に合わせて指導します。"
             }
           },
           {
@@ -440,8 +497,7 @@
             "name": "大人向け・30分（1レッスン）",
             "price": "2500",
             "priceCurrency": "JPY",
-            "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
+            "url": "https://alicepiano-komatsu.com/adult-piano.html",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・30分"
@@ -452,8 +508,7 @@
             "name": "大人向け・40分（1レッスン）",
             "price": "3000",
             "priceCurrency": "JPY",
-            "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
+            "url": "https://alicepiano-komatsu.com/adult-piano.html",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・40分"
@@ -464,8 +519,7 @@
             "name": "大人向け・60分（1レッスン）",
             "price": "4000",
             "priceCurrency": "JPY",
-            "url": "https://alicepiano-komatsu.com/#pricing",
-            "description": "1レッスンの料金です。1レッスンから承っております。月2回・月4回のコースもございます。",
+            "url": "https://alicepiano-komatsu.com/adult-piano.html",
             "itemOffered": {
               "@type": "Service",
               "name": "大人向けピアノレッスン・60分"
@@ -473,39 +527,52 @@
           },
           {
             "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "音大受験・保育志望のピアノレッスン",
-              "description": "音大受験や保育士・幼児教育を目指す方のピアノ準備にも対応します。"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "子ども・中高生の無料体験レッスン",
-              "description": "体験レッスンは40分〜。教室の雰囲気やレッスン内容を確認できます。"
-            },
             "name": "子ども・中高生の体験レッスン",
             "price": "0",
             "priceCurrency": "JPY",
-            "url": "https://alicepiano-komatsu.com/trial-lesson.html"
+            "url": "https://alicepiano-komatsu.com/trial-lesson.html",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "子ども・中高生の無料体験レッスン",
+              "description": "40分〜を目安に実施します。"
+            }
           },
           {
             "@type": "Offer",
             "name": "大人の体験レッスン",
             "price": "500",
             "priceCurrency": "JPY",
-            "url": "https://alicepiano-komatsu.com/adult-piano.html",
+            "url": "https://alicepiano-komatsu.com/trial-lesson.html",
             "itemOffered": {
               "@type": "Service",
               "name": "大人の体験レッスン",
-              "description": "体験レッスンは40分〜。ご入会の場合は、初回の月謝から500円差し引きます。"
+              "description": "40分〜を目安に実施し、ご入会の場合は初回の月謝から500円差し引きます。"
             }
           }
         ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alicepiano-komatsu.com/#teacher-ogawa",
+      "name": "小川 公子",
+      "jobTitle": "ピアノ講師",
+      "description": "県外の音楽系高校・音大ピアノ科を卒業後、地域で47年にわたりピアノ指導を続けています。生徒の理解の仕方や特性を見ながら、教え方や課題を工夫し、編曲や発表会の仕上げにも対応します。",
+      "worksFor": {
+        "@id": "https://alicepiano-komatsu.com/#school"
       },
-      "email": "ponpoko2121@gmail.com"
+      "knowsAbout": [
+        "ピアノ個人指導",
+        "ソルフェージュ",
+        "楽曲編曲",
+        "学校伴奏",
+        "発表会指導",
+        "音大受験",
+        "保育系資格試験"
+      ],
+      "sameAs": [
+        "https://teacher.piano.or.jp/705141"
+      ]
     },
     {
       "@type": "WebSite",
@@ -513,7 +580,8 @@
       "url": "https://alicepiano-komatsu.com/",
       "name": "アリスピアノ教室",
       "alternateName": [
-        "Alice Piano School"
+        "Alice Piano School",
+        "アリスピアノ教室 小松市"
       ],
       "inLanguage": "ja-JP",
       "publisher": {
@@ -1264,7 +1332,23 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 </div>
 </div>
 </div>
-</section><section class="section visual-reasons" id="features">
+</section>
+<section class="school-overview" aria-labelledby="school-overview-title">
+<div class="wrap">
+<div class="school-overview-card">
+<h2 class="section-title" id="school-overview-title">教室の基本情報</h2>
+<dl class="school-overview-list">
+<div><dt>所在地</dt><dd>石川県小松市小寺町乙38番地1</dd></div>
+<div><dt>講師</dt><dd>小川公子・指導歴47年</dd></div>
+<div><dt>対象</dt><dd>幼児、小学生、中高生、経験者、大人</dd></div>
+<div><dt>レッスン</dt><dd>個別指導・通常1回60分（初級者は30〜40分程度）</dd></div>
+<div><dt>特徴</dt><dd>つまずきに応じた指導、レベルに合う編曲、保護者への共有</dd></div>
+<div><dt>環境</dt><dd>完全防音の独立教室・グランドピアノ・駐車場あり</dd></div>
+</dl>
+</div>
+</div>
+</section>
+<section class="section visual-reasons" id="features">
 <div class="wrap">
 <h2 class="section-title">大切にしていること</h2>
 <div class="visual-reason-grid">
@@ -1324,6 +1408,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <p class="section-lead">実際に通われている生徒さんや保護者さまからいただいたGoogle口コミを、原文のまま掲載しています。</p>
 <div class="review-grid">
 <article class="review-card">
+<div class="review-stars">★★★★★</div>
 <blockquote>
 <p>両親共に未経験者で、不安や心配がありましたが、先生にお会いし、お話しやレッスンの様子を見て、子供のいいところを褒めて伸ばしてくださる指導で、子供ものびのび！やる気ムクムク！の様子です。</p>
 <p>どんな事も嫌な顔をせず、親切丁寧に教えてくださいます。</p>
@@ -1333,6 +1418,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <cite>Google口コミより</cite>
 </article>
 <article class="review-card" id="adult-voice">
+<div class="review-stars">★★★★★</div>
 <blockquote>
 <p>粟津方面から通っている大人の男性です。</p>
 <p>フォームの矯正から丁寧に教えていただきました。今では芯のある音で弾けるようになり、譜読みのスピードも自分自身で実感できるほど早くなって驚いてます。</p>
@@ -1342,6 +1428,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <cite>Google口コミより</cite>
 </article>
 <article class="review-card">
+<div class="review-stars">★★★★★</div>
 <blockquote>
 <p>無料体験レッスンを受けさせていただきました( ◠‿◠ )とても気さくな先生でピアノのレッスンも子供も楽しんで参加していました！</p>
 <p>出来ていないところを置いてけぼりにせず、一人一人の生徒さんの進捗をきちんと確認しながらご指導をされている様子が伝わりとても信頼できる先生だと感じました。</p>
@@ -1350,6 +1437,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <cite>Google口コミより</cite>
 </article>
 <article class="review-card">
+<div class="review-stars">★★★★★</div>
 <blockquote>
 <p>年中の息子がピアノに興味を持ちはじめ、こちらの教室がプライベート空間の中で個人レッスンができると知り入会しました。</p>
 <p>まだ息子はピアノが弾けるわけではなく、興味を持ったレベルだったので、息子が楽しんで通えるか心配な気持ちはありましたが、個のレベルに合わせて進めてくださるので、今では安心して通えています。</p>
@@ -1412,7 +1500,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 </article>
 <article aria-labelledby="adult-fee-title" class="fee-panel">
 <h3 id="adult-fee-title">大人向けレッスン</h3>
-<p class="fee-course">1レッスンからも承っております。<br>月2回・月4回のコースもございます。</p>
+<p class="fee-course">1レッスンから承っております。<br>月2回・月4回のコースもございます。</p>
 <p class="fee-unit-label">1レッスンの料金</p>
 <dl class="fee-lines">
 <div><dt>30分</dt><dd>2,500円</dd></div>
@@ -1445,7 +1533,6 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 </div>
 <section aria-labelledby="form-title" class="inquiry-form-panel">
 <h3 id="form-title">メールフォームで相談する</h3>
-<p class="form-recovery-notice"><strong>メールフォーム復旧のお知らせ</strong><br>一時、メールを送信できない不具合が発生しておりましたが、現在は修正・復旧し、正常にご利用いただけます。ご不便をおかけし、申し訳ございませんでした。</p>
 <p class="form-intro">お名前と返信用メールアドレスは必須です。</p>
 <form accept-charset="UTF-8" action="https://formsubmit.co/ponpoko2121@gmail.com" id="contactForm" method="POST">
 <input name="_subject" type="hidden" value="アリスピアノ教室｜体験・お問い合わせ"/>
@@ -1456,7 +1543,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <div class="form-field"><label for="inquiry-name">お名前 <span class="field-required">必須</span></label><input autocomplete="name" id="inquiry-name" maxlength="80" name="name" placeholder="例：山田 花子" required="" type="text"/></div>
 <div class="form-field"><label for="inquiry-email">返信用メールアドレス <span class="field-required">必須</span></label><input autocapitalize="none" autocomplete="email" id="inquiry-email" inputmode="email" maxlength="254" name="email" placeholder="例：name@example.com" required="" spellcheck="false" type="email"/></div>
 <div class="form-field"><label for="inquiry-age">受講される方の年齢・学年 <span class="field-optional">任意</span></label><input id="inquiry-age" maxlength="80" name="age" placeholder="例：年中・小学1年生・40代" type="text"/></div>
-<div class="form-field"><label for="inquiry-message">希望曜日・時間帯、ご質問 <span class="field-optional">任意</span></label><textarea id="inquiry-message" maxlength="4000" name="message" placeholder="例：初めてのピアノです。水曜16時以降に、体験を希望しています。" rows="4"></textarea></div>
+<div class="form-field"><label for="inquiry-message">ご希望の曜日・時間帯、ご質問 <span class="field-optional">任意</span></label><p class="field-help">可能でしたら、日程を2〜3候補お知らせください。</p><textarea id="inquiry-message" maxlength="4000" name="message" placeholder="例：10/21（水）16時以降、10/23（金）18時以降、10/24（土）午前中を希望します。" rows="4"></textarea></div>
 <p class="form-privacy">入力内容は、お問い合わせへの返信・日程調整に使用します。送信にはFormSubmitを利用します。</p>
 <button class="btn primary form-send" id="inquiry-submit" type="submit">問い合わせを送信する</button>
 <p class="form-service-note">送信時に、迷惑送信防止の確認画面が開く場合があります。</p>
