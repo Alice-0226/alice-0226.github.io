@@ -1403,6 +1403,13 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 }
 
 </style>
+<style id="note-game-nav-style">
+@media(min-width:1101px){#primary-navigation{gap:.65rem!important}#primary-navigation a{white-space:nowrap}}
+#primary-navigation .note-game-nav{display:inline-flex;align-items:center;justify-content:center;padding:.35rem .7rem!important;border:1px solid #ead0da;border-radius:999px;background:#fff0f5;color:#92566d;white-space:nowrap;line-height:1.6}
+#primary-navigation .note-game-nav::after{display:none}
+#primary-navigation .note-game-nav:hover{background:#fbe5ee}
+@media(max-width:1100px){#nav.open #primary-navigation .note-game-nav{display:flex;justify-content:flex-start;min-height:44px;padding:10px 12px!important}}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
@@ -1411,6 +1418,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 <nav aria-label="メインメニュー" class="nav-links" id="primary-navigation">
 <a href="#quick-start">レッスン</a>
 <a href="#features">教室について</a>
+<a class="note-game-nav" href="note-reading-game.html">♪ 音符ゲーム</a>
 <a href="#reviews">口コミ</a>
 <a href="#teacher">講師</a>
 <a href="#pricing">料金</a>
@@ -1558,11 +1566,14 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
 </section>
 <!-- Note reading game: isolated addition -->
 <section id="note-game-entry" aria-labelledby="note-game-entry-title" style="padding:40px 0;background:#fffaf2">
-<div class="wrap" style="text-align:center">
-<p style="color:#a85b5b;font-weight:700;margin:0 0 8px">無料で遊べる♪</p>
+<div class="wrap">
+<div style="text-align:center;max-width:840px;margin:auto;padding:clamp(24px,4vw,38px) 18px;border:1px solid #eedcd2;border-radius:26px;background:linear-gradient(120deg,#fff0f2,#fff9e9);box-shadow:0 8px 24px rgba(120,80,70,.04)">
+<div aria-hidden="true" style="color:#b97b88;font-size:1.7rem;letter-spacing:.5em;line-height:1.4">♪ ♫</div>
+<p style="color:#a85b5b;font-weight:700;margin:8px 0">無料で遊べる♪</p>
 <h2 id="note-game-entry-title" class="serif" style="font-size:clamp(1.4rem,4vw,1.9rem);margin:0 0 12px">音符早読みチャレンジ</h2>
-<p style="color:#5d544c;margin:0 auto 20px;max-width:600px">五線譜の音符を見て、ドレミをタップ。お家で1分、楽しみながら譜読みに親しめます。</p>
-<a class="btn secondary" href="note-reading-game.html">ゲームで遊んでみる →</a>
+<p style="color:#5d544c;margin:0 auto 20px;max-width:600px">五線譜の音符を見て、ドレミをタップ。<br>お家で1分、楽しみながら譜読みに親しめます。</p>
+<a class="btn secondary" href="note-reading-game.html" style="background:#f3d8df!important;border-color:#dfb6c1!important;color:#6a3e4b!important;min-height:48px;max-width:100%;white-space:normal">ゲームで遊んでみる →</a>
+</div>
 </div>
 </section>
 <section class="section review-section" id="reviews">
@@ -1776,6 +1787,7 @@ main h1,main h2,main h3{font-family:'Noto Serif JP',serif}
     if (!(event.target instanceof Element)) return;
     const a=event.target.closest('a');if(!a)return;
     const href=a.getAttribute('href')||'', at=a.dataset.ctaLocation||'other';
+    if (a.classList.contains('note-game-nav')) track('note_game_nav_click',{cta_location:'header_navigation',link_url:href,link_text:a.textContent.trim()});
     if (href==='https://lin.ee/s7dxB4M') {
       const p={cta_location:at,link_url:href,link_text:a.textContent.trim()};
       track('line_click',p);
