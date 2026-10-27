@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>音符早読みゲーム｜無料で譜読み練習｜アリスピアノ教室 小松市</title>
+<meta name="description" content="小松市のアリスピアノ教室が届ける無料の音符早読みゲーム。ト音記号の音符を見てドレミを選び、ピアノの譜読みに楽しく親しめます。お家で遊べる10問チャレンジです。">
+<link rel="canonical" href="https://alicepiano-komatsu.com/note-reading-game.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fffaf2">
+<link rel="stylesheet" href="assets/note-reading-game.css">
+<script>
+(function () {
+  const productionHost = ['alicepiano-komatsu.com', 'www.alicepiano-komatsu.com'].includes(location.hostname);
+  if (!productionHost || location.protocol !== 'https:') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-1B9Q314H3W');
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W';
+  document.head.appendChild(script);
+})();
+</script>
+<script src="assets/note-reading-game.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="index.html">アリスピアノ教室</a><a href="index.html">教室TOPへ</a></header>
+<main>
+<div class="intro"><p class="eyebrow">無料で遊べる♪</p><h1><span>アリスの</span><wbr><span>音符早読みチャレンジ</span></h1><p>五線譜に出てくる音符を見て、ドレミを当ててみよう。お家で気軽に、楽しみながら譜読みに親しめるミニゲームです。</p></div>
+<div class="card">
+<section id="setup" aria-labelledby="setup-title"><h2 id="setup-title" tabindex="-1">難易度を選んでスタート</h2><div class="choices"><button class="choice" data-level="beginner"><strong>はじめて</strong><small>中央のド〜ラ（C4〜A4）</small></button><button class="choice" data-level="challenge"><strong>ちょっと挑戦</strong><small>中央のド〜高いファ（C4〜F5）</small></button></div><p class="hint">1ゲーム10問。音名のボタンを押して答えよう。間違えても、正解するまで考えられます。正解数は「最初の回答で正解した問題数」です。</p><p class="best" id="setup-best"></p></section>
+<section id="play" hidden aria-label="音符クイズ"><div class="stats"><span>問題 <strong id="question">1 / 10</strong></span><span>正解 <strong id="score">0 / 10</strong></span><span>タイム <strong id="timer">0.0</strong> 秒</span></div>
+<svg id="staff" class="staff" viewBox="0 0 360 210" role="img" aria-label="ト音記号の五線譜に表示された音符の音名を答えてください"><g stroke="currentColor" stroke-width="1.3"><path d="M45 50H330 M45 70H330 M45 90H330 M45 110H330 M45 130H330"/></g>
+<!-- The treble clef spiral surrounds the G4 line at y=110. -->
+<g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M78 145 C43 127 54 98 76 80 C94 63 94 38 84 32 C72 26 70 52 74 74 L88 151 C94 178 66 184 64 165 C63 153 80 151 79 163 C79 170 69 171 67 166 M78 145 C109 147 109 112 87 102 C66 93 60 115 75 121"/></g>
+<g id="note"></g></svg>
+<p id="feedback" class="feedback" role="status" aria-live="polite">音名を選んでね</p><div class="answers" aria-label="音名を選ぶ"><button data-answer="0">ド</button><button data-answer="1">レ</button><button data-answer="2">ミ</button><button data-answer="3">ファ</button><button data-answer="4">ソ</button><button data-answer="5">ラ</button><button data-answer="6">シ</button></div><p class="best" id="play-best"></p></section>
+<section id="result" hidden aria-labelledby="result-title"><h2 id="result-title" tabindex="-1">10問クリア！ おつかれさま♪</h2><p class="result-number">正解数 <span id="result-score"></span> / 10</p><p class="result-number">クリアタイム <span id="result-time"></span> 秒</p><p id="result-message"></p><p class="best" id="result-best"></p><div class="actions"><button id="retry" class="button primary">もう一度挑戦する</button><button id="change-level" class="button">難易度を変える</button></div><div class="lesson"><p>音符を読むのが苦手でも大丈夫。アリスピアノ教室では、一人ひとりの理解の仕方に合わせて、譜読みやリズムも少しずつ身につけていきます。</p><div class="actions"><a id="lesson-link" class="button" href="kids-piano.html">子どものレッスンを見る</a><a class="button" href="index.html">教室TOPへ戻る</a></div></div></section>
+<div class="sound-row"><button id="sound" aria-pressed="true">音：オン</button></div>
+<p class="privacy">ログイン不要・広告なし。名前や連絡先の入力はありません。全問正解のベストタイムは、このブラウザだけに保存します。本番サイトでは利用状況をGoogle アナリティクスで計測します。音が出なくても遊べます。</p>
+<noscript>このゲームで遊ぶには、ブラウザのJavaScriptを有効にしてください。</noscript>
+</div></main><footer>アリスピアノ教室 · 石川県小松市</footer>
+</body></html>
