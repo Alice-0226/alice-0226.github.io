@@ -50,6 +50,13 @@
     return out;
   }
   function show(section) { ['setup','play','result'].forEach(id=>{$(id).hidden=id!==section;}); }
+  function updateProgress(completed) {
+    $('progress').setAttribute('aria-valuenow',String(completed));
+    [...$('progress').children].forEach((dot,i)=>{
+      dot.classList.toggle('done',i<completed);
+      dot.classList.toggle('current',i===completed && completed<10);
+    });
+  }
   function unlockAudio() {
     if(!sound) return;
     try {
@@ -86,6 +93,8 @@
     $('question').textContent=(index+1)+' / 10';
     $('score').textContent=score+' / 10';
     $('feedback').textContent='音名を選んでね';
+    $('feedback').classList.remove('is-correct');
+    updateProgress(index);
     buttons.forEach(b=>{b.disabled=false;});
   }
   function start() {
@@ -96,13 +105,14 @@
     track('note_game_start');buttons[0].focus({preventScroll:true});
   }
   function finish() {
-    let saved=true;
+    let saved=true, newBest=false;
     if(score===10){
       const old=best();
-      if(old===null || elapsed<old){try{localStorage.setItem('alice-note-best-v1-'+level,String(elapsed));}catch(_){saved=false;}}
+      if(old===null || elapsed<old){try{localStorage.setItem('alice-note-best-v1-'+level,String(elapsed));newBest=true;}catch(_){saved=false;}}
     }
     $('result-score').textContent=score;$('result-time').textContent=elapsed.toFixed(1);
-    $('result-message').textContent=score===10?'全問正解！ よくできました♪':'最後までよくがんばりました！ また気軽に挑戦してね。';
+    $('result-message').textContent=score===10?'パーフェクト！ 🎵':'最後までよくがんばりました！ また気軽に挑戦してね。';
+    $('new-best').hidden=!newBest;
     $('result-best').textContent=bestText()+(saved?'':'（このブラウザでは記録を保存できませんでした）');
     show('result');$('result-title').focus({preventScroll:true});
     track('note_game_complete');if(score===10)track('note_game_perfect');
@@ -113,7 +123,8 @@
     const pitch=questions[index];
     if(Number(button.dataset.answer)!==pitch.step%7){mistaken=true;$('feedback').textContent='もう一度考えてみよう';return;}
     locked=true;if(!mistaken)score++;
-    $('score').textContent=score+' / 10';$('feedback').textContent='正解！ '+names[pitch.step%7]+'だね♪';
+    $('score').textContent=score+' / 10';$('feedback').textContent=['正解！','やったね♪','その調子！'][index%3]+' '+names[pitch.step%7]+'だね♪';
+    $('feedback').classList.add('is-correct');updateProgress(index+1);
     buttons.forEach(b=>{b.disabled=true;});playTone(pitch.midi);
     if(index===9){elapsed=(performance.now()-started)/1000;clearInterval(interval);$('timer').textContent=elapsed.toFixed(1);}
     setTimeout(()=>{if(index===9)finish();else{index++;renderQuestion();buttons[0].focus({preventScroll:true});}},550);
