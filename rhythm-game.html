@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>リズムまねっこゲーム｜楽しくリズム練習｜アリスピアノ教室 小松市</title>
+<meta name="description" content="小松市のアリスピアノ教室によるリズムまねっこゲーム。お手本を聞いて画面をタップしながら、楽しんでリズム感に親しめます。">
+<link rel="canonical" href="https://alicepiano-komatsu.com/rhythm-game.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fffaf2">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700;800&amp;family=Noto+Sans+JP:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/note-reading-game.css">
+<script>
+(function () {
+  const productionHost = ['alicepiano-komatsu.com', 'www.alicepiano-komatsu.com'].includes(location.hostname);
+  if (!productionHost || location.protocol !== 'https:') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-1B9Q314H3W');
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1B9Q314H3W';
+  document.head.appendChild(script);
+})();
+</script>
+<script src="assets/rhythm-game.js" defer></script>
+<link rel="stylesheet" href="assets/music-games-ui.css">
+<link rel="stylesheet" href="assets/rhythm-game.css">
+</head><body><header class="game-header"><a class="brand" href="index.html">アリスピアノ教室</a><nav aria-label="ゲームのナビゲーション"><a href="music-games.html">← 音楽ゲーム一覧</a><a href="index.html">教室TOPへ</a></nav></header><main><div class="intro"><div class="title-notes" aria-hidden="true">♪ ✦ ♫</div><h1>アリスの<br>リズムまねっこチャレンジ</h1><p>おてほんのリズムをよく聞いて、同じようにたたいてみよう！</p></div><div class="card">
+<section id="setup"><h2 tabindex="-1" id="setup-title">どっちであそぶ？</h2><div class="choices"><button class="choice" data-level="beginner"><strong>はじめて</strong><span>まずはここから♪</span><small>ゆっくり72 BPM・4拍</small></button><button class="choice" data-level="challenge"><strong>ちょっと挑戦</strong><span>いろんなリズムに挑戦！</span><small>84 BPM・4拍</small></button></div><p class="hint">1ゲーム5ラウンド。お手本を聞いたら、4拍の合図に続いてたたこう。ウンはおやすみ。何度でもやり直せます。</p><p id="setup-best" class="best"></p></section>
+<section id="play" hidden><h2 id="round-title">リズム 1 / 5</h2><div id="progress" class="progress" aria-label="ラウンドの進み具合"></div><div id="beats" class="beats" aria-label="4拍のリズム"></div><p class="hint">タン＝1回　タタ＝半拍ずつ2回　ウン＝おやすみ</p><div class="actions"><button id="listen" class="button">おてほんをきく</button><button id="imitate" class="button primary" disabled>まねしてみる</button></div><p id="status" class="rhythm-status" role="status" aria-live="polite">まずはおてほんをきこう♪</p><button id="tap" class="tap-pad" disabled>たたく！</button><p class="hint">パソコンではスペースキーでもたたけます。</p><div id="round-result" hidden><p id="stars" class="stars" aria-label="獲得スター"></p><p id="feedback" role="status"></p><div class="actions"><button id="redo" class="button">もう一度やってみる</button><button id="next" class="button primary">つぎへ</button></div></div></section>
+<section id="result" hidden><div class="result-badge" aria-hidden="true">✦ ♪ ✦</div><h2 id="result-title" tabindex="-1">5つのリズム クリア！</h2><p id="total" class="stars"></p><p id="message"></p><p class="record-card" id="best"></p><div class="actions"><button id="retry" class="button primary">もう一度挑戦する</button><button id="change" class="button">難易度を変える</button><a id="other" class="button" href="music-games.html">ほかのゲームで遊ぶ</a></div></section>
+<div class="sound-row"><button id="sound" aria-pressed="true">音：オン</button></div><p class="privacy">最高スター数はこのブラウザに保存します。音が出ないときも、光るカードを見て遊べます。</p></div><div class="actions"><a href="index.html">教室TOPへ戻る</a></div></main></body></html>
