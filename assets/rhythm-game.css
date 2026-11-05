@@ -74,3 +74,7 @@
 @media(prefers-reduced-motion:reduce){
   .tap-pad.ready{animation:none}
 }
+
+/* v17: spoken Japanese count-in */
+.countdown-card.voice-count{background:linear-gradient(135deg,#ffe9f1,#fff0bd);border-color:#dfb36a}
+.countdown-card.voice-count strong{font-size:clamp(1.55rem,7vw,2.35rem);line-height:1.4;letter-spacing:.04em}
